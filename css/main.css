@@ -1,0 +1,308 @@
+/*
+  STYLE GUIDE STYLING 
+  Default styling for the style guide 
+*/
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arimo', sans-serif;
+    line-height: 1.2em;
+    padding: 2rem;
+    background: #EEE;
+}
+
+section:not([id]) {
+    margin: 2em 0;
+    padding: 1em 0.5em;
+    /*    border-top: 0.15em solid #333;*/
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+section h2 {
+    margin-top: 0;
+    color: #336
+}
+
+section h3 {
+    margin-bottom: 0.2em;
+}
+
+section p {
+    margin-top: 0;
+}
+
+nav a:hover,
+nav a:focus {
+    text-decoration: none;
+}
+
+section code {
+    background-color: #DDD;
+    padding: .75em 1em;
+    display: block;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12), inset 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+
+/* 
+  INTERACTIVE ELEMENTS -------------------
+*/
+
+
+/* Navigation button */
+
+.list-nav {
+    display: block;
+    width: 100%;
+    background-color: #336;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.list-nav:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.list-nav .button-list-nav {
+    float: left;
+    width: 10%;
+}
+
+.list-nav a {
+    display: block;
+    padding: 0.5em 0.75em;
+    margin: 0;
+    color: #FFF;
+    text-align: center;
+    border-right: 0.1rem solid white;
+    background-color: #336;
+    text-decoration: none;
+    -webkit-transition: background-color 0.2s ease-out;
+    transition: background-color 0.2s ease-out;
+}
+
+.list-nav a:last-of-type {
+    border-right: 0.1 rem solid transparent;
+}
+
+.list-nav a:hover,
+.list-nav a:focus {
+    color: white;
+    background-color: goldenrod;
+}
+
+
+/* Links */
+
+a {
+    color: #336;
+    -webkit-transition: color 0.3s ease-out;
+    transition: color 0.3s ease-out;
+}
+
+a:hover {
+    color: goldenrod;
+}
+
+
+/* Submit & Reset Buttons */
+
+input[type="submit"],
+input[type="reset"] {
+    -webkit-border-radius: 0.5em;
+    border-radius: 0.5em;
+    padding: 0.25em 1em;
+    margin: 0 0.5em;
+    width: 8em;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:focus,
+input[type="reset"]:focus {
+    font-weight: 700;
+}
+
+input[type="submit"] {
+    background-color: goldenrod;
+}
+
+
+/* Text Input Field */
+
+input[type="text"] {
+    padding: .5em 0.25em;
+}
+
+
+/* 
+  TEXT ELEMENTS -------------------
+*/
+
+.title {
+    font-family: 'Poiret One', sans-serif;
+    font-size: 3rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Patua One', sans-serif;
+}
+
+h1 {
+    color: goldenrod;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 1rem;
+}
+
+ol {
+    counter-reset: item;
+    margin-left: 0;
+}
+
+ol > li {
+    margin: 0 0 0.2em 0;
+    text-indent: -1em;
+    list-style-type: none;
+    counter-increment: item;
+}
+
+ol li:before {
+    content: counter(item, upper-alpha) ")";
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+
+/* 
+  COMBINED ELEMENTS -------------------
+*/
+
+
+/* Main Navigation */
+
+.search-nav {
+    float: right;
+    height: 2.2rem;
+}
+
+#search-nav {
+    margin: 0;
+    background-color: #336;
+    color: white;
+    height: 2.2rem;
+    border: none;
+    border-left: 0.1rem solid white;
+    /*    border-right: 0.1em solid white;*/
+    vertical-align: top;
+}
+
+input#submit-search-nav[type="submit"] {
+    margin: 0 0 0 -.2em;
+    padding: 0;
+    background-color: #336;
+    width: 2.2rem;
+    border-radius: 0;
+    border: 0;
+    border-right: 0.1rem solid white;
+    height: 2.2rem;
+    background-image: url(/img/search_icon_white.png);
+    background-size: contain;
+    -webkit-transition: background-color 0.2s ease-out;
+    transition: background-color 0.2s ease-out;
+}
+
+input#submit-search-nav[type="submit"]:hover {
+    background-color: goldenrod;
+}
+
+.cart,
+.account {
+    float: right;
+    width: 4rem !important;
+    height: 2.2rem;
+}
+
+.cart a,
+.account a {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.cart a img,
+.account a img {
+    position: relative;
+    top: -10%;
+    padding: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0 auto;
+    vertical-align: center;
+}
+
+
+/* Product Listing */
+
+.prop-browsing {
+    width: 14em;
+    background: #eee;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.thumbnail-browsing {
+    position: relative;
+    width: 100%;
+    font-size: 2rem;
+    height: 4em;
+    background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url(/img/potential_imagery.png), white;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.title-thumbnail-browsing {
+    position: absolute;
+    bottom: 0.5em;
+    color: white;
+    margin-left: 0.5rem;
+}
+
+.info-browsing {
+    padding: 0.5em;
+}
+
+.price-browsing {
+    margin: 0 0 0.5em 0;
+    padding: 0;
+    color: goldenrod;
+}
+
+.rating-browsing {
+    margin: 0 0 0.5em 0;
+    padding: 0;
+}
+
+.rating-browsing img {
+    height: 1rem;
+    width: auto;
+}

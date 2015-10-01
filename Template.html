@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title>P01 - Style Guide Template</title>
+
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Arimo:400,700|Patua+One|Poiret+One' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+
+    <h1 class="title">P01 - Style Guide Template</h1>
+
+    <p>A template you can use to start building out your own style guides with.</p>
+
+
+    <nav>
+
+        <p>
+            On this page:
+        </p>
+        <ul>
+            <li>
+                <a href="#interactive_elements">Interactive Elements</a>
+            </li>
+            <li>
+                <a href="#text_elements">Text Elements</a>
+            </li>
+            <li>
+                <a href="#combined_elements">Combined Elements</a>
+            </li>
+        </ul>
+
+        <p>
+            Other pages:
+            <a href="#">User-flows</a>,
+            <a href="#">Citations</a>
+        </p>
+
+    </nav>
+
+
+
+    <!-- INTERACTIVE ELEMENTS SECTION // -->
+    <section id="interactive_elements">
+
+        <!-- Default Button styling section -->
+        <section>
+
+            <h2>Navigation Button</h2>
+
+            <h3>CSS selector:</h3>
+            <p>.button-nav</p>
+
+            <h3>Sample code:</h3>
+            <code>
+                &lt;li&gt;&lt;a href="#"&gt;Default Button&lt;/a&gt;&lt;/li&gt
+            </code>
+
+            <h3>Rendered element:</h3>
+            <nav class="list-nav">
+                <div class="button-list-nav"><a href="#">Default Button</a></div>
+            </nav>
+
+        </section>
+
+        <section>
+            <h2>In-text link</h2>
+
+            <h3>Css selector:</h3>
+            <p>a</p>
+
+            <h3>Sample Code:</h3>
+            <code>&lt;a href="link_url"&gt;Link Text&lt;/a&gt;</code>
+
+            <h3>Rendered element:</h3>
+            <a href="#">Link</a>
+        </section>
+
+        <section>
+            <h2>Submit/Reset Buttons</h2>
+
+            <h3>CSS selector:</h3>
+            <p>input[type="submit"], input[type="reset"]</p>
+
+            <h3>Sample Code:</h3>
+            <code>
+                &lt;button type="submit"&gt;Label&lt;/button&gt;<br>
+                &lt;button type="reset"&gt;Label&lt;/button&gt;
+            </code>
+
+            <h3>Rendered element:</h3>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Start Over">
+
+        </section>
+
+        <section>
+            <h2>Text Input Field</h2>
+            <!-- Also include label -->
+
+            <h3>CSS selector:</h3>
+            <p>input[type="text"]</p>
+
+            <h3>Sample Code:</h3>
+            <code>
+                &lt;input type="text" id="form-subject" placeholder="Sample text input"&gt;
+            </code>
+
+            <h3>Rendered element:</h3>
+            <input type="text" id="form-subject" placeholder="Sample text input">
+        </section>
+
+    </section>
+    <!-- // INTERACTIVE ELEMENTS SECTION -->
+
+
+
+    <!-- TEXT ELEMENTS SECTION // -->
+    <section id="text_elements">
+
+        <section>
+            <h2>Headings</h2>
+
+            <h3>CSS selector:</h3>
+            <p>h1, h2, h3</p>
+
+            <h3>Sample Code:</h3>
+            <code>
+                &lt;h1&gt;Top level heading&lt;/h1&gt;<br>
+                &lt;h2&gt;Second level heading&lt;/h2&gt;<br>
+                &lt;h3&gt;Third level heading&lt;/h3&gt;
+            </code>
+
+            <h3>Rendered element:</h3>
+            <h1>Top level heading</h1>
+            <h2>Second level heading</h2>
+            <h3>Third level heading</h3>
+        </section>
+
+        <section>
+            <h2>Paragraphs</h2>
+
+            <h3>CSS selector:</h3>
+            <p>p</p>
+
+            <h3>Sample Code:</h3>
+            <code>
+                &lt;p&gt;A paragraph&lt;/p&gt;
+            </code>
+
+            <h3>Rendered element:</h3>
+            <p>A paragraph</p>
+        </section>
+
+        <section>
+            <h2>Bulleted Lists</h2>
+
+            <h3>CSS selector:</h3>
+            <p>ul</p>
+
+            <h3>Sample Code:</h3>
+            <code>
+                &lt;ul&gt;<br>
+                    &ensp;&lt;li&gt;List  item&lt;/li&gt;<br>
+                &lt;/ul&gt;
+            </code>
+
+            <h3>Rendered element:</h3>
+            <ul>
+                <li>List item</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Numbered Lists</h2>
+
+            <h3>CSS selector:</h3>
+            <p>ol</p>
+
+            <h3>Sample Code:</h3>
+            <code>
+                &lt;ol&gt;<br>
+                    &ensp;&lt;li&gt;List  item&lt;/li&gt;<br>
+                &lt;/ol&gt;
+            </code>
+
+            <h3>Rendered element:</h3>
+            <ol>
+                <li>List item</li>
+                <li>List item</li>
+                <li>List item</li>
+            </ol>
+        </section>
+
+    </section>
+    <!-- // TEXT ELEMENTS SECTION -->
+
+
+
+    <!-- COMBINED ELEMENTS SECTION // -->
+    <section id="combined_elements">
+
+        <section>
+            <h2>Main Navigation</h2>
+
+            <h3>CSS selector:</h3>
+            <p>.list-nav</p>
+
+            <h3>Sample code:</h3>
+            <code>
+                &lt;nav class="list-nav"&gt;<br>
+                    &nbsp;&lt;div class="button-list-nav"&gt;<br>
+                        &nbsp;&nbsp;&lt;a href="#"&gt;About&lt;/a&gt;<br>
+                    &nbsp;&lt;/div&gt;<br>
+                    &nbsp;&lt;div class="button-list-nav"&gt;<br>
+                        &nbsp;&nbsp;&lt;a href="#"&gt;Products&lt;/a&gt;<br>
+                    &nbsp;&lt;/div&gt;<br>
+                    &nbsp;&lt;div class="account"&gt;<br>
+                        &nbsp;&nbsp;&lt;a href="#"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&lt;img src="img/account.png"&gt;<br>
+                        &nbsp;&nbsp;&lt;/a&gt;<br>
+                    &nbsp;&lt;/div&gt;<br>
+                    &nbsp;&lt;div class="cart"&gt;<br>
+                        &nbsp;&nbsp;&lt;a href="#"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&lt;img src="img/cart.png"&gt;<br>
+                        &nbsp;&nbsp;&lt;/a&gt;<br>
+                    &nbsp;&lt;/div&gt;<br>
+                    &nbsp;&lt;div class="search-nav"&gt;<br>
+                        &nbsp;&nbsp;&lt;input type="text" id="search-nav" placeholder="search"&gt;<br>
+                        &nbsp;&nbsp;&lt;input type="submit" id="submit-search-nav" value=""&gt;<br>
+                    &nbsp;&lt;/div&gt;<br>
+                &lt;/nav&gt;
+            </code>
+
+            <h3>Rendered element:</h3>
+            <nav class="list-nav">
+                <div class="button-list-nav"><a href="#">About</a></div>
+                <div class="button-list-nav"><a href="#">Products</a></div>
+                <div class="account">
+                    <a href="#"><img src="img/account.png"></a>
+                </div>
+                <div class="cart">
+                    <a href="#"><img src="img/cart.png"></a>
+                </div>
+                <div class="search-nav">
+                    <input type="text" id="search-nav" placeholder="search">
+                    <input type="submit" id="submit-search-nav" value="">
+                </div>
+            </nav>
+
+        </section>
+
+        <section>
+            <h2>Product Listing</h2>
+            <h3>CSS selector:</h3>
+            <p>.prop-browsing</p>
+
+            <h3>Sample code:</h3>
+            <code>
+                &lt;div class="prop-browsing"&gt;<br>
+                    &nbsp;&lt;a href="#"&gt;<br>
+                        &nbsp;&nbsp;&lt;div class="thumbnail-browsing"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&lt;div class="title-thumbnail-browsing"&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;span&gt;Space Blaster&lt;/span&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+                        &nbsp;&nbsp;&lt;/div&gt;<br>
+                    &nbsp;&lt;/a&gt;<br>
+                    &nbsp;&lt;div class="info-browsing"&gt;<br>
+                        &nbsp;&nbsp;&lt;div class="price-browsing"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&lt;span&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;$4000.00<br>
+                            &nbsp;&nbsp;&nbsp;&lt;/span&gt;<br>
+                        &nbsp;&nbsp;&lt;/div&gt;<br>
+                        &nbsp;&nbsp;&lt;div class="rating-browsing"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&lt;img src="img/star.png"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&lt;img src="img/star.png"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&lt;img src="img/star.png"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&lt;img src="img/star.png"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&lt;img src="img/star.png"&gt;<br>
+                        &nbsp;&nbsp;&lt;/div&gt;<br>
+                        &nbsp;&nbsp;&lt;div class="description-browsing"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&lt;ul&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Quiet operation allows for discrete usage&lt;/li&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Comes with cleaning equipment&lt;/li&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br>
+                        &nbsp;&nbsp;&lt;/div&gt;<br>
+                    &nbsp;&lt;/div&gt;<br>
+                &lt;/div&gt;
+            </code>
+
+            <h3>Rendered element:</h3>
+            <div class="prop-browsing">
+                <a href="#">
+                    <div class="thumbnail-browsing">
+                        <div class="title-thumbnail-browsing">
+                            <span>Space Blaster</span>
+                        </div>
+                    </div>
+                </a>
+                <div class="info-browsing">
+                    <div class="price-browsing">
+                        <span>
+                            $4000.00
+                        </span>
+                    </div>
+                    <div class="rating-browsing">
+                        <img src="img/star.png">
+                        <img src="img/star.png">
+                        <img src="img/star.png">
+                        <img src="img/star.png">
+                        <img src="img/star.png">
+                    </div>
+                    <div class="description-browsing">
+                        <ul>
+                            <li>Quiet operation allows for discrete usage</li>
+                            <li>Comes with cleaning equipment</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Don't forget the website grid... the page itself has the grid, no? -->
+
+    </section>
+    <!-- // COMBINED ELEMENTS SECTION -->
+
+
+
+
+</body>
+
+</html>
