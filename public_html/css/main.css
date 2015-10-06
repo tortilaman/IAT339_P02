@@ -49,6 +49,44 @@ section code {
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12), inset 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
+/* 
+  COLOUR PALETTE -------------------
+*/
+.cp_red,
+.cp_beige,
+.cp_brown,
+.cp_blue,
+.cp_black {
+    font-family: "Courier Prime", monospace;
+    width: 100px;
+    color: white;
+    padding: 1em;
+    text-align: center;
+    display: inline-block;
+}
+
+.cp_beige {
+    color: #404041;
+    background-color: #FBF4E5;
+}
+
+.cp_brown {
+    background-color: #E6DAC5;
+}
+
+.cp_blue {
+    background-color: #A2CACC;
+}
+
+.cp_red {
+    background-color: #DD4D6A;
+}
+
+.cp_black {
+    background-color: #404041;
+}
+
+
 
 /* 
   INTERACTIVE ELEMENTS -------------------
