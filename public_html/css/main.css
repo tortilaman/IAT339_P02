@@ -9,11 +9,26 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: "Courier Prime";
+    src: url (font/courier_prime/courierPrime.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: "Courier Prime Bold";
+    src: url (font/courier_prime/courierPrime_bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: "OswaldLight";
+    src: url (font/oswald_light.ttf) format('truetype');
+}
+
 body {
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Courier Prime', sans-serif;
     line-height: 1.2em;
     padding: 2rem;
-    background: #EEE;
+    background: #FBF4E5;
 }
 
 section:not([id]) {
@@ -25,9 +40,13 @@ section:not([id]) {
 }
 
 section h2 {
+    font-family: 'Oswald';
     margin-top: 0;
-    color: #336
+    color: #DD4D6A;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
 }
+
 
 section h3 {
     margin-bottom: 0.2em;
@@ -35,6 +54,7 @@ section h3 {
 
 section p {
     margin-top: 0;
+    font-size: 1em;
 }
 
 nav a:hover,
@@ -49,13 +69,16 @@ section code {
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12), inset 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
+
 /* 
   COLOUR PALETTE -------------------
 */
+
 .cp_red,
 .cp_beige,
 .cp_brown,
 .cp_blue,
+.cp_grey,
 .cp_black {
     font-family: "Courier Prime", monospace;
     width: 100px;
@@ -82,10 +105,13 @@ section code {
     background-color: #DD4D6A;
 }
 
+.cp_grey{
+    background-color: #939597;
+}
+
 .cp_black {
     background-color: #404041;
 }
-
 
 
 /* 
@@ -96,9 +122,9 @@ section code {
 /* Navigation button */
 
 .list-nav {
-    display: block;
+    display: inline;
     width: 100%;
-    background-color: #336;
+    /*background-color: #336;*/
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -110,22 +136,28 @@ section code {
     clear: both;
 }
 
-.list-nav .button-list-nav {
+.list-nav .button-list-nav a{
     float: left;
-    width: 10%;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    letter-spacing: 0.05em;
 }
 
 .list-nav a {
     display: block;
     padding: 0.5em 0.75em;
-    margin: 0;
+    margin: 0em 0.09em;
+    margin-bottom: 0.2em;
     color: #FFF;
     text-align: center;
-    border-right: 0.1rem solid white;
-    background-color: #336;
+    background-color: #404041;
     text-decoration: none;
     -webkit-transition: background-color 0.2s ease-out;
     transition: background-color 0.2s ease-out;
+    
 }
 
 .list-nav a:last-of-type {
@@ -135,7 +167,7 @@ section code {
 .list-nav a:hover,
 .list-nav a:focus {
     color: white;
-    background-color: goldenrod;
+    background-color: #939597;
 }
 
 
@@ -187,8 +219,12 @@ input[type="text"] {
 */
 
 .title {
-    font-family: 'Poiret One', sans-serif;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
     font-size: 3rem;
+    letter-spacing: 0.05em;
+    color: #A2CACC;
+    height: 100%;
 }
 
 h1,
@@ -197,8 +233,8 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Patua One', sans-serif;
-}
+    font-family: 'OswaldLight', Arial, Helvetica, sans-serif;
+} 
 
 h1 {
     color: goldenrod;
@@ -206,6 +242,7 @@ h1 {
 
 h2 {
     font-size: 1.5rem;
+    color: #DD4D6A;
 }
 
 ul {
