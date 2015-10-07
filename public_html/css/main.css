@@ -139,11 +139,13 @@ section code {
 .list-nav .button-list-nav a{
     float: left;
     font-family: 'Oswald', sans-serif;
-    font-size: 0.9em;
+    font-weight: 500;
+    font-size: 0.8em;
     text-transform: uppercase;
     padding-left: 1.5em;
     padding-right: 1.5em;
     letter-spacing: 0.05em;
+    margin-top: 1em;
 }
 
 .list-nav a {
@@ -186,24 +188,23 @@ a:hover {
 
 /* Submit & Reset Buttons */
 
-input[type="submit"],
-input[type="reset"] {
-    -webkit-border-radius: 0.5em;
-    border-radius: 0.5em;
-    padding: 0.25em 1em;
-    margin: 0 0.5em;
-    width: 8em;
+input[type="submit"]{
+    font-family: "Oswald", Arial, sans-serif;
+    background-color: #404041;
+    color: #FFF;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 0.8em;
+    padding: 0.5em 1em;
+    letter-spacing: 0.1em;
+    margin-top: 1em;
 }
 
 input[type="submit"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:focus,
 input[type="reset"]:focus {
-    font-weight: 700;
-}
-
-input[type="submit"] {
-    background-color: goldenrod;
 }
 
 
@@ -233,11 +234,11 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'OswaldLight', Arial, Helvetica, sans-serif;
+    font-family: 'Oswald', Arial, Helvetica, sans-serif;
 } 
 
-h1 {
-    color: goldenrod;
+section h1 {
+    
 }
 
 h2 {
