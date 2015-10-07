@@ -388,3 +388,9 @@ input#submit-search-nav[type="submit"]:hover {
     height: 1rem;
     width: auto;
 }
+
+
+.sm_img img{
+    width: 100%;
+    height: auto;
+}
