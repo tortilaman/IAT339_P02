@@ -9,6 +9,11 @@
     box-sizing: border-box;
 }
 
+
+/*
+ *  FONT DEFINITIONS -------------------
+*/
+
 @font-face {
     font-family: "Courier Prime";
     src: url (font/courier_prime/courierPrime.ttf) format('truetype');
@@ -27,7 +32,6 @@
 body {
     font-family: 'Courier Prime', sans-serif;
     line-height: 1.2em;
-    padding: 2rem;
     background: #FBF4E5;
 }
 
@@ -37,6 +41,29 @@ section:not([id]) {
     /*    border-top: 0.15em solid #333;*/
     background-color: #fff;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+
+/* 
+ * PAGE LAYOUT  -------------------
+*/
+
+header {
+    background-color: #DD4D6A;
+    margin: 0;
+    padding: 1rem 0 0 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    z-index: 5;
+}
+
+#page-content {
+    position: relative;
+    width: 75%;
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: #E6DAC5;
+    z-index: -1;
 }
 
 section h1 {
@@ -60,11 +87,6 @@ section h3 {
 section p {
     margin-top: 0;
     font-size: 0.9vem;
-}
-
-nav a:hover,
-nav a:focus {
-    text-decoration: none;
 }
 
 section code {
@@ -127,10 +149,9 @@ section code {
 /* Navigation button */
 
 .list-nav {
-    display: inline;
+    display: block;
     width: 100%;
-    /*background-color: #336;*/
-    list-style-type: none;
+    /*    background-color: #336;*/
     margin: 0;
     padding: 0;
 }
@@ -141,33 +162,22 @@ section code {
     clear: both;
 }
 
-.list-nav .button-list-nav a {
+.list-nav a {
     float: left;
+    display: block;
+    margin: 0em 0.09em 0 0;
+    padding: 0.5em 1.5em;
+    background-color: #404041;
+    color: white;
+    text-decoration: none;
     font-family: 'Oswald', sans-serif;
+    text-align: center;
     font-weight: 500;
     font-size: 0.8em;
     text-transform: uppercase;
-    padding-left: 1.5em;
-    padding-right: 1.5em;
     letter-spacing: 0.05em;
-    margin-top: 1em;
-}
-
-.list-nav a {
-    display: block;
-    padding: 0.5em 0.75em;
-    margin: 0em 0.09em;
-    margin-bottom: 0.2em;
-    color: #FFF;
-    text-align: center;
-    background-color: #404041;
-    text-decoration: none;
     -webkit-transition: background-color 0.2s ease-out;
     transition: background-color 0.2s ease-out;
-}
-
-.list-nav a:last-of-type {
-    border-right: 0.1 rem solid transparent;
 }
 
 .list-nav a:hover,
@@ -343,10 +353,10 @@ input#submit-search-nav[type="submit"]:hover {
 
 .prop-browsing {
     position: relative;
+    margin: 0 auto 2rem auto;
     padding: 1px;
     width: 50em;
-    background-color: #99cccc;
-    /*    background-color: #A2CACC;*/
+    background-color: #A2CACC;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
