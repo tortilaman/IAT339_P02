@@ -1,0 +1,18 @@
+NAVIGATION:
+- colour
+	- #FBF4E5
+	- #E6DAC5
+	- #A2CACC
+	- DD4D6A
+	- 939597
+	- 404041
+
+- text
+	- Heading
+	- 
+- buttons
+- forms
+- groupings: navigation bar, product listings
+
+Task:
+-make new styleguide
