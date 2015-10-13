@@ -1,0 +1,203 @@
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+#body-container {
+    margin: 19px auto;
+    max-width: 1200px;
+    font-family: "Inconsolata";
+    font-weight: 400;
+}
+
+h1 {
+    font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.clearfix {
+    clear: both;
+}
+
+
+/*===================
+    MAIN NAVIGATION
+  ===================*/
+
+#logo {
+    width: 6rem;
+    height: auto;
+    float: left;
+    display: inline-block;
+}
+
+#main-nav {
+    /*    border: 1px solid blue;*/
+    max-width: 500px;
+    float: right;
+    margin-top: 1.5em;
+    margin-right: 7em;
+}
+
+#main-nav li {
+    font-family: "Inconsolata";
+    font-weight: 400;
+    font-size: 1em;
+    width: 130px;
+    display: inline-block;
+    text-decoration: none;
+    list-style-type: none;
+    float: left;
+    margin-right: 1rem;
+    line-height: 2em;
+    text-transform: uppercase;
+}
+
+header {
+    display: block;
+    margin-bottom: 3em;
+}
+
+
+/*==================
+    INTRODUCTION
+  ==================*/
+
+#body-content {
+    /*    border: 1px solid red;*/
+    clear: both;
+    padding: 0em 2.5em;
+    padding-top: 1em;
+}
+
+#intro {
+    font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    font-weight: 400;
+    line-height: 2em;
+    padding-top: 0em;
+}
+
+
+/*===============
+    INVENTORY
+  ===============*/
+
+#home-inventory {
+    /*    border: 1px solid;*/
+    padding-top: 5em;
+}
+
+#home-inventory h1 {
+    text-transform: uppercase;
+    margin-bottom: 1em;
+    margin-top: 0em;
+}
+
+#home-inventory-text {
+    /*    border: 1px dashed blue;*/
+    display: inline-block;
+    float: left;
+    width: 100%;
+    /*    padding: 0em 4em;*/
+}
+
+#home-inventory-text p {
+    line-height: 1.5em;
+}
+
+figure#home-inventory-img {
+    /*    border: 1px solid red;*/
+    display: inline-block;
+    float: right;
+    width: 100%;
+    height: auto;
+    margin: 0px;
+}
+
+#home-inventory-img img {
+    width: 100%;
+}
+
+a.see-more {
+    text-decoration: underline;
+}
+
+
+/*===============
+    INVENTORY
+  ===============*/
+
+
+/*used for product listing grid*/
+
+.col2of8 {
+    /*    border: 1px solid;*/
+    width: 50%;
+    float: left;
+}
+
+.inventory-content {
+    padding-right: 1.5em;
+}
+
+.inventory-name {
+    margin-bottom: 0.3em;
+}
+
+.inventory-content-img {
+    width: 100%;
+    height: auto;
+}
+
+.inventory-price {
+    display: inline-block;
+    float: right;
+}
+
+@media(min-width: 50em) {
+    #body-content {
+        padding: 0em 6em;
+        padding-top: 3em;
+    }
+    #intro {
+        padding-top: 4em;
+    }
+    #home-inventory {
+        padding-top: 17em;
+    }
+    #home-inventory-text {
+        width: 50%;
+        padding-right: 4em;
+    }
+    figure#home-inventory-img {
+        width: 50%;
+    }
+    .col2of8 {
+        /*        border: 1px solid;*/
+        width: 33.333%;
+        float: left;
+    }
+}
+
+@media(max-width: 40em) {
+    .col2of8 {
+        width: 100%;
+    }
+}
