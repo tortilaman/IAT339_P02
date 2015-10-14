@@ -1,10 +1,13 @@
-/*===================
- *  TYPOGRAPHY
- *===================*/
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
 
 #body-container {
     margin: 19px auto;
     max-width: 1200px;
+    /*    border: 1px solid black;*/
     font-family: "Inconsolata";
     font-weight: 400;
 }
@@ -29,35 +32,14 @@ a:hover {
     font-weight: 700;
 }
 
-
-/*===================
- *  PAGE LAYOUT
- *===================*/
-
-#page-content {
-    position: relative;
-    width: 75%;
-    max-width: 60rem;
-    margin: 0 auto;
-    padding: 1rem;
-    background-color: #E6DAC5;
-    z-index: -1;
-}
-
 .clearfix {
     clear: both;
 }
 
-*,
-*:after,
-*:before {
-    box-sizing: border-box;
-}
-
 
 /*===================
- *  MAIN NAVIGATION
- *===================*/
+    MAIN NAVIGATION
+  ===================*/
 
 #logo {
     width: 6rem;
@@ -89,14 +71,15 @@ a:hover {
 }
 
 header {
+    /*    border: 1px dashed blue;*/
     display: block;
     margin-bottom: 3em;
 }
 
 
-/*===================
- *  INTRODUCTION
- *===================*/
+/*==================
+    INTRODUCTION
+  ==================*/
 
 #body-content {
     /*    border: 1px solid red;*/
@@ -114,9 +97,9 @@ header {
 }
 
 
-/*===================
- *  INVENTORY
- *===================*/
+/*===============
+    INVENTORY
+  ===============*/
 
 #home-inventory {
     /*    border: 1px solid;*/
