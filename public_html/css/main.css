@@ -17,16 +17,20 @@ h2 {
     font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
     font-weight: 600;
     text-transform: uppercase;
+    font-size: 1.5rem;
 }
 
 a {
     text-decoration: none;
-    color: #000;
+    color: #A2CACC;
+    -webkit-transition: opacity 0.2s ease-out;
+    transition: opacity 0.2s ease-out;
 }
 
 a:hover {
     text-decoration: underline;
     font-weight: 700;
+    opacity: 0.6;
 }
 
 
@@ -46,6 +50,7 @@ a:hover {
 
 .clearfix {
     clear: both;
+    content: "";
 }
 
 *,
@@ -185,6 +190,50 @@ a.see-more {
 .inventory-price {
     display: inline-block;
     float: right;
+}
+
+section {
+    width: 75%;
+    margin: 0 auto 2rem auto;
+}
+
+section img {
+    background-color: #A2CACC;
+    opacity: 1;
+    -webkit-transition: opacity 0.2s ease-out;
+    transition: opacity 0.2s ease-out;
+}
+
+section img:hover,
+section img:focus {
+    opacity: 0.8;
+}
+
+.content-text {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+}
+
+.content-name {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    line-height: 1em;
+}
+
+.content-date {
+    float: right;
+    display: inline-block;
+    margin: auto 0;
+    padding: 0;
+    height: 1.5rem;
+}
+
+.content-date p {
+    margin: 0.25rem 0 0 0;
+    padding: 0;
 }
 
 
