@@ -204,10 +204,6 @@ a.see-more {
  *  INVENTORY DETAIL
  *=====================*/
 
-img .product-detail {
-    border: 1px solid;
-}
-
 .inventory-detail .inventory-detail-img {
     border: 1px solid;
     padding: 0;
@@ -216,9 +212,8 @@ img .product-detail {
 figure.inventory-detail-img {
     display: inline-block;
     float: left;
-    width: 50%;
+    width: 100%;
     margin: 0;
-    padding-right: 2em;
 }
 
 .inventory-detail-img img {
@@ -240,11 +235,71 @@ figure.inventory-detail-img {
     color: #FFF;
     background-color: black;
     padding: 0.4em 1em;
+    float: right;
 }
 
 .bag-it:hover {
     text-decoration: none;
     font-weight: 400;
+}
+
+
+/*=========
+ *  BAG
+ *=========*/
+
+td {
+    padding: 0em 1.5em !important;
+    text-align: left;
+}
+
+th {
+    padding: 1em 1em !important;
+    /*  background-color:#BC7482;*/
+    /*  color:white;*/
+}
+
+.shoppingbag-summary {
+    width: 98%;
+    border-collapse: collapse;
+}
+
+.shoppingbag-summary {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-right: 0.75em;
+    padding: 1.5em 2em .5em 2em;
+    text-align: left;
+}
+
+.shoppingbag-summary th {
+    /*  background-color:#AAA3A3;*/
+}
+
+.shoppingbag-summary select {
+    margin-bottom: 4.5em;
+    margin-right: 0.5em;
+    width: 5em;
+}
+
+.shoppingbag-summary tr:nth-of-type(odd) {
+    /* colored strips for chart*/
+    background: #F6F6F6;
+}
+
+.order-summary th {
+    background: #BC7482;
+    color: white;
+}
+
+.shippingbag-title {
+    background: #FFF;
+}
+
+#bag-checkout {
+    margin-top: 2em;
+    float: right;
+    margin-right: 3em;
 }
 
 
@@ -328,8 +383,13 @@ label {
     margin-top: 2em;
 }
 
-#checkout-container .checkout-title{
+#checkout-container .checkout-title {
     margin-bottom: 0em;
+}
+
+.tiny-btn {
+    font-weight: 800;
+    text-decoration: underline;
 }
 
 
@@ -368,6 +428,10 @@ label {
         float: left;
         padding-left: 1em;
     }
+    figure.inventory-detail-img {
+        width: 50%;
+        padding-right: 2em;
+    }
     .checkout-confirm-order {
         display: inline-block;
         margin-left: 1em;
@@ -379,4 +443,5 @@ label {
     .col3of8 {
         width: 100%;
     }
+    /*    bag*/
 }
