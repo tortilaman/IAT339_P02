@@ -270,4 +270,7 @@ section img:focus {
     .col2of8 {
         width: 100%;
     }
+    section {
+        width: 100%;
+    }
 }
