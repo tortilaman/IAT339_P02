@@ -175,7 +175,7 @@ a.see-more {
 }
 
 .inventory-content {
-    padding-right: 1.5em;
+    padding: 0 1.5em 2rem 0;
 }
 
 .inventory-name {
@@ -223,7 +223,7 @@ section img:focus {
     line-height: 1em;
 }
 
-.content-date {
+.content-data {
     float: right;
     display: inline-block;
     margin: auto 0;
@@ -231,7 +231,7 @@ section img:focus {
     height: 1.5rem;
 }
 
-.content-date p {
+.content-data p {
     margin: 0.25rem 0 0 0;
     padding: 0;
 }
