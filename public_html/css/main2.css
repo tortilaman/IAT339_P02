@@ -1,0 +1,478 @@
+/*  =========================
+ *  NEW STYLESHEET
+ *  --------------------------
+ *  TODO: Update visual styling
+ *  TODO: Update/finish layouts
+ *  TODO: Responsiveness
+ *  TODO: Add remaining content pages
+ *  =========================*/
+
+.clearfix {
+    clear: both;
+}
+
+img {
+    width: 100%;
+}
+
+body {
+    background-color: #191919;
+}
+
+
+/*  =========================
+ *  TEXT STYLING
+ *  =========================*/
+
+h1,
+h2,
+h3 {
+    font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+    color: #191919;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 2em;
+}
+
+h1 {
+    font-weight: 600;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+li {
+    list-style-type: none;
+}
+
+p {
+    color: #666666;
+    line-height: 2em;
+}
+
+section {
+    display: inline-block;
+}
+
+
+/*  =========================
+ *  INTERACTIVE ELEMENTS
+ *  =========================*/
+
+
+/* Links */
+
+a {
+    color: #DD4D6A;
+    -webkit-transition: opacity 0.2s ease-out;
+    transition: opacity 0.2s ease-out;
+}
+
+a:hover {
+    text-decoration: underline;
+    opacity: 0.6;
+}
+
+a:active {
+    text-decoration: underline;
+}
+
+a.see-more {
+    text-decoration: underline;
+}
+
+
+/* -----------------------------
+ * Standard Button 
+ * -----------------------------
+ * NOTE: To style differently just create a new class that modifies this and apply both to the html
+ * -----------------------------*/
+
+.btn {
+    font-family: "Inconsolata", Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: #FFF;
+    background-color: #191919;
+    padding: 0.8em 1.3em;
+    display: inline-block;
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    text-decoration: none;
+}
+
+
+/* TODO: Different active state than hover??? */
+
+.btn:hover,
+.btn:focus,
+.btn:active {
+    text-decoration: none;
+    background-color: #333;
+}
+
+#logo {
+    width: 6rem;
+    display: block;
+    height: auto;
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    margin: 0 auto;
+}
+
+#logo:hover,
+#logo:focus,
+#logo:active {
+    opacity: 0.8;
+}
+
+
+/*  =========================
+ *  FORMS & DROPDOWNS
+ *  =========================*/
+
+label {
+    font-family: "Source Sans Pro";
+    font-weight: 600;
+    font-size: 0.8em;
+    display: block;
+    padding: 3em 0.35em 0.35em 0.25em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+select {
+    /* drop down */
+    margin-right: 3em;
+    /*    width: 153px;*/
+    border: 1.5px solid #191919;
+    background: transparent;
+    vertical-align: middle;
+}
+
+input {
+    padding: 0.5em 0.8em;
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background: transparent;
+    border: 1.5px solid;
+}
+
+
+/*  =========================
+ *  HEADER & NAVIGATION
+ *  =========================*/
+
+#main-nav {
+    overflow: hidden;
+    min-width: 600px;
+    width: 75%;
+    margin: 0 auto;
+}
+
+
+/*only used for navigation*/
+
+.btn-nav {
+    font-family: "Inconsolata";
+    font-weight: 400;
+    font-size: 1rem;
+    color: #E1E1E1;
+    letter-spacing: 0.03em;
+    display: inline-block;
+    text-decoration: none;
+    padding: 0rem 0rem 0.5rem 0rem;
+    /*  float: left;
+    margin-right: 1rem;
+    line-height: 2em;
+*/
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: 2px solid #191919;
+}
+
+.btn-nav:hover,
+.btn-nav:active {
+    text-decoration: none;
+    /*    border-bottom: 2px solid #DD4D6A;*/
+}
+
+.btn-nav.current {
+    background-image: -webkit-linear-gradient(top, transparent 0em, transparent 0.5em, #DD4D6A 0.4em, #DD4D6A 0.8em, transparent 0.8em, transparent 0.8em);
+    background-image: -o-linear-gradient(top, transparent 0em, transparent 0.5em, #DD4D6A 0.4em, #DD4D6A 0.8em, transparent 0.8em, transparent 0.8em);
+    background-image: linear-gradient(top, transparent 0em, transparent 0.5em, #DD4D6A 0.4em, #DD4D6A 0.8em, transparent 0.8em, transparent 0.8em);
+}
+
+header {
+    display: block;
+    padding: 1em 0em;
+    background-color: #191919;
+}
+
+
+/*  =========================
+ *  HOMEPAGE
+ *  =========================*/
+
+#home-intro {
+    font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    font-weight: 400;
+    line-height: 2em;
+    padding-top: 0em;
+    margin: 0;
+    background-image: url('./img/landing_bw.jpg');
+}
+
+#home-inventory {
+    /*    border: 1px solid;*/
+    padding-top: 5em;
+}
+
+#home-inventory h1 {
+    text-transform: uppercase;
+    margin-bottom: 1em;
+    margin-top: 0em;
+}
+
+#home-inventory-text {
+    /*    border: 1px dashed blue;*/
+    display: inline-block;
+    float: left;
+    width: 100%;
+    /*    padding: 0em 4em;*/
+}
+
+figure#home-inventory-img {
+    /*    border: 1px solid red;*/
+    display: inline-block;
+    float: right;
+    width: 100%;
+    height: auto;
+    margin: 0px;
+}
+
+#home-inventory-img img {
+    width: 100%;
+}
+
+
+/*  =========================
+ *  PRODUCT CONTENT
+ *
+ *  (Previously labeled inventory stuff)
+ *  =========================*/
+
+.product-fragment:hover,
+.product-fragment:active {
+    opacity: 0.8;
+    -webkit-transition: opacity 0.2s ease-out;
+    transition: opacity 0.2s ease-out;
+}
+
+.product-fragment-content {
+    margin-bottom: 6em;
+}
+
+.product-fragment-name {
+    display: inline-block;
+    float: left;
+    font-family: "Source Sans Pro";
+    font-weight: 600;
+    margin: 0em;
+    color: #000;
+}
+
+.product-fragment-content-img {
+    width: 100%;
+    height: auto;
+}
+
+.product-fragment-price {
+    /*    clear: both;*/
+    display: inline-block;
+    float: right;
+    margin-right: 1em;
+    margin-top: 0em;
+    color: #000;
+}
+
+
+/*  =========================
+ *  PRODUCT DETAIL PAGE
+ *  =========================*/
+
+.product {
+    min-width: 520px;
+}
+
+.product-detail-price {
+    font-weight: 800;
+    color: #000;
+}
+
+
+/*
+.product-detail .product-detail-img {
+    border: 1px solid;
+    padding: 0;
+}
+
+figure.product-detail-img {
+    display: inline-block;
+    float: left;
+    width: 100%;
+    margin: 0;
+}
+
+.product-detail-img img {
+    width: 100%;
+    float: left;
+}
+
+.product-detail-text {
+    display: inline-block;
+    float: left;
+    width: 50%;
+    margin-bottom: 2em;
+}
+
+.product-detail-bag-it {
+     NOTE: HTML element should also have button class 
+    float: right;
+    display: block;
+}
+
+.product-detail-bag-it:hover,
+.product-detail-bag-it:active,
+.product-detail-bag-it:focus {
+    text-decoration: none;
+    font-weight: 400;
+}*/
+
+
+/*=========
+ *  BAG
+ *=========*/
+
+td {
+    padding: 0em 1.5em !important;
+    text-align: left;
+}
+
+th {
+    padding: 1em 1em;
+    font-family: "Source Sans Pro";
+    text-transform: uppercase;
+    font-size: 0.9em;
+    letter-spacing: 0.03em;
+}
+
+.shoppingbag-summary {
+    width: 98%;
+    border-collapse: collapse;
+}
+
+.shoppingbag-summary {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-right: 0.75em;
+    padding: 1.5em 2em .5em 2em;
+    text-align: left;
+}
+
+.shoppingbag-summary select {
+    margin-bottom: 3em;
+    margin-right: 0.5em;
+    width: 5em;
+}
+
+.shoppingbag-summary tr:nth-of-type(odd) {
+    /* colored strips for chart*/
+    background: #F6F6F6;
+}
+
+.order-summary th {
+    background: #BC7482;
+    color: white;
+}
+
+.shippingbag-title {
+    background: #FFF;
+}
+
+#bag-checkout {
+    margin-top: 2em;
+    float: right;
+    margin-right: 3em;
+}
+
+
+/*===================
+ *  CHECKOUT
+ *===================*/
+
+.checkout-container {
+    display: inline-block;
+}
+
+
+/*---SHIPPING---*/
+
+.col4of8 {
+    width: 100%;
+    float: left;
+}
+
+.checkout-info-form {
+    margin-bottom: 5em;
+}
+
+
+/*
+.checkout-info-form input,
+.checkout-info-form select {
+    padding: 0.5em 0.8em;
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background: transparent;
+    border: 1.5px solid;
+}
+*/
+
+.checkout-title {
+    font-weight: 800;
+}
+
+
+/*---CONTACT PAYMENT---*/
+
+#checkout-payment {
+    margin-top: 5em;
+}
+
+.checkout-payment-expiration {
+    width: 50%;
+}
+
+.btn.confirm-order{
+    margin: 0 auto;
+}
+
+#checkout-container .checkout-title {
+    margin-bottom: 0em;
+}
+
+.tiny-btn {
+    font-weight: 800;
+    text-decoration: underline;
+}

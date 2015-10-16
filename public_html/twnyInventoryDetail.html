@@ -5,8 +5,10 @@
     <meta charset="utf-8">
 
     <title> The Whole Nine Yards </title>
-    <link href="css/main.css" rel="stylesheet">
+
     <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/grid.css" rel="stylesheet">
+    <link href="css/main2.css" rel="stylesheet">
 
 
     <link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
@@ -21,36 +23,65 @@
             =====================-->
 
         <header>
-            <img src="img/logo-02.png" id="logo" alt="The Whole Nine Yards logo">
-            <nav id="main-nav">
+            <a href="index.html"> <img src="img/logo-03.png" id="logo" alt="The Whole Nine Yards logo"> </a>
 
+            <nav id="main-nav">
                 <ul>
-                    <li class=""><a class="btn-nav" href="index.html"> Home </a></li>
-                    <li><a class="btn-nav" href="twnyInventory.html"> Inventory </a></li>
-                    <li><a class="btn-nav" href="twnyServices.html"> Services </a></li>
-                    <li><a class="btn-nav" href="twnyBlog.html"> Blog </a></li>
-                    <li><a class="btn-nav" href="twnyContact.html"> Contact </a></li>
-                    <li><a class="btn-nav" href="twnyAccount.html"> Account </a></li>
+                    <li><a class="col1of6 btn-nav" href="index.html"> Home </a></li>
+                    <li><a class="col1of6 btn-nav current" href="twnyInventory.html"> Inventory </a></li>
+                    <li><a class="col1of6 btn-nav" href="twnyServices.html"> Services </a></li>
+                    <li><a class="col1of6 btn-nav" href="twnyBlog.html"> Blog </a></li>
+                    <li><a class="col1of6 btn-nav" href="twnyContact.html"> Contact </a></li>
+                    <li><a class="col1of6 btn-nav" href="twnyAccount.html"> Account </a></li>
                 </ul>
             </nav>
             <div class="clearfix"></div>
         </header>
 
-        <div id="body-content">
-                <figure class="col4of8 inventory-detail-img">
-                    <img src="img/product.jpg" id="product-detail" alt="product">
-                </figure>
-                <div class="col4of8 inventory-detail-text">
-                    <h1 id="title-inventory">Product Name</h1>
-                    <p> Write a short blurb that introduces the products in the inventory and why customers should be interested in it.</p> <br>
-                </div>
-<!--            <div class="clearfix"></div>-->
-            <a href="twnyBag.html" class="bag-it"> Bag It </a>
+        <div class="clearfix"></div>
 
-                
-            
-            
+        <!-- =====================
+                CONTENT
+             ===================== -->
+
+        <div id="body-content">
+            <div id="product-detail-body">
+                <figure class="col3of6">
+                    <img src="img/product.jpg" alt="product_description">
+                </figure>
+
+                <div class="col3of6 product-detail-text">
+                    <h1 id="product-detail-name">Product Name</h1>
+                    <p class="product-detail-price"> $15.00 </p>
+                    <p> Write a short blurb that introduces the products in the inventory and why customers should be interested in it.</p>
+
+                    <form>
+                      <label for="form-quantity2"></label>
+                        <select name="form-quantity2" id="form-quantity2">
+                          <option value="quantity1">1</option>
+                          <option value="quantity2">2</option>
+                          <option value="quantity3">3</option>
+                          <option value="quantity4">4</option>
+                          <option value="quantity5">5</option>
+                          <option value="quantity6">6</option>
+                          <option value="quantity7">7</option>
+                          <option value="quantity8">8</option>
+                          <option value="quantity9">9</option>
+                          <option value="quantity10">10</option>
+                        </select>
+                      </form>
+                    <br>
+                    
+                    <a href="twnyBag.html" class="btn bag-it"> Bag It </a>
+                </div>
+
+
+
+
+            </div>
+
         </div>
     </div>
-    </body>
+</body>
+
 </html>

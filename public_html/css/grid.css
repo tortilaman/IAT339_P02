@@ -19,7 +19,8 @@
 [class^="col"] {
     float: left;
     margin: 0;
-    padding: 0 1rem 0 0;
+/*    padding: 0 1rem 0 1rem;*/
+    padding: 1rem;
 }
 
 .col1of6 {
@@ -32,6 +33,7 @@
 
 .col3of6 {
     width: 50%;
+    float: left;
 }
 
 
@@ -39,9 +41,18 @@
     LAYOUT STUFF
   ==================*/
 
+#body-container {
+    margin: 0.001px auto;
+    max-width: 1050px;
+    font-family: "Inconsolata";
+    font-weight: 400;
+    background: #FFF;
+}
+
+
 #body-content {
-    /*    border: 1px solid red;*/
     clear: both;
-    padding: 0em 2.5em;
-    padding-top: 1em;
+    overflow: hidden;
+    padding: 4em;
+
 }

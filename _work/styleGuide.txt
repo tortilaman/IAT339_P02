@@ -1,3 +1,32 @@
+To do:
+- add content to contacts
+- add content to account
+- add review form into product detail
+- add "X" to delete at bag
+
+Oct 21:
+- figure out the page after "confirm order"
+- add content to: Home, Inventory, Services, Contact, Blog, Account
+- Add styling to: Home, Inventory, Services, Contact, Blog, Account
+- finish images for inventory 2-3
+
+Instructions:
+- Only showing us 2-3 items (and having all other links direct to those items) is ok
+- Only showing us one flow through the purchase process (and having all links direct there) is ok
+- Having forms act as links instead of actually collecting information is ok
+- Duplicated content such as the same product image (x20) is not ok
+
+- 
+- add in email area in contact page
+
+Oct 28:
+- Update the syleguide
+
+
+
+
+
+
 NAVIGATION:
 - colour
 	- #FBF4E5

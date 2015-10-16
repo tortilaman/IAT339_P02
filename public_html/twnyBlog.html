@@ -6,8 +6,9 @@
 
     <title> The Whole Nine Yards </title>
 
-    <link href="css/main.css" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/grid.css" rel="stylesheet">
+    <link href="css/main2.css" rel="stylesheet">
 
 
     <link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
@@ -21,33 +22,35 @@
                 NAVIGATION  
              ===================== -->
         <header>
-            <img src="img/logo-02.png" id="logo" alt="The Whole Nine Yards logo">
+            <a href="index.html"> <img src="img/logo-03.png" id="logo" alt="The Whole Nine Yards logo"> </a>
+
             <nav id="main-nav">
                 <ul>
-                    <li class=""><a class="btn-nav" href="index.html"> Home </a></li>
-                    <li><a class="btn-nav" href="twnyInventory.html"> Inventory </a></li>
-                    <li><a class="btn-nav" href="twnyServices.html"> Services </a></li>
-                    <li><a class="btn-nav" href="twnyBlog.html"> Blog </a></li>
-                    <li><a class="btn-nav" href="twnyContact"> Contact </a></li>
-                    <li><a class="btn-nav" href="twnyAccount.html"> Account </a></li>
+                    <li><a class="col1of6 btn-nav" href="index.html"> Home </a></li>
+                    <li><a class="col1of6 btn-nav" href="twnyInventory.html"> Inventory </a></li>
+                    <li><a class="col1of6 btn-nav" href="twnyServices.html"> Services </a></li>
+                    <li><a class="col1of6 btn-nav current" href="twnyBlog.html"> Blog </a></li>
+                    <li><a class="col1of6 btn-nav" href="twnyContact.html"> Contact </a></li>
+                    <li><a class="col1of6 btn-nav" href="twnyAccount.html"> Account </a></li>
                 </ul>
             </nav>
             <div class="clearfix"></div>
         </header>
-        <!-- =====================
-                BODY CONTENT 
-             ===================== -->
+
+        <!--================
+                CONTENT  
+            ================-->
         <div id="body-content">
-            <!--item 1-->
+            <!--CONTENT 1-->
             <section>
-                <a href="#">
+                <a href="#" class="col3of6">
                     <img src="img/product.jpg" class="inventory-content-img">
                 </a>
-                <div class="content-text">
+                <div class="col3of6 content-text">
                     <a href="#">
                         <h2 class="content-name">Service / Update</h2>
                     </a>
-                    <div class="content-data">
+                    <div class="content-date">
                         <p>Sept. 24th 2015</p>
                     </div>
                     <div class="content-excerpt">
@@ -55,22 +58,26 @@
                     </div>
                 </div>
             </section>
+            
+            <!--CONTENT 2-->
             <section>
-                <a href="#">
+                <a href="#" class="col3of6">
                     <img src="img/product.jpg" class="inventory-content-img">
                 </a>
-                <div class="content-text">
+                <div class="col3of6 content-text">
                     <a href="#">
                         <h2 class="content-name">Service / Update</h2>
                     </a>
-                    <div class="content-data">
-                        <p>Feb. 27th 2015</p>
+                    <div class="content-date">
+                        <p>Sept. 24th 2015</p>
                     </div>
                     <div class="content-excerpt">
                         <p>Bacon ipsum dolor amet venison spare ribs filet mignon short ribs pork chop biltong pork loin turkey capicola pork. Ribeye tail beef ribs tenderloin, pork chop rump ham hock alcatra tri-tip shankle sirloin hamburger salami capicola turducken. Shoulder pork loin chuck venison pastrami. Meatball kielbasa rump swine, salami brisket tenderloin beef ribs. Pork chop capicola bacon, turkey landjaeger cupim pastrami doner alcatra pork loin shank biltong. Filet mignon turducken beef prosciutto tri-tip cupim t-bone chuck kevin jerky pig pork loin.</p>
                     </div>
                 </div>
             </section>
+            
+            
         </div>
     </div>
 </body>
