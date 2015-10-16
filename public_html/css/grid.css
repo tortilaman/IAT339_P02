@@ -1,0 +1,47 @@
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+
+/*==================
+    THE ACTUAL GRID
+  ==================*/
+
+.grid {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+[class^="col"] {
+    float: left;
+    margin: 0;
+    padding: 0 1rem 0 0;
+}
+
+.col1of6 {
+    width: 16.6%;
+}
+
+.col2of6 {
+    width: 33.3%;
+}
+
+.col3of6 {
+    width: 50%;
+}
+
+
+/*==================
+    LAYOUT STUFF
+  ==================*/
+
+#body-content {
+    /*    border: 1px solid red;*/
+    clear: both;
+    padding: 0em 2.5em;
+    padding-top: 1em;
+}
