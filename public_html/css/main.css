@@ -1,16 +1,30 @@
-*,
-*:after,
-*:before {
-    box-sizing: border-box;
+/* ===================
+ *    BASE STYLING
+ * ===================*/
+
+img {
+    width: 100%;
 }
 
-#body-container {
-    margin: 19px auto;
-    max-width: 1200px;
-    /*    border: 1px solid black;*/
-    font-family: "Inconsolata";
-    font-weight: 400;
+body {
+    background-color: #191919;
 }
+
+
+/* ========================
+ *    UTILITY CLASSES
+ * ------------------------
+ *      Use these to augment styles for a particular purpose
+ * ========================*/
+
+.clearfix {
+    clear: both;
+}
+
+
+/* ===================
+ *    TYPOGRAPHY
+ * ===================*/
 
 h1,
 h2,
@@ -23,6 +37,9 @@ h2 {
     text-transform: uppercase;
     font-size: 1.5rem;
 }
+
+
+/*  Links    */
 
 a {
     text-decoration: none;
@@ -42,6 +59,9 @@ a:hover {
     content: "";
 }
 
+
+/*  Text Buttons */
+
 .btn {
     font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
     text-transform: uppercase;
@@ -50,17 +70,20 @@ a:hover {
     background-color: black;
     padding: 0.4em 1em;
     display: inline-block;
+    -webkit-transition: background-color 0.25s ease-in-out;
+    transition: background-color 0.25s ease-in-out;
 }
 
 .btn:hover {
     text-decoration: none;
+    background-color: #333;
     font-weight: 400;
 }
 
 
-/*===================
-    MAIN NAVIGATION
-  ===================*/
+/* ===========================
+ *    NAVIGATION & HEADER
+ * ===========================*/
 
 #logo {
     width: 6rem;
@@ -98,12 +121,32 @@ header {
 }
 
 
-/*==================
-    INTRODUCTION
-  ==================*/
+/* ==================
+ *    INTRODUCTION
+ * ==================*/
+
+#home-intro {
+    display: block;
+    position: relative;
+    width: 100%;
+    /*This is where things might get wonky*/
+    height: 30%;
+    overflow: hidden;
+    /*Multiple backgrounds so text always shows up regardless of image*/
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25)), url(/img/scale_model.jpg) cover no-repeat;
+}
+
+#home-intro p {
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+    width: 100%;
+}
+
+
+/*It's not clear this is only for the introduction, is it used elsewhere? */
 
 #body-content {
-    /*    border: 1px solid red;*/
     clear: both;
     padding: 0em 2.5em;
     padding-top: 1em;
@@ -118,9 +161,9 @@ header {
 }
 
 
-/*===================
-    HOME-INVENTORY
-  ===================*/
+/* ===================
+ *    HOME-INVENTORY
+ * ===================*/
 
 #home-inventory {
     /*    border: 1px solid;*/
@@ -166,12 +209,6 @@ a.see-more {
 /*==================
  *  INVENTORY-GRID
  *==================*/
-
-.col3of8 {
-    /*    border: 1px solid;*/
-    width: 50%;
-    float: left;
-}
 
 .inventory-content {
     padding-right: 1.5em;
@@ -249,9 +286,9 @@ figure.inventory-detail-img {
 }
 
 
-/*=========
- *  BAG
- *=========*/
+/* =============
+ *      BAG
+ * =============*/
 
 td {
     padding: 0em 1.5em !important;
@@ -308,9 +345,9 @@ th {
 }
 
 
-/*===================
- *  CHECKOUT
- *===================*/
+/* ===================
+ *      CHECKOUT
+ * ===================*/
 
 .checkout-container {
     display: inline-block;

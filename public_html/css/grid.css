@@ -19,7 +19,7 @@
 [class^="col"] {
     float: left;
     margin: 0;
-/*    padding: 0 1rem 0 1rem;*/
+    /*    padding: 0 1rem 0 1rem;*/
     padding: 1rem;
 }
 
@@ -42,17 +42,14 @@
   ==================*/
 
 #body-container {
-    margin: 0.001px auto;
-    max-width: 1050px;
+    margin: 19px auto;
+    max-width: 1200px;
     font-family: "Inconsolata";
     font-weight: 400;
-    background: #FFF;
 }
-
 
 #body-content {
     clear: both;
     overflow: hidden;
     padding: 4em;
-
 }
