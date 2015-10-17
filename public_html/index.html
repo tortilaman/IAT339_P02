@@ -9,6 +9,8 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/grid.css" rel="stylesheet">
     <link href="css/main2.css" rel="stylesheet">
+    <link rel="stylesheet" media="(max-width:920px)" href="main2-small.css"><!-- Mobile layout -->
+    <link rel="stylesheet" media="(min-width:921px)" href="main2-large.css"><!-- Desktop layout -->
 
 
     <link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
@@ -35,38 +37,52 @@
                     <li><a class="col1of6 btn-nav" href="twnyAccount.html"> Account </a></li>
                 </ul>
             </nav>
-            <div class="clearfix"></div>
         </header>
         <!--=====================
                 INTRODUCTION
             =====================-->
-        <section id="home-intro">
-            <p>TWNY will bring your movie to life with tangible results you never imagined were possible.</p>
-        </section>
-
+        <div id="home-intro-container">
+            <div id="home-intro"></div>
+            <div id="home-intro-content">
+                <span>TWNY<br>Studios</span>
+                <p>TWNY will bring your movie to life with a creative manufacturing prowess unrivaled in the industry.</p>
+            </div>
+        </div>
         <div id="body-content">
+            <div class="grid">
+                <!--=====================
+                    INVENTORY
+                =====================-->
 
-
-
-            <!--=====================
-                INVENTORY
-            =====================-->
-
-            <section id="home-inventory">
-                <div class="col3of6">
-                    <h1>Inventory</h1>
-                    <p> Write a short blurb that introduces the products in the inventory and why customers should be interested in it.
+                <article class="col2of6 content-fragment-container">
+                    <img src="img/product.jpg" alt="An inventory listing">
+                    <div class="home-content-text">
+                        <h2>Inventory</h2>
+                        <p> Write a short blurb that introduces the products in the inventory and why customers should be interested in it.
                         <br>
                         <a href="twnyInventory.html" class="see-more"> see more → </a></p>
-                </div>
-
-                <figure class="col3of6">
-                    <img src="img/product.jpg" id="product">
-                    <figcaption>Swiss Army knife</figcaption>
-                </figure>
-            </section>
+                    </div>
+                </article>
+                <article class="col2of6 content-fragment-container">
+                    <img src="img/product.jpg" alt="A service offering">
+                    <div class="home-content-text">
+                        <h2>Services</h2>
+                        <p> Write a short blurb that introduces the products in the inventory and why customers should be interested in it.
+                        <br>
+                        <a href="twnyInventory.html" class="see-more"> see more → </a></p>
+                    </div>
+                </article>
+                <article class="col2of6 content-fragment-container">
+                    <img src="img/product.jpg" alt="A recent news article">
+                    <div class="home-content-text">
+                        <h2>Updates</h2>
+                        <p> Write a short blurb that introduces the products in the inventory and why customers should be interested in it.
+                        <br>
+                        <a href="twnyInventory.html" class="see-more"> see more → </a></p>
+                    </div>
+                </article>
+            </div>
             <div class="clearfix"></div>
-
         </div>
     </div>
 </body>

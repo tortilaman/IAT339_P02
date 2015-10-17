@@ -5,6 +5,8 @@
  *  TODO: Update/finish layouts
  *  TODO: Responsiveness
  *  TODO: Add remaining content pages
+ *  TODO: Rename 'product-fragment' classes to 'content-fragment' so they're more extendable.
+ *  TODO: Add banner to other pages besides homepage, but shorter containing only the page title
  *  =========================*/
 
 /*  =========================
@@ -20,7 +22,7 @@ body {
 }
 
 section {
-    display: inline-block;
+    display: inline-block;/* Why? not removing, but confused...*/
 }
 
 /*  =========================
@@ -28,6 +30,8 @@ section {
  *  =========================*/
 
 .clearfix {
+    content: "";
+    display: table;
     clear: both;
 }
 
@@ -37,21 +41,17 @@ section {
 
 h1,
 h2,
-h3 {
+h3,
+span {
     font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
-    color: #191919;
+    color: white;
+    font-weight: 600;
     text-transform: uppercase;
     text-decoration: none;
     margin: 0;
-/*    line-height: 2em; This screws up alignment on things and I don't think we'll ever have multi-line headings*/
-}
-
-h1 {
-    font-weight: 600;
 }
 
 h2 {
-    font-weight: 600;
     font-size: 1.5rem;
 }
 
@@ -222,67 +222,67 @@ header {
  *  =========================*/
 
 #home-intro {
-    position: relative;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
     padding-top: 0em;
-    margin: 0;
-    width: 100%;
-    /*This is where things might get wonky*/
+    margin: 0 auto;
+    width: 100vw;
     height: 35vh;
-    min-height: 10rem;
-/*    overflow: hidden;*/
+    min-height: 23rem;
     /*Multiple backgrounds so text always shows up regardless of image*/
     background:
         linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.95)),
         url(../img/scale_model.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-/*    font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;*/
-    font-size: 2rem;
-    font-weight: 400;
-    line-height: 2em;
 }
 
-#home-intro p {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    margin: 0;
-    padding: 0 4rem;
+#home-intro-content {
+    position: relative;
+    display: block;
+    padding: 2rem 5rem;
+}
+
+#home-intro-container {
+    position: relative;
     width: 100%;
+    height: 35vh;
+    min-height: 23rem;
+}
+
+#home-intro-container p  {
+    margin: 0;
+    padding: 0;
+    width: 28rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1.5em;
+    letter-spacing: 0.1rem;
     color: white;
 }
-#home-inventory {
-    padding-top: 2rem;
+
+#home-intro-container span {
+    display: inline-block;
+    font-size: 7rem;
+    font-weight: 700;
+    letter-spacing: 0.3rem;
+    line-height: 0.85;
+    color: white;
+    border-bottom: 0.4rem solid #DD4D6A;
 }
 
-#home-inventory h1 {
+.content-fragment-container h2, #home-intro-container h1 {
     text-transform: uppercase;
     margin: 0 0 1rem 0;
     padding: 0;
-    color: white;
 }
 
-#home-inventory-text {
-    /*    border: 1px dashed blue;*/
-    display: inline-block;
-    float: left;
-    width: 100%;
-    /*    padding: 0em 4em;*/
+.content-fragment-container {
+    padding-top: 3rem;
 }
-
-figure#home-inventory-img {
-    /*    border: 1px solid red;*/
-    display: inline-block;
-    float: right;
-    width: 100%;
-    height: auto;
-    margin: 0px;
-}
-
-#home-inventory-img img {
-    width: 100%;
-}
-
 
 /*  =========================
  *  PRODUCT CONTENT
@@ -495,4 +495,31 @@ th {
 .tiny-btn {
     font-weight: 800;
     text-decoration: underline;
+}
+
+/* ==================
+ *   MEDIA QUERIES
+ * ==================*/
+
+@media(max-width: 58rem) {
+    #home-intro-content {
+/*        display:none;*/
+        padding: 0.5rem 5rem;
+    }
+    #home-intro-container, #home-intro {
+        height: 20vh;
+        min-height: 13rem;
+    }
+    #home-intro-container h1 {
+        font-size: 3.5rem;
+    }
+    #home-intro-container p {
+        font-size: 1rem;
+    }
+    .home-content-block {
+        padding-top: 1rem;
+    }
+    #main-nav {
+        display: none;
+    }
 }

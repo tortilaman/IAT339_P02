@@ -16,6 +16,12 @@
     padding: 0;
 }
 
+.grid:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 [class^="col"] {
     float: left;
     margin: 0;
@@ -33,27 +39,56 @@
 
 .col3of6 {
     width: 50%;
-    float: left;
 }
 
 
-/*==================
-    LAYOUT STUFF
-  ==================*/
+/* ==================
+ *   LAYOUT STUFF
+ * ==================*/
 
 #body-container {
     position: relative;
     margin: 0 auto;
-    max-width: 1200px;
-    background: #151515;
+    max-width: 75rem;
+/*    background: #151515;*/
     font-family: "Inconsolata";
     font-weight: 400;
     height: 100vh;
-    box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, 0.25);
+/*    box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, 0.25);*/
 }
 
 #body-content {
     clear: both;
     overflow: hidden;
     padding: 0 4rem;
+}
+
+/* ==================
+ *   MEDIA QUERIES
+ * ==================*/
+
+@media only screen
+    and (max-width: 58rem) {
+    .col1of6, .col2of6, .col3of6 {
+        width: 100%;
+    }
+}
+@media only screen
+    and (min-width: 58.1rem)
+    and (max-width: 75rem) {
+        .col2of6 {
+            width: 100%;
+        }
+        .col2of6 img {
+            width: 50%;
+            float: right;
+        }
+        .content-fragment-text {
+            width: 50%;
+            padding-right: 1rem;
+        }
+}
+@media only screen
+    and (min-width: 75.1rem) {
+
 }
