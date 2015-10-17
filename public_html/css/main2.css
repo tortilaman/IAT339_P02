@@ -87,7 +87,7 @@ a.see-more {
 
 
 /* -----------------------------
- * Standard Button 
+ * Standard Button
  * -----------------------------
  * NOTE: To style differently just create a new class that modifies this and apply both to the html
  * -----------------------------*/
@@ -222,24 +222,43 @@ header {
  *  =========================*/
 
 #home-intro {
-    font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
-    font-size: 2em;
-    font-weight: 400;
-    line-height: 2em;
+    position: relative;
     padding-top: 0em;
     margin: 0;
-    background-image: url('./img/landing_bw.jpg');
+    width: 100%;
+    /*This is where things might get wonky*/
+    height: 20rem;
+/*    overflow: hidden;*/
+    /*Multiple backgrounds so text always shows up regardless of image*/
+    background:
+        linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.95)),
+        url(../img/scale_model.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 2em;
 }
 
+#home-intro p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0 4rem;
+    width: 100%;
+    color: white;
+}
 #home-inventory {
-    /*    border: 1px solid;*/
-    padding-top: 5em;
+    padding-top: 2rem;
 }
 
 #home-inventory h1 {
     text-transform: uppercase;
     margin-bottom: 1em;
     margin-top: 0em;
+    color: white;
 }
 
 #home-inventory-text {
@@ -345,7 +364,7 @@ figure.product-detail-img {
 }
 
 .product-detail-bag-it {
-     NOTE: HTML element should also have button class 
+     NOTE: HTML element should also have button class
     float: right;
     display: block;
 }
