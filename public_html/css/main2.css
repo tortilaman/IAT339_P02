@@ -158,12 +158,11 @@ label {
 }
 
 select {
-    /* drop down */
     margin-right: 3em;
-    /*    width: 153px;*/
     border: 1.5px solid #191919;
     background: transparent;
     vertical-align: middle;
+    width: 100;
 }
 
 input {
@@ -478,15 +477,15 @@ th {
     font-weight: 800;
 }
 
+#month, #year {
+    display: block;
+    float: left;
+}
 
 /*---CONTACT PAYMENT---*/
 
 #checkout-payment {
     margin-top: 5em;
-}
-
-.checkout-payment-expiration {
-    width: 50%;
 }
 
 .btn.confirm-order{
