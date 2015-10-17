@@ -1,6 +1,17 @@
-/* ===================
- *    BASE STYLING
- * ===================*/
+/*  =========================
+ *  NEW STYLESHEET
+ *  --------------------------
+ *  TODO: Update visual styling
+ *  TODO: Update/finish layouts
+ *  TODO: Responsiveness
+ *  TODO: Add remaining content pages
+ *  TODO: Rename 'product-fragment' classes to 'content-fragment' so they're more extendable.
+ *  TODO: Add banner to other pages besides homepage, but shorter containing only the page title
+ *  =========================*/
+
+/*  =========================
+ *  DEFAULT STYLING
+ *  =========================*/
 
 img {
     width: 100%;
@@ -10,195 +21,73 @@ body {
     background-color: #191919;
 }
 
+section {
+    display: inline-block;/* Why? not removing, but confused...*/
+}
 
-/* ========================
- *    UTILITY CLASSES
- * ------------------------
- *      Use these to augment styles for a particular purpose
- * ========================*/
+/*  =========================
+ *  "MIXINS"
+ *  =========================*/
 
 .clearfix {
+    content: "";
+    display: table;
     clear: both;
 }
 
-
-/* ===================
- *    TYPOGRAPHY
- * ===================*/
+/*  =========================
+ *  TEXT STYLING
+ *  =========================*/
 
 h1,
 h2,
-h3 {
+h3,
+span {
     font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: 0;
 }
 
 h2 {
-    font-weight: 600;
-    text-transform: uppercase;
     font-size: 1.5rem;
 }
 
+li {
+    list-style-type: none;
+}
 
-/*  Links    */
+p {
+    color: #666666;
+    line-height: 2em;
+}
+
+figcaption {
+    color: #666666;
+}
+
+/*  =========================
+ *  INTERACTIVE ELEMENTS
+ *  =========================*/
+
+
+/* Links */
 
 a {
-    text-decoration: none;
-    color: #A2CACC;
+    color: #DD4D6A;
     -webkit-transition: opacity 0.2s ease-out;
     transition: opacity 0.2s ease-out;
 }
 
 a:hover {
     text-decoration: underline;
-    font-weight: 700;
     opacity: 0.6;
 }
 
-.clearfix {
-    clear: both;
-    content: "";
-}
-
-
-/*  Text Buttons */
-
-.btn {
-    font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: #FFF;
-    background-color: black;
-    padding: 0.4em 1em;
-    display: inline-block;
-    -webkit-transition: background-color 0.25s ease-in-out;
-    transition: background-color 0.25s ease-in-out;
-}
-
-.btn:hover {
-    text-decoration: none;
-    background-color: #333;
-    font-weight: 400;
-}
-
-
-/* ===========================
- *    NAVIGATION & HEADER
- * ===========================*/
-
-#logo {
-    width: 6rem;
-    height: auto;
-    float: left;
-    display: inline-block;
-}
-
-#main-nav {
-    /*    border: 1px solid blue;*/
-    max-width: 500px;
-    float: right;
-    margin-top: 1.5em;
-    margin-right: 7em;
-}
-
-#main-nav li {
-    font-family: "Inconsolata";
-    font-weight: 400;
-    font-size: 1em;
-    width: 130px;
-    display: inline-block;
-    text-decoration: none;
-    list-style-type: none;
-    float: left;
-    margin-right: 1rem;
-    line-height: 2em;
-    text-transform: uppercase;
-}
-
-header {
-    /*    border: 1px dashed blue;*/
-    display: block;
-    margin-bottom: 3em;
-}
-
-
-/* ==================
- *    INTRODUCTION
- * ==================*/
-
-#home-intro {
-    display: block;
-    position: relative;
-    width: 100%;
-    /*This is where things might get wonky*/
-    height: 30%;
-    overflow: hidden;
-    /*Multiple backgrounds so text always shows up regardless of image*/
-    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25)), url(/img/scale_model.jpg) cover no-repeat;
-}
-
-#home-intro p {
-    position: absolute;
-    bottom: 1rem;
-    left: 0;
-    width: 100%;
-}
-
-
-/*It's not clear this is only for the introduction, is it used elsewhere? */
-
-#body-content {
-    clear: both;
-    padding: 0em 2.5em;
-    padding-top: 1em;
-}
-
-#intro {
-    font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
-    font-size: 2em;
-    font-weight: 400;
-    line-height: 2em;
-    padding-top: 0em;
-}
-
-
-/* ===================
- *    HOME-INVENTORY
- * ===================*/
-
-#home-inventory {
-    /*    border: 1px solid;*/
-    padding-top: 5em;
-}
-
-#home-inventory h1 {
-    text-transform: uppercase;
-    margin-bottom: 1em;
-    margin-top: 0em;
-}
-
-#home-inventory-text {
-    /*    border: 1px dashed blue;*/
-    display: inline-block;
-    float: left;
-    width: 100%;
-    /*    padding: 0em 4em;*/
-}
-
-#home-inventory-text p {
-    line-height: 1.5em;
-}
-
-figure#home-inventory-img {
-    /*    border: 1px solid red;*/
-    display: inline-block;
-    float: right;
-    width: 100%;
-    height: auto;
-    margin: 0px;
-}
-
-#home-inventory-img img {
-    width: 100%;
+a:active {
+    text-decoration: underline;
 }
 
 a.see-more {
@@ -206,89 +95,292 @@ a.see-more {
 }
 
 
-/*==================
- *  INVENTORY-GRID
- *==================*/
+/* -----------------------------
+ * Standard Button
+ * -----------------------------
+ * NOTE: To style differently just create a new class that modifies this and apply both to the html
+ * -----------------------------*/
 
-.inventory-content {
-    padding-right: 1.5em;
+.btn {
+    font-family: "Inconsolata", Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: #FFF;
+    background-color: #191919;
+    padding: 0.8em 1.3em;
+    display: inline-block;
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    text-decoration: none;
+}
+
+
+/* TODO: Different active state than hover??? */
+
+.btn:hover,
+.btn:focus,
+.btn:active {
+    text-decoration: none;
+    background-color: #333;
+}
+
+#logo {
+    width: 6rem;
+    display: block;
+    height: auto;
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    margin: 0 auto;
+}
+
+#logo:hover,
+#logo:focus,
+#logo:active {
+    opacity: 0.8;
+}
+
+
+/*  =========================
+ *  FORMS & DROPDOWNS
+ *  =========================*/
+
+label {
+    font-family: "Source Sans Pro";
+    font-weight: 600;
+    font-size: 0.8em;
+    display: block;
+    padding: 3em 0.35em 0.35em 0.25em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+select {
+    margin-right: 3em;
+    border: 1.5px solid #191919;
+    background: transparent;
+    vertical-align: middle;
+    width: 100;
+}
+
+input {
+    padding: 0.5em 0.8em;
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background: transparent;
+    border: 1.5px solid;
+}
+
+
+/*  =========================
+ *  HEADER & NAVIGATION
+ *  =========================*/
+
+#main-nav {
+    overflow: hidden;
+    min-width: 600px;
+    width: 75%;
+    margin: 0 auto;
+}
+
+
+/*only used for navigation*/
+
+.btn-nav {
+    font-family: "Inconsolata";
+    font-weight: 400;
+    font-size: 1rem;
+    color: #E1E1E1;
+    letter-spacing: 0.03em;
+    display: inline-block;
+    text-decoration: none;
+    padding: 0rem 0rem 0.5rem 0rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.btn-nav:hover,
+.btn-nav:active {
+    text-decoration: none;
+    /*    border-bottom: 2px solid #DD4D6A;*/
+}
+
+.btn-nav.current {
+    border-bottom: 0.4rem solid #DD4D6A;
+}
+
+header {
+    display: block;
+    padding: 1em 0 0 0;
+}
+
+
+/*  =========================
+ *  HOMEPAGE
+ *  =========================*/
+
+#home-intro {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    padding-top: 0em;
+    margin: 0 auto;
+    width: 100vw;
+    height: 35vh;
+    min-height: 23rem;
+    /*Multiple backgrounds so text always shows up regardless of image*/
+    background:
+        linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.95)),
+        url(../img/scale_model.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#home-intro-content {
+    position: relative;
+    display: block;
+    padding: 2rem 5rem;
+}
+
+#home-intro-container {
+    position: relative;
+    width: 100%;
+    height: 35vh;
+    min-height: 23rem;
+}
+
+#home-intro-container p  {
+    margin: 0;
+    padding: 0;
+    width: 28rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1.5em;
+    letter-spacing: 0.1rem;
+    color: white;
+}
+
+#home-intro-container span {
+    display: inline-block;
+    font-size: 7rem;
+    font-weight: 700;
+    letter-spacing: 0.3rem;
+    line-height: 0.85;
+    color: white;
+    border-bottom: 0.4rem solid #DD4D6A;
+}
+
+.content-fragment-container h2, #home-intro-container h1 {
+    text-transform: uppercase;
+    margin: 0 0 1rem 0;
+    padding: 0;
+}
+
+.content-fragment-container {
+    padding-top: 3rem;
+}
+
+/*  =========================
+ *  PRODUCT CONTENT
+ *
+ *  (Previously labeled inventory stuff)
+ *  =========================*/
+
+.product-fragment:hover,
+.product-fragment:active {
+    opacity: 0.8;
+    -webkit-transition: opacity 0.2s ease-out;
+    transition: opacity 0.2s ease-out;
+}
+
+.product-fragment-content {
     margin-bottom: 6em;
 }
 
-.inventory-name {
+.product-fragment-name {
     display: inline-block;
     float: left;
     font-family: "Source Sans Pro";
     font-weight: 600;
     margin: 0em;
+    color: #000;
 }
 
-.inventory-content-img {
+.product-fragment-content-img {
     width: 100%;
     height: auto;
 }
 
-.inventory-price p {
-    /*    border: 1px solid;*/
-    clear: both;
+.product-fragment-price {
+    /*    clear: both;*/
     display: inline-block;
-    float: left;
+    float: right;
     margin-right: 1em;
     margin-top: 0em;
-}
-
-.inventory-link .inventory-price p:hover {
-    text-decoration: none;
+    color: #000;
 }
 
 
-/*=====================
- *  INVENTORY DETAIL
- *=====================*/
+/*  =========================
+ *  PRODUCT DETAIL PAGE
+ *  =========================*/
 
-.inventory-detail .inventory-detail-img {
+.product {
+    min-width: 520px;
+}
+
+.product-detail-price {
+    font-weight: 800;
+    color: #000;
+}
+
+
+/*
+.product-detail .product-detail-img {
     border: 1px solid;
     padding: 0;
 }
 
-figure.inventory-detail-img {
+figure.product-detail-img {
     display: inline-block;
     float: left;
     width: 100%;
     margin: 0;
 }
 
-.inventory-detail-img img {
+.product-detail-img img {
     width: 100%;
     float: left;
 }
 
-.inventory-detail-text {
+.product-detail-text {
     display: inline-block;
     float: left;
     width: 50%;
     margin-bottom: 2em;
 }
 
-.bag-it {
-    font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: #FFF;
-    background-color: black;
-    padding: 0.4em 1em;
+.product-detail-bag-it {
+     NOTE: HTML element should also have button class
     float: right;
+    display: block;
 }
 
-.bag-it:hover {
+.product-detail-bag-it:hover,
+.product-detail-bag-it:active,
+.product-detail-bag-it:focus {
     text-decoration: none;
     font-weight: 400;
-}
+}*/
 
 
-/* =============
- *      BAG
- * =============*/
+/*=========
+ *  BAG
+ *=========*/
 
 td {
     padding: 0em 1.5em !important;
@@ -296,9 +388,11 @@ td {
 }
 
 th {
-    padding: 1em 1em !important;
-    /*  background-color:#BC7482;*/
-    /*  color:white;*/
+    padding: 1em 1em;
+    font-family: "Source Sans Pro";
+    text-transform: uppercase;
+    font-size: 0.9em;
+    letter-spacing: 0.03em;
 }
 
 .shoppingbag-summary {
@@ -314,12 +408,8 @@ th {
     text-align: left;
 }
 
-.shoppingbag-summary th {
-    /*  background-color:#AAA3A3;*/
-}
-
 .shoppingbag-summary select {
-    margin-bottom: 4.5em;
+    margin-bottom: 3em;
     margin-right: 0.5em;
     width: 5em;
 }
@@ -345,9 +435,9 @@ th {
 }
 
 
-/* ===================
- *      CHECKOUT
- * ===================*/
+/*===================
+ *  CHECKOUT
+ *===================*/
 
 .checkout-container {
     display: inline-block;
@@ -365,16 +455,8 @@ th {
     margin-bottom: 5em;
 }
 
-label {
-    font-family: "Source Sans Pro";
-    font-weight: 600;
-    font-size: 0.8em;
-    display: block;
-    padding: 3em 0.35em 0.35em 0.25em;
-    text-transform: uppercase;
-    cursor: pointer;
-}
 
+/*
 .checkout-info-form input,
 .checkout-info-form select {
     padding: 0.5em 0.8em;
@@ -384,13 +466,17 @@ label {
     margin-right: auto;
     background: transparent;
     border: 1.5px solid;
-    /*    height: 25px;*/
 }
+*/
 
 .checkout-title {
     font-weight: 800;
 }
 
+#month, #year {
+    display: block;
+    float: left;
+}
 
 /*---CONTACT PAYMENT---*/
 
@@ -398,31 +484,8 @@ label {
     margin-top: 5em;
 }
 
-.col2of8 {
-    /* used for product listing page*/
-    width: 100%;
-    float: left;
-}
-
-.payment-info-form .col4of8 {
-    clear: both;
-}
-
-.checkout-payment-expiration {
-    width: 50%;
-}
-
-.payment-info-form .col4of8.expiration {
-    /*    border: 1px solid red;*/
-    width: 50%;
-    float: left;
-}
-
-.checkout-confirm-order {
-    /*    border: 1px solid;*/
-    display: inline-block;
-    margin-left: 0em;
-    margin-top: 2em;
+.btn.confirm-order{
+    margin: 0 auto;
 }
 
 #checkout-container .checkout-title {
@@ -434,58 +497,29 @@ label {
     text-decoration: underline;
 }
 
+/* ==================
+ *   MEDIA QUERIES
+ * ==================*/
 
-/*===================
- *  MEDIA QUERIES
- *===================*/
-
-@media(min-width: 50em) {
-    #body-content {
-        padding: 0em 6em;
-        padding-top: 3em;
+@media(max-width: 58rem) {
+    #home-intro-content {
+/*        display:none;*/
+        padding: 0.5rem 5rem;
     }
-    #intro {
-        padding-top: 4em;
+    #home-intro-container, #home-intro {
+        height: 20vh;
+        min-height: 13rem;
     }
-    #home-inventory {
-        padding-top: 17em;
+    #home-intro-container h1 {
+        font-size: 3.5rem;
     }
-    #home-inventory-text {
-        width: 50%;
-        padding-right: 4em;
+    #home-intro-container p {
+        font-size: 1rem;
     }
-    figure#home-inventory-img {
-        width: 50%;
+    .home-content-block {
+        padding-top: 1rem;
     }
-    .col3of8 {
-        width: 33.333333333%;
-        float: left;
-    }
-    .col2of8 {
-        /* used for product listing page*/
-        width: 25%;
-    }
-    .col4of8 {
-        width: 50%;
-        float: left;
-        padding-left: 1em;
-    }
-    figure.inventory-detail-img {
-        width: 50%;
-        padding-right: 2em;
-    }
-    .checkout-confirm-order {
-        display: inline-block;
-        margin-left: 1em;
-        margin-top: 2em;
-    }
-}
-
-@media(max-width: 40em) {
-    .col3of8 {
-        width: 100%;
-    }
-    section {
-        width: 100%;
+    #main-nav {
+        display: none;
     }
 }
