@@ -43,10 +43,13 @@
 
 #body-container {
     position: relative;
-    margin: 19px auto;
+    margin: 0 auto;
     max-width: 1200px;
+    background: #151515;
     font-family: "Inconsolata";
     font-weight: 400;
+    height: 100vh;
+    box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, 0.25);
 }
 
 #body-content {
