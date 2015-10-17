@@ -19,6 +19,10 @@ body {
     background-color: #191919;
 }
 
+section {
+    display: inline-block;
+}
+
 /*  =========================
  *  "MIXINS"
  *  =========================*/
@@ -26,7 +30,6 @@ body {
 .clearfix {
     clear: both;
 }
-
 
 /*  =========================
  *  TEXT STYLING
@@ -64,11 +67,6 @@ p {
 figcaption {
     color: #666666;
 }
-
-section {
-    display: inline-block;
-}
-
 
 /*  =========================
  *  INTERACTIVE ELEMENTS
@@ -211,14 +209,12 @@ input {
 }
 
 .btn-nav.current {
-    background-image: -webkit-linear-gradient(top, transparent 0em, transparent 0.5em, #DD4D6A 0.4em, #DD4D6A 0.8em, transparent 0.8em, transparent 0.8em);
-    background-image: -o-linear-gradient(top, transparent 0em, transparent 0.5em, #DD4D6A 0.4em, #DD4D6A 0.8em, transparent 0.8em, transparent 0.8em);
-    background-image: linear-gradient(top, transparent 0em, transparent 0.5em, #DD4D6A 0.4em, #DD4D6A 0.8em, transparent 0.8em, transparent 0.8em);
+    border-bottom: 0.4rem solid #DD4D6A;
 }
 
 header {
     display: block;
-    padding: 1em 0em;
+    padding: 1em 0 0 0;
 }
 
 
