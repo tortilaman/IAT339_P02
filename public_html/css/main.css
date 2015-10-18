@@ -1,13 +1,12 @@
 /*  =========================
  *  NEW STYLESHEET
- *  --------------------------
- *  TODO: Update visual styling
- *  TODO: Update/finish layouts
- *  TODO: Responsiveness
- *  TODO: Add remaining content pages
- *  TODO: Rename 'product-fragment' classes to 'content-fragment' so they're more extendable.
- *  TODO: Add banner to other pages besides homepage, but shorter containing only the page title
  *  =========================*/
+/*  TODO: Update visual styling*/
+/*  TODO: Update/finish layouts*/
+/*  TODO: Responsiveness*/
+/*  TODO: Add remaining content pages*/
+/*  TODO: Add banner to other pages besides homepage, but shorter containing only the page title*/
+/*  =========================*/
 
 /*  =========================
  *  DEFAULT STYLING
@@ -97,9 +96,9 @@ a.see-more {
 
 /* -----------------------------
  * Standard Button
- * -----------------------------
- * NOTE: To style differently just create a new class that modifies this and apply both to the html
  * -----------------------------*/
+/* NOTE: To style differently just create a new class that modifies this and apply both to the html*/
+/* -----------------------------*/
 
 .btn {
     font-family: "Inconsolata", Arial, Helvetica, sans-serif;
@@ -218,42 +217,53 @@ header {
 
 
 /*  =========================
- *  HOMEPAGE
+ *  BANNERS
  *  =========================*/
 
-#home-intro {
-    position: absolute;
+.banner-container {
+    position: relative;
+    width: 100%;
+    height: 20vh;
+/*    min-height: 23rem;*/
+}
+
+#banner-image {
+    position: relative;
     left: 50%;
     -webkit-transform: translate(-50%, 0);
     -ms-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
-    padding-top: 0em;
-    margin: 0 auto;
+    padding: 0;
+    margin: 0;
     width: 100vw;
-    height: 35vh;
-    min-height: 23rem;
-    /*Multiple backgrounds so text always shows up regardless of image*/
-    background:
-        linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.95)),
-        url(../img/scale_model.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+    height: 20vh;
+/*    min-height: 23rem;*/
+    overflow: hidden;
 }
 
-#home-intro-content {
-    position: relative;
+/* This is the overlay for the banner image */
+#banner-image:after {
+    position: absolute;
+    content:"";
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.95));
+    z-index: 5;
+}
+
+#banner-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
     display: block;
-    padding: 2rem 5rem;
+    padding: 0rem 5rem;
+    line-height: 0;
 }
 
-#home-intro-container {
-    position: relative;
-    width: 100%;
-    height: 35vh;
-    min-height: 23rem;
-}
 
-#home-intro-container p  {
+#banner-content p  {
     margin: 0;
     padding: 0;
     width: 28rem;
@@ -264,17 +274,50 @@ header {
     color: white;
 }
 
-#home-intro-container span {
+#banner-content h1 {
     display: inline-block;
+    margin: 0;
+    padding: 0;
+    font-size: 4rem;
+    letter-spacing: 0.3rem;
+    line-height: 0.85em;
+    color: white;
+}
+
+#home-banner, #home-banner #banner-image {
+    height: 35vh;
+    min-height: 23rem;
+}
+
+#home-banner #banner-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 2rem 5rem;
+}
+
+#home-banner p  {
+    margin: 0;
+    padding: 0;
+    width: 28rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1.5em;
+    letter-spacing: 0.1rem;
+    color: white;
+}
+
+#home-banner h1 {
     font-size: 7rem;
     font-weight: 700;
-    letter-spacing: 0.3rem;
-    line-height: 0.85;
-    color: white;
     border-bottom: 0.4rem solid #DD4D6A;
 }
 
-.content-fragment-container h2, #home-intro-container h1 {
+/*  =========================
+ *  CONTENT FRAGMENTS
+ *  =========================*/
+
+.content-fragment-container h2, .banner-container h1 {
     text-transform: uppercase;
     margin: 0 0 1rem 0;
     padding: 0;
@@ -283,6 +326,8 @@ header {
 .content-fragment-container {
     padding-top: 3rem;
 }
+
+/*  TODO: Rename 'product-fragment' classes to 'content-fragment' so they're more extendable.*/
 
 /*  =========================
  *  PRODUCT CONTENT
@@ -502,21 +547,21 @@ th {
  * ==================*/
 
 @media(max-width: 58rem) {
-    #home-intro-content {
+    #banner-content {
 /*        display:none;*/
         padding: 0.5rem 5rem;
     }
-    #home-intro-container, #home-intro {
+    #home-banner, #banner-image, .banner-container {
         height: 20vh;
         min-height: 13rem;
     }
-    #home-intro-container h1 {
+    #banner-content h1 {
         font-size: 3.5rem;
     }
-    #home-intro-container p {
+    #banner-content p {
         font-size: 1rem;
     }
-    .home-content-block {
+    .content-fragment {
         padding-top: 1rem;
     }
     #main-nav {
