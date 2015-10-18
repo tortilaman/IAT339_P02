@@ -5,7 +5,7 @@
 /*  TODO: Update/finish layouts*/
 /*  TODO: Responsiveness*/
 /*  TODO: Add remaining content pages*/
-/*  TODO: Add banner to other pages besides homepage, but shorter containing only the page title*/
+/*  TODO: Responsive Imagery at least for banner*/
 /*  =========================*/
 
 /*  =========================
@@ -329,7 +329,7 @@ header {
 }
 
 .content-fragment-container h2 {
-    text-transform: capitalize;
+/*    text-transform: capitalize;*/
     display:inline;
     margin: 0 0 1rem 0;
     padding: 0;
@@ -340,50 +340,29 @@ header {
     float: right;
     padding-top: 0.6rem;
     font-size: 1rem;
+    text-transform: capitalize;
 }
 
-/*  TODO: Rename 'product-fragment' classes to 'content-fragment' so they're more extendable.*/
+/* SERVICES & BLOG STYLING */
 
-/*  =========================
- *  PRODUCT CONTENT
- *
- *  (Previously labeled inventory stuff)
- *  =========================*/
-
-.product-fragment:hover,
-.product-fragment:active {
-    opacity: 0.8;
-    -webkit-transition: opacity 0.2s ease-out;
-    transition: opacity 0.2s ease-out;
-}
-
-.product-fragment-content {
-    margin-bottom: 6em;
-}
-
-.product-fragment-name {
-    display: inline-block;
+.col6of6.content-fragment-container img, .col6of6.content-fragment-container .content-fragment-text {
+    width: 50%;
     float: left;
-    font-family: "Source Sans Pro";
-    font-weight: 600;
-    margin: 0em;
-    color: #000;
 }
 
-.product-fragment-content-img {
-    width: 100%;
-    height: auto;
+.col6of6.content-fragment-container .content-fragment-text {
+    padding-left: 1.5rem;
 }
 
-.product-fragment-price {
-    /*    clear: both;*/
-    display: inline-block;
-    float: right;
-    margin-right: 1em;
-    margin-top: 0em;
-    color: #000;
+.col6of6.content-fragment-container span {
+    display: block;
+    float: none;
+    color: #666666;
 }
 
+.col6of6.content-fragment-container p {
+    margin-top: 0.25rem;
+}
 
 /*  =========================
  *  PRODUCT DETAIL PAGE
@@ -561,25 +540,33 @@ th {
  *   MEDIA QUERIES
  * ==================*/
 
-@media(max-width: 58rem) {
-    #banner-content {
-/*        display:none;*/
-        padding: 0.5rem 5rem;
-    }
-    #home-banner, #banner-image, .banner-container {
-        height: 20vh;
-        min-height: 13rem;
-    }
-    #banner-content h1 {
-        font-size: 3.5rem;
-    }
-    #banner-content p {
-        font-size: 1rem;
-    }
-    .content-fragment {
-        padding-top: 1rem;
-    }
-    #main-nav {
-        display: none;
-    }
+@media only screen
+    and (max-width: 58rem) {
+        #banner-content {
+    /*        display:none;*/
+            padding: 0.5rem 5rem;
+        }
+        #banner-content h1 {
+            font-size: 3.5rem;
+        }
+        #banner-content p {
+            font-size: 1rem;
+        }
+        .content-fragment {
+            padding-top: 1rem;
+        }
+        #main-nav {
+            display: none;
+        }
+        /* TODO: Figure out why the hell these need to use !important, because they shouldn't... */
+        #home-banner, #banner-image, .banner-container {
+            height: 20vh !important;
+            min-height: 13rem !important;
+        }
+        .col6of6.content-fragment-container img,
+        .col6of6.content-fragment-container .content-fragment-text {
+            float: none !important;
+            width: 100% !important;
+            padding-left: 0 !important;
+        }
 }
