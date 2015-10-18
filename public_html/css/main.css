@@ -1,15 +1,21 @@
-/*  =========================
- *  NEW STYLESHEET
- *  =========================*/
-/*  TODO: Update visual styling*/
-/*  TODO: Update/finish layouts*/
-/*  TODO: Responsiveness*/
-/*  TODO: Add remaining content pages*/
-/*  TODO: Responsive Imagery at least for banner*/
-/*  =========================*/
+/*  ================================================================
+ *  GENERAL TODO LIST
+ *  ----------------------------------------------------------------
+ *  Location specific items are where they need to be dealt with.
+ *  Comment categories are: TODO, NOTE, FIXME, CHANGES, FUTURE,
+ *  ================================================================*/
+/*  TODO:   Update visual styling*/
+/*  TODO:   Update/finish layouts*/
+/*  TODO:   Responsiveness*/
+/*  TODO:   Add remaining content pages*/
+/*  TODO:   Cart in navigation??? */
+/*  FIXME:  When opening the inventory detail page the nav bar animates a size chang, not sure why */
+/*  FUTURE: Responsive Imagery at least for banner*/
+/*  FUTURE: Can the border bar below nav items animate between them when the page is changed? */
+/*  ================================================================*/
 
 /*  =========================
- *  DEFAULT STYLING
+ *  DEFAULT ELEMENT STYLING
  *  =========================*/
 
 img {
@@ -18,10 +24,6 @@ img {
 
 body {
     background-color: #191919;
-}
-
-section {
-    display: inline-block;/* Why? not removing, but confused...*/
 }
 
 /*  =========================
@@ -184,8 +186,7 @@ input {
     margin: 0 auto;
 }
 
-/* TODO: Update html on pages other than homepage to use this properly */
-/*only used for navigation*/
+/* NOTE: any element that uses this also requires the .btn class */
 
 .btn-nav {
     font-size: 1rem;
@@ -320,6 +321,8 @@ header {
     box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.5);
 }
 
+/* HOME & INVENTORY FRAGMENTS */
+
 .home-content.content-fragment-container h2, .banner-container h1 {
     text-transform: uppercase;
 }
@@ -339,7 +342,7 @@ header {
     text-transform: capitalize;
 }
 
-/* SERVICES & BLOG STYLING */
+/* SERVICES & BLOG FRAGMENTS */
 
 .col6of6.content-fragment-container img, .col6of6.content-fragment-container .content-fragment-text {
     width: 50%;
@@ -359,6 +362,8 @@ header {
 .col6of6.content-fragment-container p {
     margin-top: 0.25rem;
 }
+
+/* TODO: Below this point hasn't been udpated other than the media queries. */
 
 /*  =========================
  *  PRODUCT DETAIL PAGE
