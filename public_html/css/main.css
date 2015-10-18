@@ -76,23 +76,22 @@ figcaption {
 
 a {
     color: #DD4D6A;
-    -webkit-transition: opacity 0.2s ease-out;
-    transition: opacity 0.2s ease-out;
+    text-decoration: none;
+    opacity: 1;
+/*
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+*/
 }
 
-a:hover {
+a:hover, a:active, a:focus, a h1:hover, a h1:active, a h1:focus, a h2:hover, a h2:focus, a h2:active {
     text-decoration: underline;
-    opacity: 0.6;
-}
-
-a:active {
-    text-decoration: underline;
+    opacity: 0.6
 }
 
 a.see-more {
     text-decoration: underline;
 }
-
 
 /* -----------------------------
  * Standard Button
@@ -225,6 +224,7 @@ header {
     width: 100%;
     height: 20vh;
 /*    min-height: 23rem;*/
+    margin-bottom: 2rem;
 }
 
 #banner-image {
@@ -317,14 +317,29 @@ header {
  *  CONTENT FRAGMENTS
  *  =========================*/
 
-.content-fragment-container h2, .banner-container h1 {
+/* Was thinking of styling the boxes on the homepage a bit differently, but didn't really work out */
+.home-content .border-container {
+    background: #151515;
+    margin: 0 0.25rem;
+    box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.5);
+}
+
+.home-content.content-fragment-container h2, .banner-container h1 {
     text-transform: uppercase;
+}
+
+.content-fragment-container h2 {
+    text-transform: capitalize;
+    display:inline;
     margin: 0 0 1rem 0;
     padding: 0;
 }
 
-.content-fragment-container {
-    padding-top: 3rem;
+.content-fragment-container span {
+    display: inline;
+    float: right;
+    padding-top: 0.6rem;
+    font-size: 1rem;
 }
 
 /*  TODO: Rename 'product-fragment' classes to 'content-fragment' so they're more extendable.*/
