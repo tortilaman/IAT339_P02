@@ -47,16 +47,20 @@
                 CONTENT
              ===================== -->
         <div id="body-content">
-            <div id="product-detail-body">
-                <figure class="col3of6">
-                    <img src="img/product.jpg" alt="product_description">
-                </figure>
-                <div class="col3of6 product-detail-text">
-                    <h1 id="product-detail-name">Product Name</h1>
-                    <p class="product-detail-price"> $15.00 </p>
-                    <p> Write a short blurb that introduces the products in the inventory and why customers should be interested in it.</p>
+            <div class="col6of6 content-container clearfix">
+                <a href="twnyInventoryDetail.html"><img src="img/product.jpg" alt="An inventory listing"></a>
+                <div class="content-fragment-text">
+                    <a href="twnyInventoryDetail.html"><h2>Car Keys</h2></a>
+                    <div class="star-rating">★★★★☆<span> - from 4 reviews</span></div>
+                    <span>$100.00</span>
+                    <ul>
+                        <li>Here's a feature</li>
+                        <li>Another feature</li>
+                        <li>Wow, three features for this item</li>
+                        <li>More features than you know what to do with</li>
+                    </ul>
                     <form>
-                        <label for="form-quantity2"></label>
+                        <label for="form-quantity2">Quantity:</label>
                         <select name="form-quantity2" id="form-quantity2">
                             <option value="quantity1">1</option>
                             <option value="quantity2">2</option>
@@ -69,13 +73,48 @@
                             <option value="quantity9">9</option>
                             <option value="quantity10">10</option>
                         </select>
+                        <br>
+                        <button class="btn">Bag it</button>
                     </form>
-                    <br>
-                    <a href="twnyBag.html" class="btn bag-it"> Bag It </a>
                 </div>
             </div>
+            <div class="content-details-container">
+                    <div class="content-selector">
+                        <ul>
+                            <a href="#" id="reviews-btn" class="btn current" onclick="changeDetailsTab(this, 'content-details-reviews')"><li>Reviews</li></a>
+                            <a href="#" id="desc-btn" class="btn" onclick="changeDetailsTab(this, 'content-details-desc')"><li>Description</li></a>
+                            <a href="#" id="spec-btn" class="btn" onclick="changeDetailsTab(this, 'content-details-spec')"><li>Specifications</li></a>
+                        </ul>
+                    </div>
+                    <div id="content-details-reviews">
+                        <div class="review">
+                            <img src="img/account.png">
+                            <h2>This product Sucks</h2>
+                            <h3>Geoff Daniels</h3>
+                            <div class="star-rating">★★★★☆</div>
+                            <p>Let's talk about people. People don't like stuff, and I'm one of those people. People also don't make sense though, so I'm going to give something that I don't like 4 stars. How you like them apples. ANNNNNAAAAARCHY!!!!</p>
+                        </div>
+                    </div>
+                    <div id="content-details-desc">
+                        <p>Here's a description of the item you're looking at. Yep. More stuff to read here, wow I sure am typing a lot, I should probably get some ipsum text for this...</p>
+                    </div>
+                    <div id="content-details-spec">
+
+                    </div>
+                </div>
         </div>
     </main>
+    <script>
+        function changeDetailsTab(clickedElem, visElem) {
+            /*FUTURE: Perhaps there's a way to dynamically populate this instead of an array? Not important now though...*/
+            var tabs = ["content-details-reviews", "content-details-desc", "content-details-spec"];
+            var btns = ["reviews-btn", "desc-btn", "spec-btn"];
+            for(i=0, len = tabs.length; i < len; i++) {
+                document.getElementById(tabs[i]).style.display = "none";
+                document.getElementById(btns[i]).className = "btn";
+            }
+            document.getElementById(visElem).style.display = "block";
+        }
+    </script>
 </body>
-
 </html>

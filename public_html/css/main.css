@@ -9,10 +9,21 @@
 /*  TODO:   Responsiveness*/
 /*  TODO:   Add remaining content pages*/
 /*  TODO:   Cart in navigation??? */
+/*  TODO:   Shopping bag icon for "bag it" button*/
+/*  FIXME:  Move price to right side on inventory page? */
 /*  FIXME:  When opening the inventory detail page the nav bar animates a size chang, not sure why */
 /*  FUTURE: Responsive Imagery at least for banner*/
 /*  FUTURE: Can the border bar below nav items animate between them when the page is changed? */
 /*  ================================================================*/
+
+/*  =========================
+ *  COLOR PALLETTE
+ *  -------------------------
+ *  Red:    #DD4D6A
+ *  White:  #E1E1E1
+ *  Gray:   #666666
+ *  Black:   #191919
+ *  =========================*/
 
 /*  =========================
  *  DEFAULT ELEMENT STYLING
@@ -30,7 +41,7 @@ body {
  *  "MIXINS"
  *  =========================*/
 
-.clearfix {
+.clearfix:after {
     content: "";
     display: table;
     clear: both;
@@ -45,7 +56,7 @@ h2,
 h3,
 span {
     font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
-    color: white;
+    color: #E1E1E1;
     font-weight: 600;
     text-transform: uppercase;
     text-decoration: none;
@@ -63,6 +74,7 @@ li {
 p {
     color: #666666;
     line-height: 2em;
+    margin-top: 0;
 }
 
 figcaption {
@@ -102,27 +114,36 @@ a.see-more {
 /* TODO: It should be more obvious this is a button before you hover... */
 /* -----------------------------*/
 
+button {
+    border: none;
+    background-color: #666666;
+    box-shadow: 0.1rem 0.1rem 0.1rem rgba(50, 50, 50, 0.5);
+    -webkit-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+}
+
 .btn {
+    display: inline-block;
+    padding: 0.4em 1.3em;
+    color: #E1E1E1;
     font-family: "Inconsolata", Arial, Helvetica, sans-serif;
     font-size: 0.9em;
     text-transform: uppercase;
     letter-spacing: 0.03em;
-    color: #FFF;
-    background-color: #191919;
-    padding: 0.8em 1.3em;
-    display: inline-block;
     text-decoration: none;
-    -webkit-transition: all 0.25s ease-in-out;
-    transition: all 0.25s ease-in-out;
 }
 
 /* TODO: Different active state than hover??? */
 
-.btn:hover,
-.btn:focus,
-.btn:active {
+button:hover,
+button:focus,
+button:active {
+    -webkit-transform: translateY(-0.05rem);
+    transform: translateY(-0.05rem);
+    box-shadow: 0.1rem 0.1rem 0.2rem rgba(100, 100, 100, 0.5);
     text-decoration: none;
-    background-color: #333;
+    background-color: #DD4D6A;
+    color: #191919;
 }
 
 #logo {
@@ -139,41 +160,6 @@ a.see-more {
 #logo:active {
     opacity: 0.8;
 }
-
-
-/*  =========================
- *  FORMS & DROPDOWNS
- *  =========================*/
-
-/* TODO: Update this section's styling. */
-label {
-    font-family: "Source Sans Pro";
-    font-weight: 600;
-    font-size: 0.8em;
-    display: block;
-    padding: 3em 0.35em 0.35em 0.25em;
-    text-transform: uppercase;
-    cursor: pointer;
-}
-
-select {
-    margin-right: 3em;
-    border: 1.5px solid #191919;
-    background: transparent;
-    vertical-align: middle;
-    width: 100;
-}
-
-input {
-    padding: 0.5em 0.8em;
-    display: block;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    background: transparent;
-    border: 1.5px solid;
-}
-
 
 /*  =========================
  *  HEADER & NAVIGATION
@@ -198,8 +184,9 @@ input {
 .btn-nav:hover,
 .btn-nav:active {
     background-color: #191919;
+    color: #E1E1E1;
     text-decoration: none;
-    /*    border-bottom: 2px solid #DD4D6A;*/
+    box-shadow: none;
 }
 
 .btn-nav.current {
@@ -259,7 +246,6 @@ header {
     line-height: 0;
 }
 
-
 #banner-content p  {
     margin: 0;
     padding: 0;
@@ -268,7 +254,7 @@ header {
     font-weight: 700;
     line-height: 1.5em;
     letter-spacing: 0.1rem;
-    color: white;
+    color: #E1E1E1;
 }
 
 #banner-content h1 {
@@ -278,7 +264,7 @@ header {
     font-size: 4rem;
     letter-spacing: 0.3rem;
     line-height: 0.85em;
-    color: white;
+    color: #E1E1E1;
 }
 
 #home-banner, #home-banner #banner-image {
@@ -301,7 +287,7 @@ header {
     font-weight: 700;
     line-height: 1.5em;
     letter-spacing: 0.1rem;
-    color: white;
+    color: #E1E1E1;
 }
 
 #home-banner h1 {
@@ -323,18 +309,18 @@ header {
 
 /* HOME & INVENTORY FRAGMENTS */
 
-.home-content.content-fragment-container h2, .banner-container h1 {
+.home-content.content-container h2, .banner-container h1 {
     text-transform: uppercase;
 }
 
-.content-fragment-container h2 {
+.content-container h2 {
 /*    text-transform: capitalize;*/
     display:inline;
     margin: 0 0 1rem 0;
     padding: 0;
 }
 
-.content-fragment-container span {
+.content-container span {
     display: inline;
     float: right;
     padding-top: 0.6rem;
@@ -344,40 +330,156 @@ header {
 
 /* SERVICES & BLOG FRAGMENTS */
 
-.col6of6.content-fragment-container img, .col6of6.content-fragment-container .content-fragment-text {
+.col6of6.content-container img, .col6of6.content-container .content-fragment-text {
     width: 50%;
     float: left;
 }
 
-.col6of6.content-fragment-container .content-fragment-text {
+.col6of6.content-container .content-fragment-text {
     padding-left: 1.5rem;
 }
 
-.col6of6.content-fragment-container span {
+.col6of6.content-container span {
     display: block;
     float: none;
-    color: #666666;
+    color: #DD4D6A;
 }
 
-.col6of6.content-fragment-container p {
+.col6of6.content-container p {
     margin-top: 0.25rem;
 }
 
 /* TODO: Below this point hasn't been udpated other than the media queries. */
 
 /*  =========================
- *  PRODUCT DETAIL PAGE
+ *  DETAIL PAGES
  *  =========================*/
 
-.product {
-    min-width: 520px;
+.content-fragment-text ul {
+    padding: 0;
 }
 
-.product-detail-price {
-    font-weight: 800;
-    color: #000;
+.content-fragment-text li {
+    list-style: square;
+    color: #666666;
+    padding: 0 0 0.5rem 0;
+    margin-left: 1rem;
 }
 
+.star-rating {
+    color: #DD4D6A;
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+    line-height: 1rem;
+    padding: 0.5rem 0 0 0;
+}
+
+.content-fragment-text .star-rating span {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    color: #E1E1E1;
+    font-size: 1rem;
+    letter-spacing: 0;
+    font-weight: 400;
+}
+
+.content-details-container {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0 1rem;
+    line-height: 1rem;
+}
+
+.content-selector ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    background: #666666;
+}
+
+.content-selector a {
+    margin: 0;
+    border: none;
+    font-weight: 600;
+}
+
+.content-selector a:hover, .content-selector a:focus, .content-selector a:active {
+    background-color: #DD4D6A;
+    color: #191919;
+    font-weight: 600;
+    opacity: 1;
+}
+
+#content-details-desc {
+    display: none;
+}
+
+#content-details-text p {
+    margin: 0;
+    padding: 0.5rem 0 0 0;
+    line-height: 1.2rem;
+}
+
+#content-details-reviews {
+    padding: 0.5rem 0;
+}
+
+#content-details-reviews .review img {
+    float: left;
+    width: 10%;
+    margin: 0 1rem 1rem 0;
+}
+
+#content-details-reviews .review h2, #content-details-reviews .review h3, #content-details-reviews .review .star-rating {
+    padding: 0.5rem 0 0 0;
+    text-transform: none;
+}
+
+#content-details-reviews .review p {
+    line-height: 1.2rem;
+    padding-top: 0.5rem;
+}
+
+/*  =========================
+ *  FORMS & DROPDOWNS
+ *  =========================*/
+
+/* TODO: Update form element styling. */
+form {
+    padding: 0;
+    margin: 0;
+}
+
+label {
+    display: inline-block;
+    margin: 0;
+    padding: 0 0.35em 0.35em 0.25em;
+    font-family: "Source Sans Pro";
+    color: #E1E1E1;
+    font-weight: 600;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+select {
+/*    margin-right: 3em;*/
+    border: 1.5px solid #191919;
+    background: #666666;
+    color: #E1E1E1;
+}
+
+input {
+    padding: 0.5em 0.8em;
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background: transparent;
+    border: 1.5px solid;
+}
 
 /*
 .product-detail .product-detail-img {
@@ -562,11 +664,35 @@ th {
         #home-banner, #banner-image, .banner-container {
             height: 20vh !important;
             min-height: 13rem !important;
+            margin-bottom: 0;
         }
-        .col6of6.content-fragment-container img,
-        .col6of6.content-fragment-container .content-fragment-text {
+
+        .content-container {
+            padding: 0;
+        }
+        .content-fragment-text {
+            padding: 0 3rem;
+        }
+
+        /* Blog & Services */
+        .col6of6.content-container img,
+        .col6of6.content-container .content-fragment-text {
             float: none !important;
             width: 100% !important;
-            padding-left: 0 !important;
+/*            padding-left: 0 !important;*/
+        }
+}
+
+@media only screen
+    and (min-width: 58.1rem)
+    and (max-width: 75rem) {
+        .col2of6.content-container>a, .col2of6.content-container>img {
+            float:left;
+            width: 50%;
+        }
+        .content-fragment-text {
+            float:left;
+            width: 50%;
+            padding-left: 1rem;
         }
 }

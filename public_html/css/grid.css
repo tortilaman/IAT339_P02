@@ -25,7 +25,6 @@
 [class^="col"] {
     float: left;
     margin: 0;
-    /*    padding: 0 1rem 0 1rem;*/
     padding: 1rem;
 }
 
@@ -41,6 +40,7 @@
     width: 50%;
 }
 .col6of6 {
+    float: none;
     width: 100%;
 }
 
@@ -74,6 +74,10 @@ main {
     and (max-width: 58rem) {
         .col1of6, .col2of6, .col3of6 {
             width: 100%;
+            padding: 0 0 2rem 0;
+        }
+        #body-content {
+            padding: 0;
         }
 }
 @media only screen
@@ -81,14 +85,6 @@ main {
     and (max-width: 75rem) {
         .col2of6 {
             width: 100%;
-        }
-        .col2of6 img {
-            width: 50%;
-            float: right;
-        }
-        .content-fragment-text {
-            width: 50%;
-            padding-right: 1rem;
         }
 }
 @media only screen
