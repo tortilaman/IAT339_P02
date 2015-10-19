@@ -2,124 +2,141 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-
-    <title> The Whole Nine Yards </title>
-
-    <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/grid.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
-
-
-    <link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700' rel='stylesheet' type='text/css'>
-
+	<meta charset="utf-8">
+	<title> The Whole Nine Yards </title>
+	<link href="css/normalize.css" rel="stylesheet">
+	<link href="css/grid.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700' rel='stylesheet' type='text/css'>
 </head>
-
 <body>
-    <main>
-        <!--=====================
-                NAVIGATION
-            =====================-->
-
-        <header>
-            <a href="index.html"> <img src="img/logo-03.png" id="logo" alt="The Whole Nine Yards logo"> </a>
-            <nav id="main-nav">
-                <ul>
-                    <li><a class="col1of6 btn btn-nav" href="index.html"> Home </a></li>
-                    <li><a class="col1of6 btn btn-nav current" href="twnyInventory.html"> Inventory </a></li>
-                    <li><a class="col1of6 btn btn-nav" href="twnyServices.html"> Services </a></li>
-                    <li><a class="col1of6 btn btn-nav" href="twnyBlog.html"> Blog </a></li>
-                    <li><a class="col1of6 btn btn-nav" href="twnyContact.html"> Contact </a></li>
-                    <li><a class="col1of6 btn btn-nav" href="twnyAccount.html"> Account </a></li>
-                </ul>
-            </nav>
-        </header>
-        <div class="banner-container">
-            <div id="banner-image">
-                <img src="img/scale_model.jpg" alt="A model of an ancient city">
-            </div>
-            <div id="banner-content">
-                <h1>Inventory</h1>
-            </div>
-        </div>
-        <!-- =====================
-                CONTENT
-             ===================== -->
-        <div id="body-content">
-            <div class="col6of6 content-container clearfix">
-                <a href="twnyInventoryDetail.html"><img src="img/product.jpg" alt="An inventory listing"></a>
-                <div class="content-fragment-text">
-                    <a href="twnyInventoryDetail.html"><h2>Car Keys</h2></a>
-                    <div class="star-rating">★★★★☆<span> - from 4 reviews</span></div>
-                    <span>$100.00</span>
-                    <ul>
-                        <li>Here's a feature</li>
-                        <li>Another feature</li>
-                        <li>Wow, three features for this item</li>
-                        <li>More features than you know what to do with</li>
-                    </ul>
-                    <!-- FIXME: The layout of the purchase stuff isn't really working out -->
-                    <form>
-                        <label for="form-quantity2">Quantity:</label>
-                        <select name="form-quantity2" id="form-quantity2">
-                            <option value="quantity1">1</option>
-                            <option value="quantity2">2</option>
-                            <option value="quantity3">3</option>
-                            <option value="quantity4">4</option>
-                            <option value="quantity5">5</option>
-                            <option value="quantity6">6</option>
-                            <option value="quantity7">7</option>
-                            <option value="quantity8">8</option>
-                            <option value="quantity9">9</option>
-                            <option value="quantity10">10</option>
-                        </select>
-                        <br>
-                        <button class="btn">Bag it</button>
-                    </form>
-                </div>
-            </div>
-            <div class="content-details-container">
-                    <div class="content-selector">
-                        <ul>
-                            <!-- FIXME: Is it obvious these are tabs / buttons? -->
-                            <!-- FIXME: <a> tags are causing validation errors here. Maybe move them inside the <li> tags? -->
-                            <a href="#" id="reviews-btn" class="btn current" onclick="changeDetailsTab(this, 'content-details-reviews')"><li>Reviews</li></a>
-                            <a href="#" id="desc-btn" class="btn" onclick="changeDetailsTab(this, 'content-details-desc')"><li>Description</li></a>
-                            <a href="#" id="spec-btn" class="btn" onclick="changeDetailsTab(this, 'content-details-spec')"><li>Specifications</li></a>
-                        </ul>
-                    </div>
-                    <div id="content-details-reviews">
-                        <!-- TODO: Add "Write review" button, and lightbox review window -->
-                        <!-- TODO: Add a couple more reviews, improve description, and create some specs. Maybe style better too -->
-                        <div class="review">
-                            <img src="img/account.png" alt="profile image">
-                            <h2>This product Sucks</h2>
-                            <h3>Geoff Daniels</h3>
-                            <div class="star-rating">★★★★☆</div>
-                            <p>Let's talk about people. People don't like stuff, and I'm one of those people. People also don't make sense though, so I'm going to give something that I don't like 4 stars. How you like them apples. ANNNNNAAAAARCHY!!!!</p>
-                        </div>
-                    </div>
-                    <div id="content-details-desc">
-                        <p>Here's a description of the item you're looking at. Yep. More stuff to read here, wow I sure am typing a lot, I should probably get some ipsum text for this...</p>
-                    </div>
-                    <div id="content-details-spec">
-
-                    </div>
-                </div>
-        </div>
-    </main>
-    <script>
-        function changeDetailsTab(clickedElem, visElem) {
-            /*FUTURE: Perhaps there's a way to dynamically populate this instead of an array? Not important now though...*/
-            var tabs = ["content-details-reviews", "content-details-desc", "content-details-spec"];
-            var btns = ["reviews-btn", "desc-btn", "spec-btn"];
-            for(i=0, len = tabs.length; i < len; i++) {
-                document.getElementById(tabs[i]).style.display = "none";
-                document.getElementById(btns[i]).className = "btn";
-            }
-            document.getElementById(visElem).style.display = "block";
-        }
-    </script>
+	<main>
+		<!--=====================
+				NAVIGATION
+			=====================-->
+		<header>
+			<a href="index.html"> <img src="img/logo-03.png" id="logo" alt="The Whole Nine Yards logo"> </a>
+			<nav id="main-nav">
+				<ul>
+					<li><a class="col1of6 btn btn-nav" href="index.html"> Home </a></li>
+					<li><a class="col1of6 btn btn-nav current" href="twnyInventory.html"> Inventory </a></li>
+					<li><a class="col1of6 btn btn-nav" href="twnyServices.html"> Services </a></li>
+					<li><a class="col1of6 btn btn-nav" href="twnyBlog.html"> Blog </a></li>
+					<li><a class="col1of6 btn btn-nav" href="twnyContact.html"> Contact </a></li>
+					<li><a class="col1of6 btn btn-nav" href="twnyAccount.html"> Account </a></li>
+				</ul>
+			</nav>
+		</header>
+		<div class="banner-container">
+			<div id="banner-image">
+				<img src="img/scale_model.jpg" alt="A model of an ancient city">
+			</div>
+			<div id="banner-content">
+				<h1>Inventory</h1>
+			</div>
+		</div>
+		<!-- =====================
+				CONTENT
+			 ===================== -->
+		<div id="body-content">
+			<div class="col6of6 content-container clearfix">
+				<a href="twnyInventoryDetail.html"><img src="img/product.jpg" alt="An inventory listing"></a>
+				<div class="content-fragment-text">
+					<a href="twnyInventoryDetail.html"><h2>Car Keys</h2></a>
+					<div class="star-rating">★★★★☆<span> - from 4 reviews</span></div>
+					<span>$100.00</span>
+					<ul>
+						<li>Here's a feature</li>
+						<li>Another feature</li>
+						<li>Wow, three features for this item</li>
+						<li>More features than you know what to do with</li>
+					</ul>
+					<!-- FIXME: The layout of the purchase stuff isn't really working out -->
+					<form>
+						<label for="form-quantity2">Quantity:</label>
+						<select name="form-quantity2" id="form-quantity2">
+							<option value="quantity1">1</option>
+							<option value="quantity2">2</option>
+							<option value="quantity3">3</option>
+							<option value="quantity4">4</option>
+							<option value="quantity5">5</option>
+							<option value="quantity6">6</option>
+							<option value="quantity7">7</option>
+							<option value="quantity8">8</option>
+							<option value="quantity9">9</option>
+							<option value="quantity10">10</option>
+						</select>
+						<br>
+						<button class="btn">Bag it</button>
+					</form>
+				</div>
+			</div>
+			<div class="content-details-container">
+					<div class="content-selector">
+						<ul>
+							<!-- FIXME: Is it obvious these are tabs / buttons? -->
+							<!-- FIXME: <a> tags are causing validation errors here. Maybe move them inside the <li> tags? -->
+							<a href="#" id="reviews-btn" class="btn current" onclick="changeDetailsTab(this, 'content-details-reviews')"><li>Reviews</li></a>
+							<a href="#" id="desc-btn" class="btn" onclick="changeDetailsTab(this, 'content-details-desc')"><li>Description</li></a>
+							<a href="#" id="spec-btn" class="btn" onclick="changeDetailsTab(this, 'content-details-spec')"><li>Specifications</li></a>
+						</ul>
+					</div>
+					<div id="content-details-reviews" class="grid">
+						<!-- TODO: Add "Write review" button, and lightbox review window -->
+						<!-- TODO: Add a couple more reviews, improve description, and create some specs. Maybe style better too -->
+						<div class="col3of6">
+							<div id="review-header">
+								<form>
+									<label for="review-sort">Sort By:</label>
+									<select name="form-quantity2" id="review-sort">
+										<option value="quantity1">Most Helpful</option>
+										<option value="quantity2">Most Recent</option>
+										<option value="quantity3">Rating</option>
+									</select>
+								</form>
+								<button class="btn">Write a Review!</button>
+							</div>
+							<div class="review">
+								<img src="img/account.png" alt="profile image">
+								<h2>This product Sucks</h2>
+								<h3>Geoff Daniels</h3>
+								<div class="star-rating">★★★★☆</div>
+								<span>Nov. 14th 2014</span>
+								<p>Let's talk about people. People don't like stuff, and I'm one of those people. People also don't make sense though, so I'm going to give something that I don't like 4 stars. How you like them apples. ANNNNNAAAAARCHY!!!!</p>
+							</div>
+							<div class="review">
+								<img src="img/account.png" alt="profile image">
+								<h2>This product Sucks</h2>
+								<h3>Geoff Daniels</h3>
+								<div class="star-rating">★★★★☆</div>
+								<span>Sept. 7th 2013</span>
+								<p>Let's talk about people. People don't like stuff, and I'm one of those people. People also don't make sense though, so I'm going to give something that I don't like 4 stars. How you like them apples. ANNNNNAAAAARCHY!!!!</p>
+							</div>
+						</div>
+						<div class="col3of6">
+							<!-- TODO: Put a review summary here or something -->
+						</div>
+					</div>
+					<div id="content-details-desc">
+						<p>Here's a description of the item you're looking at. Yep. More stuff to read here, wow I sure am typing a lot, I should probably get some ipsum text for this...</p>
+					</div>
+					<div id="content-details-spec">
+					</div>
+				</div>
+		</div>
+	</main>
+	<script>
+		function changeDetailsTab(clickedElem, visElem) {
+			/*FUTURE: Perhaps there's a way to dynamically populate this instead of an array? Not important now though...*/
+			var tabs = ["content-details-reviews", "content-details-desc", "content-details-spec"];
+			var btns = ["reviews-btn", "desc-btn", "spec-btn"];
+			for(i=0, len = tabs.length; i < len; i++) {
+				document.getElementById(tabs[i]).style.display = "none";
+				document.getElementById(btns[i]).className = "btn";
+			}
+			document.getElementById(visElem).style.display = "block";
+		}
+	</script>
 </body>
 </html>
