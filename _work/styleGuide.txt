@@ -1,4 +1,9 @@
 To do:
+- edit the photos to make it the same size
+- 
+
+
+To do:
 - add content to contacts
 - add content to account
 - add review form into product detail
