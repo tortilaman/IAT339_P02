@@ -2,73 +2,74 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
+	<meta charset="utf-8">
 
-    <title> The Whole Nine Yards </title>
+	<title> The Whole Nine Yards </title>
 
-    <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/grid.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
+	<link href="css/normalize.css" rel="stylesheet">
+	<link href="css/grid.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
 
 
-    <link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700' rel='stylesheet' type='text/css'>
 
 </head>
 
 <body>
-    <main>
-        <!-- =====================
-                NAVIGATION
-             ===================== -->
-        <header>
-            <a href="index.html"> <img src="img/logo-03.png" id="logo" alt="The Whole Nine Yards logo"> </a>
+	<main>
+		<!-- =====================
+				NAVIGATION
+			 ===================== -->
+		<header>
+			<a onclick="toggleNav()"><img src="img/logo-03.png" id="logo" alt="The Whole Nine Yards logo"> </a>
 
-            <nav id="main-nav">
-                <ul>
-                    <li><a class="col1of6 btn btn-nav" href="index.html"> Home </a></li>
-                    <li><a class="col1of6 btn btn-nav" href="twnyInventory.html"> Inventory </a></li>
-                    <li><a class="col1of6 btn btn-nav current" href="twnyServices.html"> Services </a></li>
-                    <li><a class="col1of6 btn btn-nav" href="twnyBlog.html"> Blog </a></li>
-                    <li><a class="col1of6 btn btn-nav" href="twnyContact.html"> Contact </a></li>
-                    <li><a class="col1of6 btn btn-nav" href="twnyAccount.html"> Account </a></li>
-                </ul>
-            </nav>
-        </header>
-        <div class="banner-container">
-            <div id="banner-image">
-                <img src="img/scale_model.jpg" alt="A model of an ancient city">
-            </div>
-            <div id="banner-content">
-                <h1>Services</h1>
-            </div>
-        </div>
-        <!-- =====================
-                BODY CONTENT
-             ===================== -->
-        <div id="body-content">
-            <!--item 1-->
-            <div class="col6of6 content-container">
-                <a href="#"><img src="img/product.jpg" alt="An inventory listing"></a>
-                <div class="content-fragment-text">
-                    <a href="#"><h2>Service/Update</h2></a><span>Call for quote</span>
-                    <p>Bacon ipsum dolor amet venison spare ribs filet mignon short ribs pork chop biltong pork loin turkey capicola pork. Ribeye tail beef ribs tenderloin, pork chop rump ham hock alcatra tri-tip shankle sirloin hamburger salami capicola turducken. Shoulder pork loin chuck venison pastrami. Meatball kielbasa rump swine, salami brisket tenderloin beef ribs. Pork chop capicola bacon, turkey landjaeger cupim pastrami doner alcatra pork loin shank biltong.
-                    <br>
-                    <a href="#" class="see-more"> see more → </a></p>
-                </div>
-            </div>
-            <!--item 2-->
-            <div class="col6of6 content-container">
-                <a href="#"><img src="img/product.jpg" alt="An inventory listing"></a>
-                <div class="content-fragment-text">
-                    <a href="#"><h2>Service/Update</h2></a><span>Call for quote</span>
-                    <p>Bacon ipsum dolor amet venison spare ribs filet mignon short ribs pork chop biltong pork loin turkey capicola pork. Ribeye tail beef ribs tenderloin, pork chop rump ham hock alcatra tri-tip shankle sirloin hamburger salami capicola turducken. Shoulder pork loin chuck venison pastrami. Meatball kielbasa rump swine, salami brisket tenderloin beef ribs. Pork chop capicola bacon, turkey landjaeger cupim pastrami doner alcatra pork loin shank biltong.
-                    <br>
-                    <a href="#" class="see-more"> see more → </a></p>
-                </div>
-            </div>
-        </div>
-    </main>
+			<nav id="main-nav">
+				<ul>
+					<li><a class="col1of6 btn btn-nav" href="index.html"> Home </a></li>
+					<li><a class="col1of6 btn btn-nav" href="twnyInventory.html"> Inventory </a></li>
+					<li><a class="col1of6 btn btn-nav current" href="twnyServices.html"> Services </a></li>
+					<li><a class="col1of6 btn btn-nav" href="twnyBlog.html"> Blog </a></li>
+					<li><a class="col1of6 btn btn-nav" href="twnyContact.html"> Contact </a></li>
+					<li><a class="col1of6 btn btn-nav" href="twnyAccount.html"> Account </a></li>
+				</ul>
+			</nav>
+		</header>
+		<div class="banner-container">
+			<div id="banner-image">
+				<img src="img/scale_model.jpg" alt="A model of an ancient city">
+			</div>
+			<div id="banner-content">
+				<h1>Services</h1>
+			</div>
+		</div>
+		<!-- =====================
+				BODY CONTENT
+			 ===================== -->
+		<div id="body-content">
+			<!--item 1-->
+			<div class="col6of6 content-container">
+				<a href="#"><img src="img/product.jpg" alt="An inventory listing"></a>
+				<div class="content-fragment-text">
+					<a href="#"><h2>Service/Update</h2></a><span>Call for quote</span>
+					<p>Bacon ipsum dolor amet venison spare ribs filet mignon short ribs pork chop biltong pork loin turkey capicola pork. Ribeye tail beef ribs tenderloin, pork chop rump ham hock alcatra tri-tip shankle sirloin hamburger salami capicola turducken. Shoulder pork loin chuck venison pastrami. Meatball kielbasa rump swine, salami brisket tenderloin beef ribs. Pork chop capicola bacon, turkey landjaeger cupim pastrami doner alcatra pork loin shank biltong.
+					<br>
+					<a href="#" class="see-more"> see more → </a></p>
+				</div>
+			</div>
+			<!--item 2-->
+			<div class="col6of6 content-container">
+				<a href="#"><img src="img/product.jpg" alt="An inventory listing"></a>
+				<div class="content-fragment-text">
+					<a href="#"><h2>Service/Update</h2></a><span>Call for quote</span>
+					<p>Bacon ipsum dolor amet venison spare ribs filet mignon short ribs pork chop biltong pork loin turkey capicola pork. Ribeye tail beef ribs tenderloin, pork chop rump ham hock alcatra tri-tip shankle sirloin hamburger salami capicola turducken. Shoulder pork loin chuck venison pastrami. Meatball kielbasa rump swine, salami brisket tenderloin beef ribs. Pork chop capicola bacon, turkey landjaeger cupim pastrami doner alcatra pork loin shank biltong.
+					<br>
+					<a href="#" class="see-more"> see more → </a></p>
+				</div>
+			</div>
+		</div>
+	</main>
+	<script src="js/main.js"></script>
 </body>
 
 </html>

@@ -1,47 +1,47 @@
 *,
 *:after,
 *:before {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 
 /*==================
-    THE ACTUAL GRID
+	THE ACTUAL GRID
   ==================*/
 
 .grid {
-    position: relative;
-    display: block;
-    margin: 0;
-    padding: 0;
+	position: relative;
+	display: block;
+	margin: 0;
+	padding: 0;
 }
 
 .grid:after {
-    content: "";
-    display: table;
-    clear: both;
+	content: "";
+	display: table;
+	clear: both;
 }
 
 [class^="col"] {
-    float: left;
-    margin: 0;
-    padding: 1rem;
+	float: left;
+	margin: 0;
+	padding: 1rem;
 }
 
 .col1of6 {
-    width: 16.6%;
+	width: 16.6%;
 }
 
 .col2of6 {
-    width: 33.3%;
+	width: 33.3%;
 }
 
 .col3of6 {
-    width: 50%;
+	width: 50%;
 }
 .col6of6 {
-    float: none;
-    width: 100%;
+	float: none;
+	width: 100%;
 }
 
 
@@ -50,20 +50,20 @@
  * ==================*/
 
 main {
-    position: relative;
-    margin: 0 auto;
-    max-width: 75rem;
+	position: relative;
+	margin: 0 auto;
+	max-width: 75rem;
 /*    background: #151515;*/
-    font-family: "Inconsolata";
-    font-weight: 400;
-    height: 100vh;
+	font-family: "Inconsolata";
+	font-weight: 400;
+	height: 100vh;
 /*    box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, 0.25);*/
 }
 
 #body-content {
-    clear: both;
-    overflow: hidden;
-    padding: 0 4rem;
+	clear: both;
+	overflow: hidden;
+	padding: 0 4rem;
 }
 
 /* ==================
@@ -71,23 +71,23 @@ main {
  * ==================*/
 
 @media only screen
-    and (max-width: 58rem) {
-        .col1of6, .col2of6, .col3of6 {
-            width: 100%;
-            padding: 0 0 2rem 0;
-        }
-        #body-content {
-            padding: 0;
-        }
+	and (max-width: 63rem) {
+		.col1of6, .col2of6, .col3of6 {
+			width: 100%;
+			padding: 0 0 2rem 0;
+		}
+		#body-content {
+			padding: 0;
+		}
 }
 @media only screen
-    and (min-width: 58.1rem)
-    and (max-width: 75rem) {
-        .col2of6 {
-            width: 100%;
-        }
+	and (min-width: 63.1rem)
+	and (max-width: 75rem) {
+		.col2of6 {
+			width: 100%;
+		}
 }
 @media only screen
-    and (min-width: 75.1rem) {
+	and (min-width: 75.1rem) {
 
 }

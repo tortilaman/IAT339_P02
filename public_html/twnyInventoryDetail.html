@@ -16,7 +16,7 @@
 				NAVIGATION
 			=====================-->
 		<header>
-			<a href="index.html"> <img src="img/logo-03.png" id="logo" alt="The Whole Nine Yards logo"> </a>
+			<a onclick="toggleNav()"> <img src="img/logo-03.png" id="logo" alt="The Whole Nine Yards logo"></a>
 			<nav id="main-nav">
 				<ul>
 					<li><a class="col1of6 btn btn-nav" href="index.html"> Home </a></li>
@@ -77,9 +77,9 @@
 						<ul>
 							<!-- FIXME: Is it obvious these are tabs / buttons? -->
 							<!-- FIXME: <a> tags are causing validation errors here. Maybe move them inside the <li> tags? -->
-							<a href="#" id="reviews-btn" class="btn current" onclick="changeDetailsTab(this, 'content-details-reviews')"><li>Reviews</li></a>
-							<a href="#" id="desc-btn" class="btn" onclick="changeDetailsTab(this, 'content-details-desc')"><li>Description</li></a>
-							<a href="#" id="spec-btn" class="btn" onclick="changeDetailsTab(this, 'content-details-spec')"><li>Specifications</li></a>
+							<a href="#" id="reviews-btn" class="btn current" onclick="changeDetailsTab('content-details-reviews')"><li>Reviews</li></a>
+							<a href="#" id="desc-btn" class="btn" onclick="changeDetailsTab('content-details-desc')"><li>Description</li></a>
+							<a href="#" id="spec-btn" class="btn" onclick="changeDetailsTab('content-details-spec')"><li>Specifications</li></a>
 						</ul>
 					</div>
 					<div id="content-details-reviews" class="grid">
@@ -119,24 +119,26 @@
 						</div>
 					</div>
 					<div id="content-details-desc">
-						<p>Here's a description of the item you're looking at. Yep. More stuff to read here, wow I sure am typing a lot, I should probably get some ipsum text for this...</p>
+						<p>Bacon ipsum dolor amet salami kielbasa ribeye alcatra sausage. Kevin porchetta t-bone pastrami tongue ribeye. Ribeye sirloin turkey, corned beef jerky jowl short ribs alcatra shank salami pork loin cupim. Chicken venison drumstick short loin pork tail.</p>
+
+						<p>Kevin spare ribs jowl venison tenderloin short loin pork filet mignon flank strip steak. Short ribs landjaeger chicken pork belly. Brisket rump biltong jowl pancetta spare ribs. Ground round cow beef ribs prosciutto kielbasa ball tip shankle ribeye tail t-bone short loin filet mignon pork loin.</p>
+
+						<p>Hamburger meatloaf shoulder ground round pig salami. Jowl corned beef tongue, boudin tail bacon salami. Ground round venison leberkas shankle tongue. Shank strip steak flank short loin picanha.</p>
+
+						<p>Bacon ipsum dolor amet salami kielbasa ribeye alcatra sausage. Kevin porchetta t-bone pastrami tongue ribeye. Ribeye sirloin turkey, corned beef jerky jowl short ribs alcatra shank salami pork loin cupim. Chicken venison drumstick short loin pork tail.</p>
+
+						<p>Bacon ipsum dolor amet salami kielbasa ribeye alcatra sausage. Kevin porchetta t-bone pastrami tongue ribeye. Ribeye sirloin turkey, corned beef jerky jowl short ribs alcatra shank salami pork loin cupim. Chicken venison drumstick short loin pork tail.</p>
+						<ul>
+							<li>First item of the description. So Helpful, Much list, Wow!</li>
+							<li>More list items</li>
+							<li>A third list item even</li>
+						</ul>
 					</div>
 					<div id="content-details-spec">
 					</div>
 				</div>
 		</div>
 	</main>
-	<script>
-		function changeDetailsTab(clickedElem, visElem) {
-			/*FUTURE: Perhaps there's a way to dynamically populate this instead of an array? Not important now though...*/
-			var tabs = ["content-details-reviews", "content-details-desc", "content-details-spec"];
-			var btns = ["reviews-btn", "desc-btn", "spec-btn"];
-			for(i=0, len = tabs.length; i < len; i++) {
-				document.getElementById(tabs[i]).style.display = "none";
-				document.getElementById(btns[i]).className = "btn";
-			}
-			document.getElementById(visElem).style.display = "block";
-		}
-	</script>
+	<script src="js/main.js"></script>
 </body>
 </html>
