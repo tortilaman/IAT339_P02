@@ -449,6 +449,13 @@ header {
 	margin: 0;
 	padding: 0;
 }
+
+.content-detail-interview{
+    padding: 3em;
+}
+.content-detail-interview strong{
+    color: #FFF;
+}
 /* FIXME: For some reason this doesn't work... not sure why. */
 #content-details-reviews:first-child{
 	padding-left: 0;
@@ -476,6 +483,9 @@ header {
 	list-style-type: square;
 }
 
+span.entry-date{
+    font-size: 0.9rem;
+}
 /*  =========================
  *  FORMS & DROPDOWNS
  *  =========================*/
