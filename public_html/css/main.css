@@ -150,6 +150,7 @@ a img:hover{
     text-transform: uppercase;
     letter-spacing: 0.03em;
     text-decoration: none;
+    margin-top: 1rem;
 }
 
 
@@ -366,7 +367,13 @@ header {
     font-size: 1rem;
     text-transform: capitalize;
 }
-
+.content-fragment-feature {
+    margin-top: 1rem;
+}
+.content-fragment-feature p{
+    line-height: 0;
+    padding-left: 1rem;
+}
 
 /* SERVICES & BLOG FRAGMENTS */
 
@@ -460,6 +467,7 @@ header {
 
 #content-details-desc {
     display: none;
+    margin-top: 1rem;
 }
 
 #content-details-text p {
@@ -538,6 +546,7 @@ header {
 
 #content-details-spec {
     display: none;
+    margin-top: 1rem;
 }
 
 span.entry-date {
