@@ -78,8 +78,12 @@ main {
 			padding: 0 0 2rem 0;
 		}
 		#body-content {
-			padding: 0;
+			padding: 0 2rem;
 		}
+        
+        .content-container{
+            padding-top: 2rem;
+        }
 }
 @media only screen
 	and (min-width: 63.1rem)
