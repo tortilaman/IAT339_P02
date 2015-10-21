@@ -137,16 +137,12 @@ a img:hover{
 /* TODO: It should be more obvious this is a button before you hover... */
 /* -----------------------------*/
 
-button {
+.btn {
+    display: inline-block;
+    margin-top: 0.5rem;
     border: none;
     background-color: #666666;
     box-shadow: 0 0 0.1rem rgba(150, 150, 150, 0.25);
-    -webkit-transition: all 0.15s ease-in-out;
-    transition: all 0.15s ease-in-out;
-}
-
-.btn {
-    display: inline-block;
     padding: 0.4em 1.3em;
     color: #E1E1E1;
     font-family: "Inconsolata", Arial, Helvetica, sans-serif;
@@ -159,9 +155,9 @@ button {
 
 /* TODO: Different active state than hover??? */
 
-button:hover,
-button:focus,
-button:active {
+.btn:hover,
+.btn:focus,
+.btn:active {
     -webkit-transform: translateY(-0.05rem);
     transform: translateY(-0.05rem);
     box-shadow: 0.1rem 0.2em 0.3rem rgba(150, 150, 150, 0.25);
@@ -219,6 +215,8 @@ label[for="nav-trigger"]:active {
 .btn-nav {
     font-size: 1rem;
     color: #E1E1E1;
+    background: #191919;
+    box-shadow: none;
     padding: 0rem 0rem 0.5rem 0rem;
     text-align: center;
 }
