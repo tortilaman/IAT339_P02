@@ -215,6 +215,7 @@ label[for="nav-trigger"]:active {
 
 .btn-nav {
     font-size: 1rem;
+    margin-top:0;
     color: #E1E1E1;
     background: #191919;
     box-shadow: none;
