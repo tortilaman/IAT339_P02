@@ -435,6 +435,7 @@ header {
     width: 100%;
     padding: 0 1rem;
     line-height: 1rem;
+    padding-top: 1rem;
 }
 
 .content-selector ul {
@@ -495,7 +496,7 @@ header {
     position: relative;
     display: block;
     margin: 0;
-    padding: 0;
+    padding: 1rem 0;
 }
 
 .content-detail-interview {
@@ -918,7 +919,7 @@ tr.pricing-total td{
 		}
 
 		.content-container {
-			padding: 0;
+			padding: 0 0 1rem 0;
 		}
 		.content-fragment-text {
 /*			padding: 0 3rem;*/
