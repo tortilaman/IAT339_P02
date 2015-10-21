@@ -279,20 +279,22 @@ header {
 }
 
 #home-banner p  {
+    font-family: "Source Sans Pro";
 	margin: 0;
 	padding: 0;
 	width: 28rem;
 	font-size: 1.3rem;
-	font-weight: 700;
+	font-weight: 100;
 	line-height: 1.5em;
 	letter-spacing: 0.1rem;
 	color: #E1E1E1;
 }
 
 #home-banner h1 {
-	font-size: 7rem;
+	font-size: 6rem;
 	font-weight: 700;
-	border-bottom: 0.4rem solid #DD4D6A;
+/*	border-bottom: 0.4rem solid #DD4D6A;*/
+    margin-bottom: 1rem;
 }
 
 /*  =========================
@@ -715,7 +717,7 @@ th {
 			padding: 2em 0;
 		}
 		.content-fragment-text {
-			padding: 0 3rem;
+			padding: 1rem 0rem 0rem 0rem;
 		}
 
 		/* Blog & Services */
