@@ -23,8 +23,8 @@
 			=====================-->
 
 		<header>
-			<a onclick="toggleNav()"><img src="img/logo-03.png" id="logo" alt="The Whole Nine Yards logo"> </a>
-
+			<input type="checkbox" id="nav-trigger" class="nav-trigger logo"/>
+            <label for="nav-trigger"></label>
 			<nav id="main-nav">
 				<ul>
 					<li><a class="col1of6 btn btn-nav" href="index.html"> Home </a></li>
@@ -36,12 +36,33 @@
 				</ul>
 			</nav>
 		</header>
-
+        <div class="banner-container">
+			<div id="banner-image">
+				<img src="img/scale_model.jpg" alt="A model of an ancient city">
+			</div>
+			<div id="banner-content">
+				<h1>Contact</h1>
+			</div>
+		</div>
 		<!--================
 				CONTENT
 			================-->
 
-		<div id="body-content">
+		<div id="body-content" class="clearfix">
+            <div class="col3of6">
+                <h2>Call us!</h2>
+                <p>(555)873-5000</p>
+                <h2>Email us!</h2>
+                <p>letschat@twny.com</p>
+                <h2>Visit us!</h2>
+                <p>1393 Knight St. Vancouver CA</p>
+            </div>
+            <div class="col3of6">
+                <!-- FUTURE: Make the map fill remaining screen height. Seems to be a serious pain, even with javascript. -->
+                <div id="mapContainer">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d83410.68201518073!2d-122.87652524044188!3d49.20845425961716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sca!4v1445368393967" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+            </div>
 		</div>
 	</main>
 	<script src="js/main.js"></script>
