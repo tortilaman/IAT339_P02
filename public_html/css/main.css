@@ -687,6 +687,11 @@ tr.pricing-total td{
     letter-spacing: 0.03em;
 }
 
+.bag-checkout.login .btn {
+    float: left;
+    margin: 0.5rem 1rem;
+}
+
 
 /*===================
  *  CHECKOUT
@@ -712,10 +717,11 @@ tr.pricing-total td{
     margin-bottom: 5em;
 }
 
-.checkout-title {
+.checkout-content h2 {
     font-weight: 800;
     margin-top: 1rem;
     color: #191919;
+    margin-bottom: 0em;
 }
 
 #month,
@@ -735,13 +741,11 @@ tr.pricing-total td{
     margin-top: 2em;
 }
 
-#checkout-container .checkout-title {
-    margin-bottom: 0em;
-}
-
 .tiny-btn {
     font-weight: 800;
     text-decoration: underline;
+    margin-top: 1rem;
+    margin-left: 1rem;
 }
 
 #confirm-order-content{
@@ -917,7 +921,7 @@ tr.pricing-total td{
 			padding: 0;
 		}
 		.content-fragment-text {
-			padding: 0 3rem;
+/*			padding: 0 3rem;*/
 		}
 
 		/* Blog & Services */

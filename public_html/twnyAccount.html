@@ -22,7 +22,7 @@
 				NAVIGATION
 			=====================-->
 
-		<header>
+        <header>
 			<input type="checkbox" id="nav-trigger" class="nav-trigger logo" />
 <label for="nav-trigger"></label>
 			<nav id="main-nav">
@@ -37,14 +37,53 @@
 			</nav>
 		</header>
 
-		<!--================
+        <!--================
 				CONTENT
 			================-->
 
-		<div id="body-content">
-		</div>
-	</main>
-	<script src="js/main.js"></script>
+        <div id="body-content">
+            <div class="checkout-content">
+
+                <div class="col3of6">
+                    <form>
+                        <div class="col6of6">
+                            <h2>Login</h2>
+                            <label for="email1">Email Adress</label>
+                            <input type="text" id="email1" placeholder="jdoe@gmail.com">
+                        </div>
+
+                        <div class="col6of6">
+                            <label for="password">Password</label>
+                            <input type="text" id="password" placeholder="*********">
+                        </div>
+                        <div class="bag-checkout login">
+                            <a class="tiny-btn">I forgot my password</a><br>
+                            <a href="#" class="btn">Login</a>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col3of6">
+                    <form>
+                        <div class="col6of6">
+                            <h2>Join now!</h2>
+                            <p>Welcome new customer! Please register to access convenient features and quick checkout.</p>
+                            <label for="email1">Email Adress</label>
+                            <input type="text" id="email1" placeholder="jdoe@gmail.com">
+                        </div>
+                        <div class="bag-checkout login">
+                                <a href="#" class="btn">Create Account</a>
+                            </div>
+
+                    </form>
+                </div>
+
+
+            </div>
+
+        </div>
+    </main>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
