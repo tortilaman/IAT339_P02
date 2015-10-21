@@ -4,19 +4,46 @@
  *  Location specific items are where they need to be dealt with.
  *  Comment categories are: TODO, NOTE, FIXME, CHANGES, FUTURE,
  *  ================================================================*/
+
+
 /*  TODO:   Update visual styling*/
+
+
 /*  TODO:   Update/finish layouts*/
+
+
 /*  TODO:   Responsiveness*/
+
+
 /*  TODO:   Add remaining content pages*/
+
+
 /*  TODO:   Create contact page*/
+
+
 /*  TODO:   Create account page*/
+
+
 /*  TODO:   Cart in navigation??? */
+
+
 /*  TODO:   Shopping bag icon for "bag it" button*/
+
+
 /*  FIXME:  Banner image changes position from homepage to inventory/services/blog to details.*/
+
+
 /*  FIXME:  Move price to right side on inventory page? */
+
+
 /*  FUTURE: Responsive Imagery at least for banner*/
+
+
 /*  FUTURE: Can the border bar below nav items animate between them when the page is changed? */
+
+
 /*  ================================================================*/
+
 
 /*  =========================
  *  COLOR PALLETTE
@@ -24,35 +51,38 @@
  *  Red:    #DD4D6A
  *  White:  #E1E1E1
  *  Gray:   #666666
- *  Black:   #191919
+ *  Black:  #191919
  *  =========================*/
+
 
 /*  =========================
  *  DEFAULT ELEMENT STYLING
  *  =========================*/
 
 img {
-	width: 100%;
+    width: 100%;
 }
 
 body {
-	background-color: #191919;
-	color: #E1E1E1;
+    background-color: #191919;
+    color: #E1E1E1;
 }
 
 li {
-	list-style-type: none;
+    list-style-type: none;
 }
+
 
 /*  =========================
  *  "MIXINS"
  *  =========================*/
 
 .clearfix:after {
-	content: "";
-	display: table;
-	clear: both;
+    content: "";
+    display: table;
+    clear: both;
 }
+
 
 /*  =========================
  *  TEXT STYLING
@@ -62,27 +92,28 @@ h1,
 h2,
 h3,
 span {
-	font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
-	color: #E1E1E1;
-	font-weight: 600;
-	text-transform: uppercase;
-	text-decoration: none;
-	margin: 0;
+    font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+    color: #E1E1E1;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: 0;
 }
 
 h2 {
-	font-size: 1.5rem;
+    font-size: 1.5rem;
 }
 
 p {
-	color: #666666;
-	line-height: 2em;
-	margin-top: 0;
+    color: #666666;
+    line-height: 2em;
+    margin-top: 0;
 }
 
 figcaption {
-	color: #666666;
+    color: #666666;
 }
+
 
 /*  =========================
  *  INTERACTIVE ELEMENTS
@@ -92,109 +123,133 @@ figcaption {
 /* Links */
 
 a {
-	color: #DD4D6A;
-	text-decoration: none;
-	opacity: 1;
+    color: #DD4D6A;
+    text-decoration: none;
+    opacity: 1;
 }
 
-a:hover, a:active, a:focus, a h1:hover, a h1:active, a h1:focus, a h2:hover, a h2:focus, a h2:active {
-	text-decoration: underline;
-	opacity: 0.6
+a:hover,
+a:active,
+a:focus{
+    text-decoration: underline;
+    opacity: 0.6;
+}
+
+a h1:hover,
+a h1:active,
+a h1:focus,
+a h2:hover,
+a h2:focus,
+a h2:active {
+    text-decoration: none;
 }
 
 a.see-more {
-	text-decoration: underline;
+    text-decoration: underline;
+}
+
+a img:hover{
+    opacity: 1;
 }
 
 /* -----------------------------
  * Standard Button
  * -----------------------------*/
+
+
 /* NOTE: To style differently just create a new class that modifies this and apply both to the html*/
+
+
 /* TODO: It should be more obvious this is a button before you hover... */
+
+
 /* -----------------------------*/
 
 button {
-	border: none;
-	background-color: #666666;
-	box-shadow: 0 0 0.1rem rgba(150, 150, 150, 0.25);
-	-webkit-transition: all 0.15s ease-in-out;
-	transition: all 0.15s ease-in-out;
+    border: none;
+    background-color: #666666;
+    box-shadow: 0 0 0.1rem rgba(150, 150, 150, 0.25);
+    -webkit-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
 }
 
 .btn {
-	display: inline-block;
-	padding: 0.4em 1.3em;
-	color: #E1E1E1;
-	font-family: "Inconsolata", Arial, Helvetica, sans-serif;
-	font-size: 0.9em;
-	text-transform: uppercase;
-	letter-spacing: 0.03em;
-	text-decoration: none;
+    display: inline-block;
+    padding: 0.4em 1.3em;
+    color: #E1E1E1;
+    font-family: "Inconsolata", Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    text-decoration: none;
 }
+
 
 /* TODO: Different active state than hover??? */
 
 button:hover,
 button:focus,
 button:active {
-	-webkit-transform: translateY(-0.05rem);
-	transform: translateY(-0.05rem);
-	box-shadow: 0.1rem 0.2em 0.3rem rgba(150, 150, 150, 0.25);
-	text-decoration: none;
-	background-color: #DD4D6A;
-	color: #191919;
+    -webkit-transform: translateY(-0.05rem);
+    transform: translateY(-0.05rem);
+    box-shadow: 0.1rem 0.2em 0.3rem rgba(150, 150, 150, 0.25);
+    text-decoration: none;
+    background-color: #DD4D6A;
+    color: #191919;
 }
 
 #logo {
-	width: auto;
-	display: block;
-	height: 2.5rem;
-	-webkit-transition: all 0.25s ease-in-out;
-	transition: all 0.25s ease-in-out;
-	margin: 0 auto;
+    width: auto;
+    display: block;
+    height: 2.5rem;
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    margin: 0 auto;
 }
 
 #logo:hover,
 #logo:focus,
 #logo:active {
-	opacity: 0.8;
+    opacity: 0.8;
 }
+
 
 /*  =========================
  *  HEADER & NAVIGATION
  *  =========================*/
 
 #main-nav {
-	overflow: hidden;
-	min-width: 600px;
-	width: 75%;
-	margin: 0 auto;
+    overflow: hidden;
+    min-width: 600px;
+    width: 75%;
+    margin: 0 auto;
 }
+
 
 /* NOTE: any element that uses this also requires the .btn class */
 
 .btn-nav {
-	font-size: 1rem;
-	color: #E1E1E1;
-	padding: 0rem 0rem 0.5rem 0rem;
-	text-align: center;
+    font-size: 1rem;
+    color: #E1E1E1;
+    padding: 0rem 0rem 0.5rem 0rem;
+    text-align: center;
 }
 
 .btn-nav:hover,
 .btn-nav:active {
-	background-color: #191919;
-	color: #E1E1E1;
-	text-decoration: none;
-	box-shadow: none;
+    background-color: #191919;
+    color: #E1E1E1;
+    text-decoration: none;
+    box-shadow: none;
 }
 
 .btn-nav.current {
-	border-bottom: 0.4rem solid #DD4D6A;
+    border-bottom: 0.4rem solid #DD4D6A;
 }
 
 header {
-	display: block;
-	padding: 1em 0 0 0;
+    display: block;
+    padding: 1em 0 0 0;
 }
 
 
@@ -203,382 +258,435 @@ header {
  *  =========================*/
 
 .banner-container {
-	position: relative;
-	width: 100%;
-	height: 20vh;
-/*    min-height: 23rem;*/
-	margin-bottom: 2rem;
+    position: relative;
+    width: 100%;
+    height: 20vh;
+    /*    min-height: 23rem;*/
+    margin-bottom: 2rem;
 }
 
 #banner-image {
-	position: relative;
-	left: 50%;
-	-webkit-transform: translate(-50%, 0);
-	-ms-transform: translate(-50%, 0);
-	transform: translate(-50%, 0);
-	padding: 0;
-	margin: 0;
-	width: 100vw;
-	height: 20vh;
-/*    min-height: 23rem;*/
-	overflow: hidden;
+    position: relative;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 20vh;
+    /*    min-height: 23rem;*/
+    overflow: hidden;
 }
 
+
 /* This is the overlay for the banner image */
+
 #banner-image:after {
-	position: absolute;
-	content:"";
-	top:0;
-	left:0;
-	width:100%;
-	height:100%;
-	background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.95));
-	z-index: 5;
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.95));
+    z-index: 5;
 }
 
 #banner-content {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	display: block;
-	padding: 0rem 5rem;
-	line-height: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    padding: 0rem 5rem;
+    line-height: 0;
 }
 
-#banner-content p  {
-	margin: 0;
-	padding: 0;
-	width: 28rem;
-	font-size: 1.3rem;
-	font-weight: 700;
-	line-height: 1.5em;
-	letter-spacing: 0.1rem;
-	color: #E1E1E1;
+#banner-content p {
+    margin: 0;
+    padding: 0;
+    width: 28rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1.5em;
+    letter-spacing: 0.1rem;
+    color: #E1E1E1;
 }
 
 #banner-content h1 {
-	display: inline-block;
-	margin: 0;
-	padding: 0;
-	font-size: 4rem;
-	letter-spacing: 0.3rem;
-	line-height: 0.85em;
-	color: #E1E1E1;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    font-size: 4rem;
+    letter-spacing: 0.3rem;
+    line-height: 0.85em;
+    color: #E1E1E1;
 }
 
-#home-banner, #home-banner #banner-image {
-	height: 35vh;
-	min-height: 23rem;
+#home-banner,
+#home-banner #banner-image {
+    height: 35vh;
+    min-height: 23rem;
 }
 
 #home-banner #banner-content {
-	position: absolute;
-	top: 0;
-	left: 0;
-	padding: 2rem 5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 2rem 5rem;
 }
 
-#home-banner p  {
+#home-banner p {
     font-family: "Source Sans Pro";
-	margin: 0;
-	padding: 0;
-	width: 28rem;
-	font-size: 1.3rem;
-	font-weight: 100;
-	line-height: 1.5em;
-	letter-spacing: 0.1rem;
-	color: #E1E1E1;
+    margin: 0;
+    padding: 0;
+    width: 28rem;
+    font-size: 1.3rem;
+    font-weight: 100;
+    line-height: 1.5em;
+    letter-spacing: 0.1rem;
+    color: #E1E1E1;
 }
 
 #home-banner h1 {
-	font-size: 6rem;
-	font-weight: 700;
-/*	border-bottom: 0.4rem solid #DD4D6A;*/
+    font-size: 6rem;
+    font-weight: 700;
+    /*	border-bottom: 0.4rem solid #DD4D6A;*/
     margin-bottom: 1rem;
 }
+
 
 /*  =========================
  *  CONTENT FRAGMENTS
  *  =========================*/
 
+
 /* Was thinking of styling the boxes on the homepage a bit differently, but didn't really work out */
+
 .home-content .border-container {
-	background: #151515;
-	margin: 0 0.25rem;
-	box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.5);
+    background: #151515;
+    margin: 0 0.25rem;
+    box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.5);
 }
+
 
 /* HOME & INVENTORY FRAGMENTS */
 
-.home-content.content-container h2, .banner-container h1 {
-	text-transform: uppercase;
+.home-content.content-container h2,
+.banner-container h1 {
+    text-transform: uppercase;
 }
 
 .content-container h2 {
-/*    text-transform: capitalize;*/
-	display:inline;
-	margin: 0 0 1rem 0;
-	padding: 0;
+    /*    text-transform: capitalize;*/
+    display: inline;
+    margin: 0 0 1rem 0;
+    padding: 0;
 }
 
 .content-container span {
-	display: inline;
-	float: right;
-	padding-top: 0.6rem;
-	font-size: 1rem;
-	text-transform: capitalize;
+    display: inline;
+    float: right;
+    padding-top: 0.6rem;
+    font-size: 1rem;
+    text-transform: capitalize;
 }
+
 
 /* SERVICES & BLOG FRAGMENTS */
 
-.col6of6.content-container img, .col6of6.content-container .content-fragment-text {
-	width: 50%;
-	float: left;
+.col6of6.content-container img,
+.col6of6.content-container .content-fragment-text {
+    width: 50%;
+    float: left;
 }
 
 .col6of6.content-container .content-fragment-text {
-	padding-left: 1.5rem;
+    padding-left: 1.5rem;
 }
 
 .col6of6.content-container span {
-	display: block;
-	float: none;
-	color: #DD4D6A;
+    display: block;
+    float: none;
+    color: #DD4D6A;
 }
 
 .col6of6.content-container p {
-	margin-top: 0.25rem;
+    margin-top: 0.25rem;
 }
 
+
 /* TODO: Below this point hasn't been udpated other than the media queries. */
+
 
 /*  =========================
  *  DETAIL PAGES
  *  =========================*/
 
 .content-fragment-text ul {
-	padding: 0;
+    padding: 0;
 }
 
 .content-fragment-text li {
-	list-style: square;
-	color: #666666;
-	padding: 0 0 0.5rem 0;
-	margin-left: 1rem;
+    list-style: square;
+    color: #666666;
+    padding: 0 0 0.5rem 0;
+    margin-left: 1rem;
 }
 
 .star-rating {
-	color: #DD4D6A;
-	font-size: 1.5rem;
-	letter-spacing: 0.2rem;
-	line-height: 1rem;
-	padding: 0.5rem 0 0 0;
+    color: #DD4D6A;
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+    line-height: 1rem;
+    padding: 0.5rem 0 0 0;
 }
 
 .content-fragment-text .star-rating span {
-	display: inline-block;
-	margin: 0;
-	padding: 0;
-	color: #E1E1E1;
-	font-size: 1rem;
-	letter-spacing: 0;
-	font-weight: 400;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    color: #E1E1E1;
+    font-size: 1rem;
+    letter-spacing: 0;
+    font-weight: 400;
 }
 
 .content-details-container {
-	position: relative;
-	display: block;
-	width: 100%;
-	padding: 0 1rem;
-	line-height: 1rem;
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0 1rem;
+    line-height: 1rem;
 }
 
 .content-selector ul {
-	display: inline-block;
-	margin: 0;
-	padding: 0;
-	background: #666666;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    background: #666666;
 }
 
 .content-selector a {
-	margin: 0;
-	border: none;
-	font-weight: 600;
+    margin: 0;
+    border: none;
+    font-weight: 600;
 }
 
-.content-selector a:hover, .content-selector a:focus, .content-selector a:active {
-	background-color: #DD4D6A;
-	color: #191919;
-	font-weight: 600;
-	opacity: 1;
+.content-selector a:hover,
+.content-selector a:focus,
+.content-selector a:active {
+    background-color: #DD4D6A;
+    color: #191919;
+    font-weight: 600;
+    opacity: 1;
 }
 
 #content-details-desc {
-	display: none;
+    display: none;
 }
 
 #content-details-text p {
-	margin: 0;
-	padding: 0.5rem 0 0 0;
-	line-height: 1.2rem;
+    margin: 0;
+    padding: 0.5rem 0 0 0;
+    line-height: 1.2rem;
 }
 
 #content-details-reviews {
-	padding: 0.5rem 0;
+    padding: 0.5rem 0;
 }
 
 #content-details-reviews .review img {
-	float: left;
-	width: 20%;
-	margin: 0 1rem 1rem 0;
+    float: left;
+    width: 20%;
+    margin: 0 1rem 1rem 0;
 }
 
-#content-details-reviews .review h2, #content-details-reviews .review h3, #content-details-reviews .review .star-rating {
-	padding: 0.5rem 0 0 0;
-	text-transform: none;
+#content-details-reviews .review h2,
+#content-details-reviews .review h3,
+#content-details-reviews .review .star-rating {
+    padding: 0.5rem 0 0 0;
+    text-transform: none;
 }
 
 #content-details-reviews .review p {
-	line-height: 1.2rem;
-	padding-top: 0.5rem;
+    line-height: 1.2rem;
+    padding-top: 0.5rem;
 }
 
 #content-details-reviews {
-	position: relative;
-	display: block;
-	margin: 0;
-	padding: 0;
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
 }
 
-.content-detail-interview{
+.content-detail-interview {
     padding: 3em;
 }
-.content-detail-interview strong{
+
+.content-detail-interview strong {
     color: #FFF;
 }
+
+
 /* FIXME: For some reason this doesn't work... not sure why. */
-#content-details-reviews:first-child{
-	padding-left: 0;
+
+#content-details-reviews:first-child {
+    padding-left: 0;
 }
+
 .review {
-	margin: 0 0 1rem 0;
-	border-bottom: 1px solid #DD4D6A;
+    margin: 0 0 1rem 0;
+    border-bottom: 1px solid #DD4D6A;
 }
 
 #review-header {
-	margin: -0.5rem 0 1rem 0;
+    margin: -0.5rem 0 1rem 0;
 }
 
-#review-header form, #review-header btn {
-	display: inline-block;
+#review-header form,
+#review-header btn {
+    display: inline-block;
 }
 
 #content-details-desc ul {
-	color: #666666;
-	padding: 0;
-	list-style: inside;
+    color: #666666;
+    padding: 0;
+    list-style: inside;
 }
 
 #content-details-desc li {
-	list-style-type: square;
+    list-style-type: square;
 }
 
-span.entry-date{
+span.entry-date {
     font-size: 0.9rem;
 }
+
+
 /*  =========================
  *  FORMS & DROPDOWNS
  *  =========================*/
 
+
 /* TODO: Update form element styling. */
+
 form {
-	padding: 0;
-	margin: 0;
+    padding: 0;
+    margin: 0;
 }
 
 label {
-	display: inline-block;
-	margin: 0;
-	padding: 0 0.35em 0.35em 0.25em;
-	font-family: "Source Sans Pro";
-	color: #E1E1E1;
-	font-weight: 600;
-	font-size: 0.8em;
-	text-transform: uppercase;
-	cursor: pointer;
+    display: inline-block;
+    margin: 0;
+    padding: 0 0.35em 0.35em 0.25em;
+    font-family: "Source Sans Pro";
+    color: #E1E1E1;
+    font-weight: 600;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    cursor: pointer;
 }
 
 select {
-/*    margin-right: 3em;*/
-	border: 1.5px solid #191919;
-	background: #666666;
-	color: #E1E1E1;
+    border: 1.5px solid #191919;
+    /*    background: #666666;*/
+    color: #E1E1E1;
+    height: 2rem;
 }
 
 input {
-	padding: 0.5em 0.8em;
-	display: block;
-	width: 100%;
-	margin-left: auto;
-	margin-right: auto;
-	background: transparent;
-	border: 1.5px solid;
+    padding: 0.5em 0.8em;
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background: transparent;
+    border: 1.5px solid;
 }
+
+.checkout-content label,
+select {
+    color: #191919;
+}
+
+.checkout-content select {
+    background-color: #FFF;
+    width: 100%;
+}
+
 
 /*=========
  *  BAG
  *=========*/
 
 td {
-	padding: 0em 1.5em !important;
-	text-align: left;
+    padding: 0em 1.5em !important;
+    text-align: left;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
 }
 
 th {
-	padding: 1em 1em;
-	font-family: "Source Sans Pro";
-	text-transform: uppercase;
-	font-size: 0.9em;
-	letter-spacing: 0.03em;
+    padding: 1em 1em;
+    font-family: "Source Sans Pro";
+    text-transform: uppercase;
+    font-size: 0.9em;
+    letter-spacing: 0.03em;
+}
+
+tr.pricing-total td{
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+}
+
+
+.checkout-content {
+    background: white;
+    min-width: 400px;
+    color: #191919;
+    overflow: hidden;
 }
 
 .shoppingbag-summary {
-	width: 98%;
-	border-collapse: collapse;
-}
-
-.shoppingbag-summary {
-	border-collapse: collapse;
-	border-spacing: 0;
-	margin-right: 0.75em;
-	padding: 1.5em 2em .5em 2em;
-	text-align: left;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-right: 0.75em;
+    padding: 1.5em 2em .5em 2em;
+    text-align: left;
 }
 
 .shoppingbag-summary select {
-	margin-bottom: 3em;
-	margin-right: 0.5em;
-	width: 5em;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    margin-right: 0.5em;
+    width: 5em;
 }
 
 .shoppingbag-summary tr:nth-of-type(odd) {
-	/* colored strips for chart*/
-	background: #F6F6F6;
+    /* colored strips for chart*/
+    background: #F6F6F6;
 }
 
 .order-summary th {
-	background: #BC7482;
-	color: white;
+    background: #BC7482;
+    color: white;
 }
 
 .shippingbag-title {
-	background: #FFF;
+    background: #FFF;
 }
 
-#bag-checkout {
-	margin-top: 2em;
-	float: right;
-	margin-right: 3em;
+.bag-checkout .btn {
+    background: #191919;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding: 0.5em 1em;
+    float: right;
+    margin-right: 3em;
+    letter-spacing: 0.03em;
 }
 
 
@@ -587,168 +695,160 @@ th {
  *===================*/
 
 .checkout-container {
-	display: inline-block;
+    display: inline-block;
+}
+
+.checkout-content.confirm {
+    padding: 1rem;
 }
 
 
 /*---SHIPPING---*/
 
 .col4of8 {
-	width: 100%;
-	float: left;
+    width: 100%;
+    float: left;
 }
 
 .checkout-info-form {
-	margin-bottom: 5em;
+    margin-bottom: 5em;
 }
-
-
-/*
-.checkout-info-form input,
-.checkout-info-form select {
-	padding: 0.5em 0.8em;
-	display: block;
-	width: 100%;
-	margin-left: auto;
-	margin-right: auto;
-	background: transparent;
-	border: 1.5px solid;
-}
-*/
 
 .checkout-title {
-	font-weight: 800;
+    font-weight: 800;
+    margin-top: 1rem;
+    color: #191919;
 }
 
-#month, #year {
-	display: block;
-	float: left;
+#month,
+#year {
+    display: block;
+    float: left;
 }
+
+#year {
+    padding-left: 1rem;
+}
+
 
 /*---CONTACT PAYMENT---*/
 
 #checkout-payment {
-	margin-top: 5em;
-}
-
-.btn.confirm-order{
-	margin: 0 auto;
+    margin-top: 2em;
 }
 
 #checkout-container .checkout-title {
-	margin-bottom: 0em;
+    margin-bottom: 0em;
 }
 
 .tiny-btn {
-	font-weight: 800;
-	text-decoration: underline;
+    font-weight: 800;
+    text-decoration: underline;
 }
+
+
+#confirm-order-content{
+    display: inline-block;
+    width: 100%;
+    text-align:center;
+    margin: 0 auto;
+    padding-top: 3em;
+}
+
 
 /* ==================
  *   MEDIA QUERIES
  * ==================*/
 
-@media only screen
-	and (max-width: 63rem) {
-		#banner-content {
-			padding: 0.5rem 5rem;
-		}
-
-		#banner-content h1 {
-			font-size: 3.5rem;
-		}
-
-		#banner-content p {
-			font-size: 1rem;
-		}
-
-		.content-fragment {
-			padding-top: 1rem;
-		}
-
-		header {
-			padding: 0;
-			position: relative;
-			background: #191919;
-			margin-top: -18rem;
-			z-index: 14;
-			-webkit-transition: margin-top 0.2s ease-in-out;
-			transition: margin-top 0.2s ease-in-out;
-		}
-
-		header>a {
-			cursor: pointer;
-			position: absolute;
-			bottom: 0;
-			width: 100%;
-			z-index: 15;
-		}
-
-		#main-nav {
-			/*This sure is screwing things up...*/
-			position: relative;
-			width: 100%;
-			margin: 0;
-			line-height: 2.5rem
-		}
-
-		#main-nav ul {
-			padding: 0;
-			margin: 0;
-		}
-
-		#main-nav ul:after {
-			content: " ";
-			display: table;
-			clear: both;
-		}
-
-		#main-nav:after {
-			content: " ";
-			height: 3rem;
-			margin: 2rem;
-/*			padding: 3rem;*/
-			line-height: 2rem;
-		}
-
-		#main-nav .current {
-			border-bottom: 0;
-			background: #DD4D6A
-		}
-
-		/* TODO: Figure out why the hell these need to use !important, because they shouldn't... */
-		#home-banner, #banner-image, .banner-container {
-			height: 20vh !important;
-			min-height: 13rem !important;
-			margin-bottom: 0;
-		}
-
-		.content-container {
-			padding: 2em 0;
-		}
-		.content-fragment-text {
-			padding: 1rem 0rem 0rem 0rem;
-		}
-
-		/* Blog & Services */
-		.col6of6.content-container img,
-		.col6of6.content-container .content-fragment-text {
-			float: none !important;
-			width: 100% !important;
-/*            padding-left: 0 !important;*/
-		}
+@media only screen and (max-width: 63rem) {
+    #banner-content {
+        padding: 0.5rem 5rem;
+    }
+    #banner-content h1 {
+        font-size: 3.5rem;
+    }
+    #banner-content p {
+        font-size: 1rem;
+    }
+    #body-content {
+        padding-top: 1rem;
+    }
+    .content-fragment {
+        padding-top: 1rem;
+    }
+    header {
+        padding: 0;
+        position: relative;
+        background: #191919;
+        margin-top: -18rem;
+        z-index: 14;
+        -webkit-transition: margin-top 0.2s ease-in-out;
+        transition: margin-top 0.2s ease-in-out;
+    }
+    header>a {
+        cursor: pointer;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        z-index: 15;
+    }
+    #main-nav {
+        /*This sure is screwing things up...*/
+        position: relative;
+        width: 100%;
+        margin: 0;
+        line-height: 2.5rem
+    }
+    #main-nav ul {
+        padding: 0;
+        margin: 0;
+    }
+    #main-nav ul:after {
+        content: " ";
+        display: table;
+        clear: both;
+    }
+    #main-nav:after {
+        content: " ";
+        height: 3rem;
+        margin: 2rem;
+        line-height: 2rem;
+    }
+    #main-nav .current {
+        border-bottom: 0;
+        background: #DD4D6A
+    }
+    /* TODO: Figure out why the hell these need to use !important, because they shouldn't... */
+    #home-banner,
+    #banner-image,
+    .banner-container {
+        height: 20vh !important;
+        min-height: 13rem !important;
+        margin-bottom: 0;
+    }
+    .content-container {
+        padding: 2em 0;
+    }
+    .content-fragment-text {
+        padding: 1rem 0rem 0rem 0rem;
+    }
+    /* Blog & Services */
+    .col6of6.content-container img,
+    .col6of6.content-container .content-fragment-text {
+        float: none !important;
+        width: 100% !important;
+    }
 }
 
-@media only screen
-	and (min-width: 63.1rem)
-	and (max-width: 75rem) {
-		.col2of6.content-container>a, .col2of6.content-container>img {
-			float:left;
-			width: 50%;
-		}
-		.content-fragment-text {
-			float:left;
-			width: 50%;
-			padding-left: 1rem;
-		}
+@media only screen and (min-width: 63.1rem) and (max-width: 75rem) {
+    .col2of6.content-container>a,
+    .col2of6.content-container>img {
+        float: left;
+        width: 50%;
+    }
+    .content-fragment-text {
+        float: left;
+        width: 50%;
+        padding-left: 1rem;
+    }
 }
