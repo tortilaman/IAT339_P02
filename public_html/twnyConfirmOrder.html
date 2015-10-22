@@ -23,11 +23,12 @@
 			=====================-->
 
         <header>
-            <a onclick="toggleNav()"><img src="img/logo-03.png" id="logo" alt="The Whole Nine Yards logo"> </a>
-
+            <!-- Super crazy css mobile nav logo -->
+            <input type="checkbox" id="nav-trigger" class="nav-trigger logo" />
+            <label for="nav-trigger"></label>
             <nav id="main-nav">
                 <ul>
-                    <li><a class="col1of6 btn btn-nav" href="index.html"> Home </a></li>
+                    <li><a class="col1of6 btn btn-nav current" href="index.html"> Home </a></li>
                     <li><a class="col1of6 btn btn-nav" href="twnyInventory.html"> Inventory </a></li>
                     <li><a class="col1of6 btn btn-nav" href="twnyServices.html"> Services </a></li>
                     <li><a class="col1of6 btn btn-nav" href="twnyBlog.html"> Blog </a></li>
@@ -44,8 +45,8 @@
         <div id="body-content">
             <div id="confirm-order-content">
                 <h1> Thank you for your purchase.</h1>
-                <p> A receipt was sent to your email address.<br>
-                    If you have any questions feel free to reach us at our <a href="twnyContact.html">studio</a>.</p>
+                <p> A receipt was sent to your email address.
+                    <br> If you have any questions feel free to reach us at our <a href="twnyContact.html">studio</a>.</p>
             </div>
 
         </div>
