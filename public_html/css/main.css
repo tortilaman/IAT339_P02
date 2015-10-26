@@ -15,22 +15,54 @@
 **  Comment categories are: TODO, NOTE, FIXME, CHANGES, FUTURE,
 **
 **  ================================================================*/
+
+
 /*  TODO:   Update visual styling*/
+
+
 /*  TODO:   Update/finish layouts*/
+
+
 /*  TODO:   Responsiveness*/
+
+
 /*  TODO:   Add remaining content pages*/
+
+
 /*  TODO:   Create contact page*/
+
+
 /*  TODO:   Create account page*/
+
+
 /*  TODO:   Cart in navigation??? */
+
+
 /*  TODO:   Shopping bag icon for "bag it" button*/
+
+
 /*  FIXME:  Change mobile nav to use #main-nav:target instead of javascript for functionality */
+
+
 /*  FIXME:  Change tabs on details page to by default be a list of divs, and if javascript works turn it into a tab structure.*/
+
+
 /*  FIXME:  Nav bar should by default be "open", and javascript closes it if javascript is enabled.
 /*  FIXME:  The size of the navigation bar is waaaaay too small on mobile. Maybe try loading the site from my phone while my computer hosts the local webserver? */
+
+
 /*  FIXME:  Banner image changes position from homepage to inventory/services/blog to details.*/
+
+
 /*  FIXME:  Move price to right side on inventory page? */
+
+
 /*  FUTURE: Responsive Imagery at least for banner*/
+
+
 /*  FUTURE: Can the border bar below nav items animate between them when the page is changed? */
+
+
 /*  ================================================================*/
 
 
@@ -119,7 +151,7 @@ a {
 
 a:hover,
 a:active,
-a:focus{
+a:focus {
 	text-decoration: underline;
 	opacity: 0.6;
 }
@@ -137,15 +169,22 @@ a.see-more {
 	text-decoration: underline;
 }
 
-a img:hover{
+a img:hover {
 	opacity: 1;
 }
+
 
 /* -----------------------------
 ** Standard Button
 ** -----------------------------*/
+
+
 /* NOTE: To style differently just create a new class that modifies this and apply both to the html*/
+
+
 /* TODO: It should be more obvious this is a button before you hover... */
+
+
 /* -----------------------------*/
 
 .btn {
@@ -171,12 +210,14 @@ a img:hover{
 .btn:focus,
 .btn:active {
 	-webkit-transform: translateY(-0.05rem);
+	-ms-transform: translateY(-0.05rem);
 	transform: translateY(-0.05rem);
 	box-shadow: 0.1rem 0.2em 0.3rem rgba(150, 150, 150, 0.25);
 	text-decoration: none;
 	background-color: #DD4D6A;
 	color: #191919;
 }
+
 
 /*	===========================================================================
 **
@@ -190,6 +231,7 @@ a img:hover{
 **	88        88   `"Ybbd8"'  `"8bbdP"Y8   `"8bbdP"Y8   `"Ybbd8"'  88
 **
 *	===========================================================================*/
+
 
 /*  =========================
 *  NAV
@@ -207,7 +249,7 @@ a img:hover{
 	clip: rect(0, 0, 0, 0);
 }
 
-label[for="nav-trigger"]{
+label[for="nav-trigger"] {
 	width: 5rem;
 	display: block;
 	height: 2.5rem;
@@ -239,7 +281,7 @@ label[for="nav-trigger"]:active {
 
 .btn-nav {
 	font-size: 1rem;
-	margin-top:0;
+	margin-top: 0;
 	color: #E1E1E1;
 	background: #191919;
 	box-shadow: none;
@@ -291,6 +333,7 @@ header {
 	overflow: hidden;
 }
 
+
 /* This is the overlay for the banner image */
 
 #banner-image:after {
@@ -300,6 +343,7 @@ header {
 	left: 0;
 	width: 100%;
 	height: 100%;
+	background: -webkit-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.95));
 	background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.95));
 	z-index: 5;
 }
@@ -366,6 +410,7 @@ header {
 	margin-bottom: 1rem;
 }
 
+
 /* ===========================================================================
 **
 **	  ,ad8888ba,
@@ -379,16 +424,18 @@ header {
 **
 **	===========================================================================*/
 
+
 /*  =========================
 **  CONTENT FRAGMENTS
 **  =========================*/
+
 
 /* HOME & INVENTORY FRAGMENTS */
 
 .content-container {
 	background: #151515;
 	box-shadow: 0 0 0.3rem 0.1rem rgba(0, 0, 0, 0.5);
-/*	padding: 0 0 1rem 0;*/
+	/*	padding: 0 0 1rem 0;*/
 	padding: 0;
 }
 
@@ -400,6 +447,7 @@ header {
 	margin: 0;
 	padding: 0 0.5rem 0.5rem 0.5rem;
 }
+
 
 /*
 .content-container h2,
@@ -426,10 +474,12 @@ header {
 	font-size: 1rem;
 	text-transform: capitalize;
 }
+
 .content-fragment-feature {
 	margin-top: 1rem;
 }
-.content-fragment-feature p{
+
+.content-fragment-feature p {
 	line-height: 0;
 	padding-left: 1rem;
 }
@@ -437,6 +487,7 @@ header {
 .col2of6 .content-fragment-text {
 	min-height: 10rem;
 }
+
 
 /* SERVICES & BLOG FRAGMENTS */
 
@@ -455,6 +506,7 @@ header {
 .col6of6 .content-container p {
 	margin-top: 0.25rem;
 }
+
 
 /*  =========================
 **  DETAIL PAGES
@@ -525,7 +577,7 @@ header {
 }
 
 #content-details-desc {
-/*	display: none;*/
+	/*	display: none;*/
 	margin-top: 1rem;
 }
 
@@ -550,7 +602,7 @@ header {
 #content-details-reviews .review .star-rating,
 #content-details-reviews .review span {
 	margin: 0;
-	padding: 0.25rem 0 ;
+	padding: 0.25rem 0;
 	text-transform: none;
 }
 
@@ -606,7 +658,7 @@ header {
 }
 
 #content-details-spec {
-/*	display: none;*/
+	/*	display: none;*/
 	margin-top: 1rem;
 }
 
@@ -625,12 +677,14 @@ span.entry-date {
 form {
 	padding: 0;
 	margin: 0;
-	overflow: hidden;/*Contain form elements*/
+	overflow: hidden;
+	/*Contain form elements*/
 }
 
 label {
-/*	display: inline-block;*/
-	display: block; /*Hopefully this doesn't mess anything up*/
+	/*	display: inline-block;*/
+	display: block;
+	/*Hopefully this doesn't mess anything up*/
 	margin: 0;
 	padding: 0 0.35em 0.35em 0.25em;
 	font-family: "Source Sans Pro";
@@ -663,16 +717,19 @@ input[type="text"] {
 	border: 1px solid #666;
 }
 
+
 /*  =========================
 **  Contact
 **  =========================*/
 
 #mapContainer {
 	position: relative;
-	padding-bottom: 56.25%; /* 16:9 */
+	padding-bottom: 56.25%;
+	/* 16:9 */
 	padding-top: 25px;
 	height: 0;
 }
+
 #mapContainer iframe {
 	position: absolute;
 	top: 0;
@@ -685,13 +742,17 @@ input[type="text"] {
 	width: 100%;
 }
 
+
 /* TODO: Below this point hasn't been udpated other than the media queries.**/
+
 
 /*====================
 **  BAG & CHECKOUT
 **====================*/
 
+
 /*Containers*/
+
 .checkout-content {
 	min-width: 400px;
 	overflow: hidden;
@@ -701,8 +762,8 @@ input[type="text"] {
 	width: 100%;
 	border-collapse: collapse;
 	border-spacing: 0;
-/*	margin-right: 0.75em;*/
-/*	padding: 1.5em 2em .5em 2em;*/
+	/*	margin-right: 0.75em;*/
+	/*	padding: 1.5em 2em .5em 2em;*/
 	text-align: left;
 }
 
@@ -710,7 +771,9 @@ input[type="text"] {
 	display: inline-block;
 }
 
+
 /*Table Headings*/
+
 th {
 	padding: 1em 1em;
 	background: #FFF;
@@ -721,6 +784,7 @@ th {
 	letter-spacing: 0.03em;
 }
 
+
 /*.shoppingbag-summary th {
 	background: #FFF;
 }*/
@@ -730,7 +794,9 @@ th {
 	color: white;
 }
 
+
 /*Table Rows*/
+
 .shoppingbag-summary tr {
 	background-color: #151515;
 }
@@ -740,7 +806,9 @@ th {
 	background: #101010;
 }
 
+
 /*Table Cells*/
+
 td {
 	padding: 0em 1.5em !important;
 	color: #e1e1e1;
@@ -749,12 +817,16 @@ td {
 	margin-bottom: 1.5em;
 }
 
-tr.pricing-total td{
+tr.pricing-total td {
 	padding-top: 0.5rem !important;
 	padding-bottom: 0.5rem !important;
+	background-color: #e1e1e1;
+	color: #191919;
 }
 
+
 /*Form Elements*/
+
 .shoppingbag-summary select {
 	margin-top: 1.5em;
 	margin-bottom: 1.5em;
@@ -763,12 +835,13 @@ tr.pricing-total td{
 }
 
 .checkout-info-form .btn {
-/*	background: #191919;*/
+	/*	background: #191919;*/
 	margin: 2em 0;
 	padding: 0.5em 1em;
 	float: right;
 	letter-spacing: 0.03em;
 }
+
 
 /*
 .bag-checkout.login .btn {
@@ -786,6 +859,7 @@ tr.pricing-total td{
 	background-color: #151515;
 	border: 1px solid #666;
 }
+
 label[for="same-as-shipping"] {
 	display: inline-block;
 	margin: 0;
@@ -797,11 +871,13 @@ label[for="same-as-shipping"] {
 }
 
 #same-as-shipping ~form.billing {
-	display:block;
+	display: block;
 }
+
 #same-as-shipping:checked ~ form.billing {
-	display:none;
+	display: none;
 }
+
 
 /*===================
 **  CHECKOUT
@@ -826,8 +902,9 @@ label[for="same-as-shipping"] {
 
 .checkout-info-form [class^="col"] {
 	padding: 0 1rem 0.25rem 0;
-/*	margin: 0;*/
+	/*	margin: 0;*/
 }
+
 
 /*
 .checkout-content h2 {
@@ -845,14 +922,16 @@ label[for="same-as-shipping"] {
 	float: left;
 }
 
-#year, #code {
+#year,
+#code {
 	padding-left: 1rem;
 }
 
-#code input{
+#code input {
 	width: 3.5rem;
 	margin: 0;
 }
+
 
 /*---CONTACT PAYMENT---*/
 
@@ -867,10 +946,10 @@ label[for="same-as-shipping"] {
 	margin-left: 1rem;
 }
 
-#confirm-order-content{
+#confirm-order-content {
 	display: inline-block;
 	width: 100%;
-	text-align:center;
+	text-align: center;
 	margin: 0 auto;
 	padding-top: 3em;
 }
@@ -890,189 +969,167 @@ label[for="same-as-shipping"] {
 **	===========================================================================*/
 
 
-
 /* ==================
 **   MEDIA QUERIES
 ** ==================*/
 
-@media only screen
-	and (max-width: 63rem) {
-		#banner-content {
-			padding: 0.5rem 5rem;
-		}
-
-		#banner-content h1 {
-			font-size: 3.5rem;
-		}
-
-		#banner-content p {
-			font-size: 1rem;
-		}
-
-		.content-fragment {
-			padding-top: 1rem;
-		}
-
-		/* MOBILE NAVIGATION */
-
-		header {
-			padding: 0;
-			position: fixed;
-			width: 100%;
-			background: #191919;
-			margin-top: -18rem;
-			z-index: 14; /* Needs to be on top of page */
-			-webkit-transition: margin-top 0.2s ease-in-out;
-			transition: margin-top 0.2s ease-in-out;
-			/* FIXME:  Those Transitions Tho'  */
-			-moz-animation-name: dropHeader;
-			-moz-animation-iteration-count: 1;
-			-moz-animation-delay: 0.1s;
-			-moz-animation-timing-function: ease-in;
-			-moz-animation-duration: 5s;
-
-			-webkit-animation-name: dropHeader;
-			-webkit-animation-iteration-count: 1;
-			-webkit-animation-delay: 0.1s;
-			-webkit-animation-timing-function: ease-in;
-			-webkit-animation-duration: 5s;
-
-			animation-name: dropHeader;
-			animation-iteration-count: 1;
-			animation-delay: 0.1s;
-			animation-timing-function: ease-in;
-			animation-duration: 5s;
-		}
-
-		.nav-trigger:checked + label {
-			bottom: -18rem;
-		}
-
-		.nav-trigger:checked ~ #main-nav {
-			top: 18rem;
-			box-shadow: 0 0 0.2rem 0.2rem rgba(0,0,0,0.5);
-		}
-
-		label[for="nav-trigger"] {
-			cursor: pointer;
-			position: absolute;
-			bottom: 0;
-			left: 50%;
-			-webkit-transform: translate(-50%, 0);
-			transform: translate(-50%, 0);
-			z-index: 15;
-		}
-
-		.nav-trigger + label {
-			-webkit-transition: bottom 0.2s ease-in-out;
-			transition: bottom 0.2s ease-in-out;
-		}
-
-		#main-nav {
-			position: relative;
-			top: 0;
-			width: 100%;
-			min-width: 100%;
-			margin: 0;
-			padding: 0;
-			line-height: 2.5rem;
-			background: #191919;
-			-webkit-transition: top 0.2s ease-in-out;
-			transition: top 0.2s ease-in-out;
-		}
-
-		#main-nav ul {
-			padding: 0;
-			margin: 0;
-		}
-
-		#main-nav ul:after {
-			content: " ";
-			display: table;
-			clear: both;
-		}
-
-		#main-nav:after {
-			content: " ";
-			height: 3rem;
-			margin: 2rem;
-/*			padding: 3rem;*/
-			line-height: 2rem;
-		}
-
-		#main-nav .current {
-			border-bottom: 0;
-			background: #DD4D6A
-		}
-
-		/* ==================
+@media only screen and (max-width: 63rem) {
+	#banner-content {
+		padding: 0.5rem 5rem;
+	}
+	#banner-content h1 {
+		font-size: 3.5rem;
+	}
+	#banner-content p {
+		font-size: 1rem;
+	}
+	.content-fragment {
+		padding-top: 1rem;
+	}
+	/* MOBILE NAVIGATION */
+	header {
+		padding: 0;
+		position: fixed;
+		width: 100%;
+		background: #191919;
+		margin-top: -18rem;
+		z-index: 14;
+		/* Needs to be on top of page */
+		-webkit-transition: margin-top 0.2s ease-in-out;
+		transition: margin-top 0.2s ease-in-out;
+		/* FIXME:  Those Transitions Tho'  */
+		-moz-animation-name: dropHeader;
+		-moz-animation-iteration-count: 1;
+		-moz-animation-delay: 0.1s;
+		-moz-animation-timing-function: ease-in;
+		-moz-animation-duration: 5s;
+		-webkit-animation-name: dropHeader;
+		-webkit-animation-iteration-count: 1;
+		-webkit-animation-delay: 0.1s;
+		-webkit-animation-timing-function: ease-in;
+		-webkit-animation-duration: 5s;
+		-webkit-animation-name: dropHeader;
+		animation-name: dropHeader;
+		-webkit-animation-iteration-count: 1;
+		animation-iteration-count: 1;
+		-webkit-animation-delay: 0.1s;
+		animation-delay: 0.1s;
+		-webkit-animation-timing-function: ease-in;
+		animation-timing-function: ease-in;
+		-webkit-animation-duration: 5s;
+		animation-duration: 5s;
+	}
+	.nav-trigger:checked + label {
+		bottom: -18rem;
+	}
+	.nav-trigger:checked ~ #main-nav {
+		top: 18rem;
+		box-shadow: 0 0 0.2rem 0.2rem rgba(0, 0, 0, 0.5);
+	}
+	label[for="nav-trigger"] {
+		cursor: pointer;
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		-webkit-transform: translate(-50%, 0);
+		-ms-transform: translate(-50%, 0);
+		transform: translate(-50%, 0);
+		z-index: 15;
+	}
+	.nav-trigger + label {
+		-webkit-transition: bottom 0.2s ease-in-out;
+		transition: bottom 0.2s ease-in-out;
+	}
+	#main-nav {
+		position: relative;
+		top: 0;
+		width: 100%;
+		min-width: 100%;
+		margin: 0;
+		padding: 0;
+		line-height: 2.5rem;
+		background: #191919;
+		-webkit-transition: top 0.2s ease-in-out;
+		transition: top 0.2s ease-in-out;
+	}
+	#main-nav ul {
+		padding: 0;
+		margin: 0;
+	}
+	#main-nav ul:after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
+	#main-nav:after {
+		content: " ";
+		height: 3rem;
+		margin: 2rem;
+		/*			padding: 3rem;*/
+		line-height: 2rem;
+	}
+	#main-nav .current {
+		border-bottom: 0;
+		background: #DD4D6A
+	}
+	/* ==================
 		**   ANIMATIONS
 		** ==================*/
-
-		@-moz-keyframes dropHeader {
-			0% {
-				-moz-transform: translateY(0);
-			}
-			50% {
-				-moz-transform: translateY(1.5rem);
-			}
-			100% {
-				-moz-transform: translateY(0);
-			}
+	@-webkit-keyframes dropHeader {
+		0% {
+			-webkit-transform: translateY(0);
 		}
-		@-webkit-keyframes dropHeader {
-			0% {
-				-webkit-transform: translateY(0);
-			}
-			50% {
-				-webkit-transform: translateY(1.5rem);
-			}
-			100% {
-				-webkit-transform: translateY(0);
-			}
+		50% {
+			-webkit-transform: translateY(1.5rem);
 		}
-		@keyframes dropHeader {
-			0% {
-				transform: translateY(0);
-			}
-			50% {
-				transform: translateY(1.5rem;)
-			}
-			100% {
-				transform: translateY(0);
-			}
+		100% {
+			-webkit-transform: translateY(0);
 		}
-
-
-		/* TODO: Figure out why the hell these need to use !important, because they shouldn't... */
-		#home-banner, #banner-image, .banner-container {
-			height: 20vh !important;
-			min-height: 13rem !important;
-			margin-bottom: 0;
+	}
+	@keyframes dropHeader {
+		0% {
+			-webkit-transform: translateY(0);
+			transform: translateY(0);
 		}
-
-		.content-container {
-			padding: 0 0 1rem 0;
+		50% {
+			-webkit-transform: translateY(1.5rem;
+			);
+			transform: translateY(1.5rem;
+			)
 		}
-
-		/* Blog & Services */
-		.col6of6 .content-container img,
-		.col6of6 .content-container .content-fragment-text {
-			float: none !important;
-			width: 100% !important;
+		100% {
+			-webkit-transform: translateY(0);
+			transform: translateY(0);
 		}
+	}
+	/* TODO: Figure out why the hell these need to use !important, because they shouldn't... */
+	#home-banner,
+	#banner-image,
+	.banner-container {
+		height: 20vh !important;
+		min-height: 13rem !important;
+		margin-bottom: 0;
+	}
+	.content-container {
+		padding: 0 0 1rem 0;
+	}
+	/* Blog & Services */
+	.col6of6 .content-container img,
+	.col6of6 .content-container .content-fragment-text {
+		float: none !important;
+		width: 100% !important;
+	}
 }
 
-@media only screen
-	and (min-width: 63.1rem)
-	and (max-width: 75rem) {
-		.col2of6.content-container>a, .col2of6.content-container>img {
-			float:left;
-			width: 50%;
-		}
-		.content-fragment-text {
-			float:left;
-			width: 50%;
-			padding-left: 1rem;
-		}
+@media only screen and (min-width: 63.1rem) and (max-width: 75rem) {
+	.col2of6.content-container>a,
+	.col2of6.content-container>img {
+		float: left;
+		width: 50%;
+	}
+	.content-fragment-text {
+		float: left;
+		width: 50%;
+		padding-left: 1rem;
+	}
 }
