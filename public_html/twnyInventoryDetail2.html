@@ -2,158 +2,159 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <title> The Whole Nine Yards </title>
-    <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/grid.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700' rel='stylesheet' type='text/css'>
+	<meta charset="utf-8">
+	<title> The Whole Nine Yards </title>
+	<link href="css/normalize.css" rel="stylesheet">
+	<link href="css/grid.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
-    <main>
-        <!--=====================
+	<main>
+		<!--=====================
 				NAVIGATION
 			=====================-->
-        <header>
-            <input type="checkbox" id="nav-trigger" class="nav-trigger logo" />
-            <label for="nav-trigger"></label>
-            <nav id="main-nav">
-                <ul>
-                    <li><a class="col1of6 btn btn-nav" href="index.html"> Home </a></li>
-                    <li><a class="col1of6 btn btn-nav current" href="twnyInventory.html"> Inventory </a></li>
-                    <li><a class="col1of6 btn btn-nav" href="twnyServices.html"> Services </a></li>
-                    <li><a class="col1of6 btn btn-nav" href="twnyBlog.html"> Blog </a></li>
-                    <li><a class="col1of6 btn btn-nav" href="twnyContact.html"> Contact </a></li>
-                    <li><a class="col1of6 btn btn-nav" href="twnyAccount.html"> Account </a></li>
-                </ul>
-            </nav>
-        </header>
-        <div class="banner-container">
-            <div id="banner-image">
-                <img src="img/scale_model.jpg" alt="A model of an ancient city">
-            </div>
-            <div id="banner-content">
-                <h1>Inventory</h1>
-            </div>
-        </div>
-        <!-- =====================
+		<header>
+			<input type="checkbox" id="nav-trigger" class="nav-trigger logo" />
+			<label for="nav-trigger"></label>
+			<nav id="main-nav">
+				<ul>
+					<li><a class="col1of6 btn btn-nav" href="index.html"> Home </a></li>
+					<li><a class="col1of6 btn btn-nav current" href="twnyInventory.html"> Inventory </a></li>
+					<li><a class="col1of6 btn btn-nav" href="twnyServices.html"> Services </a></li>
+					<li><a class="col1of6 btn btn-nav" href="twnyBlog.html"> Blog </a></li>
+					<li><a class="col1of6 btn btn-nav" href="twnyContact.html"> Contact </a></li>
+					<li><a class="col1of6 btn btn-nav" href="twnyAccount.html"> Account </a></li>
+				</ul>
+			</nav>
+		</header>
+		<div class="banner-container">
+			<div id="banner-image">
+				<img src="img/scale_model.jpg" alt="A model of an ancient city">
+			</div>
+			<div id="banner-content">
+				<h1>Inventory</h1>
+			</div>
+		</div>
+		<!-- =====================
 				CONTENT
 			 ===================== -->
-        <div id="body-content">
-            <div class="col6of6 content-container clearfix">
-                <img src="img/pl_savage110BA.jpg" alt="Image of a rocket launcher">
-                <div class="content-fragment-text">
-                    <h2>Savage 110 BA</h2>
-                    <div class="star-rating">★★★★☆<span> - from 1 review</span></div>
-                    <span>$50.00</span>
-                    <div class="content-fragment-feature">
-                        <label>Firearm length:</label>
-                        <p>50.5 inches</p>
-                        <label>Barrel Length:</label>
-                        <p>26 inches</p>
-                        <label>Color:</label>
-                        <p>Black</p>
-                    </div>
-                    <!-- FIXME: The layout of the purchase stuff isn't really working out -->
-                    <form>
-                        <label for="form-quantity2">Quantity:</label>
-                        <select name="form-quantity2" id="form-quantity2">
-                            <option value="quantity1">1</option>
-                            <option value="quantity2">2</option>
-                            <option value="quantity3">3</option>
-                            <option value="quantity4">4</option>
-                            <option value="quantity5">5</option>
-                            <option value="quantity6">6</option>
-                            <option value="quantity7">7</option>
-                            <option value="quantity8">8</option>
-                            <option value="quantity9">9</option>
-                            <option value="quantity10">10</option>
-                        </select>
-                    	<br>
-                        <a class="btn" href="twnyBag.html">Bag it</a>
-                    </form>
-                </div>
-            </div>
-            <div class="content-details-container">
-                <div class="content-selector">
-                    <ul>
-                        <!-- FIXME: Is it obvious these are tabs / buttons? -->
-                        <!-- FIXME: <a> tags are causing validation errors here. Maybe move them inside the <li> tags? -->
-                        <a href="#" id="reviews-btn" class="btn current" onclick="changeDetailsTab('content-details-reviews')">
-                            <li>Reviews</li>
-                        </a>
-                        <a href="#" id="desc-btn" class="btn" onclick="changeDetailsTab('content-details-desc')">
-                            <li>Description</li>
-                        </a>
-                        <a href="#" id="spec-btn" class="btn" onclick="changeDetailsTab('content-details-spec')">
-                            <li>Specifications</li>
-                        </a>
-                    </ul>
-                </div>
-                <div id="content-details-reviews" class="grid">
-                    <!-- TODO: Add "Write review" button, and lightbox review window -->
-                    <!-- TODO: Add a couple more reviews, improve description, and create some specs. Maybe style better too -->
-                    <div class="col3of6">
-                        <div id="review-header">
-                            <form>
-                                <label for="review-sort">Sort By:</label>
-                                <select name="form-quantity2" id="review-sort">
-                                    <option value="quantity1">Most Helpful</option>
-                                    <option value="quantity2">Most Recent</option>
-                                    <option value="quantity3">Rating</option>
-                                </select>
-                            </form>
-                            <button class="btn">Write a Review!</button>
-                        </div>
-
-
-                        <!--review 2-->
-                        <div class="review">
-                            <img src="img/identicon3.png" alt="profile image" class="profilePic">
-                            <div>
-                                <h2>Awesome</h2>
-                                <h3>Malorey Evans</h3>
-                                <div class="star-rating">★★★★☆</div>
-                                <span>Sept. 20th 2014</span>
-                            </div>
-
-                            <p>This is awesome sauce! Worked well for a film I was making. Fast delivery and the person I talked to (shout out to John!) was very helpful when I was having issues with the shipping.</p>
-                        </div>
-                    </div>
-                    <div class="col3of6">
-                        <!-- TODO: Put a review summary here or something -->
-                    </div>
-                </div>
-                <div id="content-details-desc">
-                    <p>The Savage 110 BA is a bolt-action sniper/tactical rifle manufactured by the Savage Arms Company. The rifle is designated with an "LE" code; "Law Enforcement". All 110 BA series rifles are configured with AccuTrigger, matte-blued barreled action, fluted heavy free-floating, muzzle brake, oversized bolt handle, external box magazine (holding 5 - 6 rounds), magpul adjustable stock, adjustable pistol grip, and three swivel studs for sling and bipod mounting.
-                    </p>
-                </div>
-                <div id="content-details-spec">
-                    <label>Manufacturer:</label>
-                    <p>Savage</p>
-                    <label>Model:</label>
-                    <p>110BA</p>
-                    <label>Calibre:</label>
-                    <p>.338 Lapua</p>
-                    <label>Firearm length:</label>
-                    <p>50.5 inches</p>
-                    <label>Barrel Length:</label>
-                    <p>26 inches</p>
-                    <label>Color:</label>
-                    <p>Black</p>
-                    <label>Origin:</label>
-                    <p>USA</p>
-                    <label>Initial date of manufacture:</label>
-                    <p>2009</p>
-                    <label>Popular from:</label>
-                    <p>2009 to present</p>
-                </div>
-            </div>
-        </div>
-    </main>
-    <script src="js/main.js"></script>
+		<div id="body-content">
+			<div class="col6of6">
+				<div class="content-container details-page clearfix">
+					<img src="img/pl_savage110BA.jpg" alt="Image of a rocket launcher">
+					<div class="content-fragment-text">
+						<h2>Savage 110 BA</h2>
+						<div class="star-rating">★★★★☆<span> - from 1 review</span></div>
+						<span>$50.00</span>
+						<ul>
+							<li>CNC machined out of aluminium per manufacturer specs</li>
+							<li>Functioning scope included</li>
+							<li>Fully adjustable bipod and stock with working rail system</li>
+						</ul>
+						<!-- FIXME: The layout of the purchase stuff isn't really working out -->
+						<form>
+							<label for="form-quantity2">Quantity:</label>
+							<select name="form-quantity2" id="form-quantity2">
+								<option value="quantity1">1</option>
+								<option value="quantity2">2</option>
+								<option value="quantity3">3</option>
+								<option value="quantity4">4</option>
+								<option value="quantity5">5</option>
+								<option value="quantity6">6</option>
+								<option value="quantity7">7</option>
+								<option value="quantity8">8</option>
+								<option value="quantity9">9</option>
+								<option value="quantity10">10</option>
+							</select>
+							<a class="btn" href="twnyBag.html">Bag it</a>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="content-details-container">
+				<div class="content-selector">
+					<ul>
+						<!-- FIXME: Is it obvious these are tabs / buttons? -->
+						<!-- FIXME: <a> tags are causing validation errors here. Maybe move them inside the <li> tags? -->
+						<a href="#" id="reviews-btn" class="btn current" onclick="changeDetailsTab('content-details-reviews')">
+							<li>Reviews</li>
+						</a>
+						<a href="#" id="desc-btn" class="btn" onclick="changeDetailsTab('content-details-desc')">
+							<li>Description</li>
+						</a>
+						<a href="#" id="spec-btn" class="btn" onclick="changeDetailsTab('content-details-spec')">
+							<li>Specifications</li>
+						</a>
+					</ul>
+				</div>
+				<div class="grid">
+					<div class="col3of6">
+						<h1>Reviews</h1>
+						<div id="content-details-reviews">
+							<!-- TODO: Add "Write review" button, and lightbox review window -->
+							<!-- TODO: Add a couple more reviews, improve description, and create some specs. Maybe style better too -->
+							<div id="review-header">
+								<form>
+									<label for="review-sort">Sort By:</label>
+									<select name="form-quantity2" id="review-sort">
+										<option value="quantity1">Most Helpful</option>
+										<option value="quantity2">Most Recent</option>
+										<option value="quantity3">Rating</option>
+									</select>
+									<button class="btn">Write a Review!</button>
+								</form>
+							</div>
+							<!--review 2-->
+							<div class="review">
+								<img src="img/identicon3.png" alt="profile image" class="profilePic">
+								<div>
+									<h2>Awesome</h2>
+									<h3>Malorey Evans</h3>
+									<div class="star-rating">★★★★☆</div>
+									<span>Sept. 20th 2014</span>
+								</div>
+								<p>This is awesome sauce! Worked well for a film I was making. Fast delivery and the person I talked to (shout out to John!) was very helpful when I was having issues with the shipping.</p>
+							</div>
+							<div class="col3of6">
+								<!-- TODO: Put a review summary here or something -->
+							</div>
+						</div>
+					</div>
+					<div class="col3of6">
+						<h1>Description</h1>
+						<div id="content-details-desc">
+							<p>The Savage 110 BA is a bolt-action sniper/tactical rifle manufactured by the Savage Arms Company. The rifle is designated with an "LE" code; "Law Enforcement". All 110 BA series rifles are configured with AccuTrigger, matte-blued barreled action, fluted heavy free-floating, muzzle brake, oversized bolt handle, external box magazine (holding 5 - 6 rounds), magpul adjustable stock, adjustable pistol grip, and three swivel studs for sling and bipod mounting.
+							</p>
+						</div>
+						<div id="content-details-spec">
+							<label>Manufacturer:</label>
+							<p>Savage</p>
+							<label>Model:</label>
+							<p>110BA</p>
+							<label>Calibre:</label>
+							<p>.338 Lapua</p>
+							<label>Firearm length:</label>
+							<p>50.5 inches</p>
+							<label>Barrel Length:</label>
+							<p>26 inches</p>
+							<label>Color:</label>
+							<p>Black</p>
+							<label>Origin:</label>
+							<p>USA</p>
+							<label>Initial date of manufacture:</label>
+							<p>2009</p>
+							<label>Popular from:</label>
+							<p>2009 to present</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<script src="js/main.js"></script>
 </body>
 
 </html>

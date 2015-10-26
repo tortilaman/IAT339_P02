@@ -1,9 +1,20 @@
-/*  ================================================================
- *  GENERAL TODO LIST
- *  ----------------------------------------------------------------
- *  Location specific items are where they need to be dealt with.
- *  Comment categories are: TODO, NOTE, FIXME, CHANGES, FUTURE,
- *  ================================================================*/
+/*	================================================================
+**
+**	888888888888                    88888888ba,
+**	     88                         88      `"8b
+**	     88                         88        `8b
+**	     88   ,adPPYba,             88         88   ,adPPYba,
+**	     88  a8"     "8a  aaaaaaaa  88         88  a8"     "8a
+**	     88  8b       d8  """"""""  88         8P  8b       d8
+**	     88  "8a,   ,a8"            88      .a8P   "8a,   ,a8"
+**	     88   `"YbbdP"'             88888888Y"'     `"YbbdP"'
+**
+**  ----------------------------------------------------------------
+**
+**  Location specific items are where they need to be dealt with.
+**  Comment categories are: TODO, NOTE, FIXME, CHANGES, FUTURE,
+**
+**  ================================================================*/
 /*  TODO:   Update visual styling*/
 /*  TODO:   Update/finish layouts*/
 /*  TODO:   Responsiveness*/
@@ -24,93 +35,93 @@
 
 
 /*  =========================
- *  COLOR PALLETTE
- *  -------------------------
- *  Red:    #DD4D6A
- *  White:  #E1E1E1
- *  Gray:   #666666
- *  Black:  #191919
- *  =========================*/
+**  COLOR PALLETTE
+**  -------------------------
+**  Red:    #DD4D6A
+**  White:  #E1E1E1
+**  Gray:   #666666
+**  Black:  #191919
+**  =========================*/
 
 
 /*  =========================
- *  DEFAULT ELEMENT STYLING
- *  =========================*/
+**  DEFAULT ELEMENT STYLING
+**  =========================*/
 
 img {
-    width: 100%;
+	width: 100%;
 }
 
 body {
-    background-color: #191919;
-    color: #E1E1E1;
+	background-color: #191919;
+	color: #E1E1E1;
 }
 
 li {
-    list-style-type: none;
+	list-style-type: none;
 }
 
 
 /*  =========================
- *  "MIXINS"
- *  =========================*/
+**  "MIXINS"
+**  =========================*/
 
 .clearfix:after {
-    content: "";
-    display: table;
-    clear: both;
+	content: "";
+	display: table;
+	clear: both;
 }
 
 
 /*  =========================
- *  TEXT STYLING
- *  =========================*/
+**  TEXT STYLING
+**  =========================*/
 
 h1,
 h2,
 h3,
 span {
-    font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
-    color: #E1E1E1;
-    font-weight: 600;
-    text-transform: uppercase;
-    text-decoration: none;
-    margin: 0;
+	font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+	color: #E1E1E1;
+	font-weight: 600;
+	text-transform: uppercase;
+	text-decoration: none;
+	margin: 0 0 0.5em 0;
 }
 
 h2 {
-    font-size: 1.5rem;
+	font-size: 1.5rem;
 }
 
 p {
-    color: #666666;
-    line-height: 2em;
-    margin-top: 0;
+	color: #666666;
+	line-height: 1.3em;
+	margin-top: 0;
 }
 
 figcaption {
-    color: #666666;
+	color: #666666;
 }
 
 
 /*  =========================
- *  INTERACTIVE ELEMENTS
- *  =========================*/
+**  INTERACTIVE ELEMENTS
+**  =========================*/
 
 
 /* Links */
 
 a {
-    color: #DD4D6A;
-    text-decoration: none;
-    opacity: 1;
+	color: #DD4D6A;
+	text-decoration: none;
+	opacity: 1;
 }
 
 a:hover,
 a:active,
 a:focus{
-    text-decoration: underline;
-    opacity: 0.6;
+	text-decoration: underline;
+	opacity: 0.6;
 }
 
 a h1:hover,
@@ -119,38 +130,38 @@ a h1:focus,
 a h2:hover,
 a h2:focus,
 a h2:active {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 a.see-more {
-    text-decoration: underline;
+	text-decoration: underline;
 }
 
 a img:hover{
-    opacity: 1;
+	opacity: 1;
 }
 
 /* -----------------------------
- * Standard Button
- * -----------------------------*/
+** Standard Button
+** -----------------------------*/
 /* NOTE: To style differently just create a new class that modifies this and apply both to the html*/
 /* TODO: It should be more obvious this is a button before you hover... */
 /* -----------------------------*/
 
 .btn {
-    display: inline-block;
-    margin-top: 0.5rem;
-    border: none;
-    background-color: #666666;
-    box-shadow: 0 0 0.1rem rgba(150, 150, 150, 0.25);
-    padding: 0.4em 1.3em;
-    color: #E1E1E1;
-    font-family: "Inconsolata", Arial, Helvetica, sans-serif;
-    font-size: 0.9em;
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
-    text-decoration: none;
-    margin-top: 1rem;
+	display: inline-block;
+	margin-top: 0.5rem;
+	border: none;
+	background-color: #666666;
+	box-shadow: 0 0 0.1rem rgba(150, 150, 150, 0.25);
+	padding: 0.4em 1.3em;
+	color: #E1E1E1;
+	font-family: "Inconsolata", Arial, Helvetica, sans-serif;
+	font-size: 0.9em;
+	text-transform: uppercase;
+	letter-spacing: 0.03em;
+	text-decoration: none;
+	margin-top: 1rem;
 }
 
 
@@ -159,40 +170,53 @@ a img:hover{
 .btn:hover,
 .btn:focus,
 .btn:active {
-    -webkit-transform: translateY(-0.05rem);
-    transform: translateY(-0.05rem);
-    box-shadow: 0.1rem 0.2em 0.3rem rgba(150, 150, 150, 0.25);
-    text-decoration: none;
-    background-color: #DD4D6A;
-    color: #191919;
+	-webkit-transform: translateY(-0.05rem);
+	transform: translateY(-0.05rem);
+	box-shadow: 0.1rem 0.2em 0.3rem rgba(150, 150, 150, 0.25);
+	text-decoration: none;
+	background-color: #DD4D6A;
+	color: #191919;
 }
 
+/*	===========================================================================
+**
+**	88        88                                   88
+**	88        88                                   88
+**	88        88                                   88
+**	88aaaaaaaa88   ,adPPYba,  ,adPPYYba,   ,adPPYb,88   ,adPPYba,  8b,dPPYba,
+**	88""""""""88  a8P_____88  ""     `Y8  a8"    `Y88  a8P_____88  88P'   "Y8
+**	88        88  8PP"""""""  ,adPPPPP88  8b       88  8PP"""""""  88
+**	88        88  "8b,   ,aa  88,    ,88  "8a,   ,d88  "8b,   ,aa  88
+**	88        88   `"Ybbd8"'  `"8bbdP"Y8   `"8bbdP"Y8   `"Ybbd8"'  88
+**
+*	===========================================================================*/
+
 /*  =========================
- *  HEADER & NAVIGATION
- *  =========================*/
+*  NAV
+*  =========================*/
 
 .nav-trigger {
-    width: 5rem;
-    height: 2.5rem;
-    margin: 0 auto;
-    position: absolute;
-    left: 50%;
-    -webkit-transform: translate(-50%, 0);
+	width: 5rem;
+	height: 2.5rem;
+	margin: 0 auto;
+	position: absolute;
+	left: 50%;
+	-webkit-transform: translate(-50%, 0);
 	-ms-transform: translate(-50%, 0);
 	transform: translate(-50%, 0);
-    clip: rect(0, 0, 0, 0);
+	clip: rect(0, 0, 0, 0);
 }
 
 label[for="nav-trigger"]{
 	width: 5rem;
 	display: block;
 	height: 2.5rem;
-    margin: 0 auto;
-    padding: 0;
-    background-image: url(../img/Logo-03.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+	margin: 0 auto;
+	padding: 0;
+	background-image: url(../img/Logo-03.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
 	-webkit-transition: all 0.25s ease-in-out;
 	transition: all 0.25s ease-in-out;
 }
@@ -204,401 +228,444 @@ label[for="nav-trigger"]:active {
 }
 
 #main-nav {
-    overflow: hidden;
-    min-width: 600px;
-    width: 75%;
-    margin: 0 auto;
+	overflow: hidden;
+	min-width: 600px;
+	width: 75%;
+	margin: 0 auto;
 }
 
 
 /* NOTE: any element that uses this also requires the .btn class */
 
 .btn-nav {
-    font-size: 1rem;
-    margin-top:0;
-    color: #E1E1E1;
-    background: #191919;
-    box-shadow: none;
-    padding: 0rem 0rem 0.5rem 0rem;
-    text-align: center;
+	font-size: 1rem;
+	margin-top:0;
+	color: #E1E1E1;
+	background: #191919;
+	box-shadow: none;
+	padding: 0rem 0rem 0.5rem 0rem;
+	text-align: center;
 }
 
 .btn-nav:hover,
 .btn-nav:active {
-    background-color: #191919;
-    color: #E1E1E1;
-    text-decoration: none;
-    box-shadow: none;
+	background-color: #191919;
+	color: #E1E1E1;
+	text-decoration: none;
+	box-shadow: none;
 }
 
 .btn-nav.current {
-    border-bottom: 0.4rem solid #DD4D6A;
+	border-bottom: 0.4rem solid #DD4D6A;
 }
 
 header {
-    display: block;
-    padding: 1em 0 0 0;
+	display: block;
+	padding: 1em 0 0 0;
 }
 
 
 /*  =========================
- *  BANNERS
- *  =========================*/
+**  BANNERS
+**  =========================*/
 
 .banner-container {
-    position: relative;
-    width: 100%;
-    height: 20vh;
-    /*    min-height: 23rem;*/
-    margin-bottom: 2rem;
+	position: relative;
+	width: 100%;
+	height: 20vh;
+	/*    min-height: 23rem;*/
+	margin-bottom: 2rem;
 }
 
 #banner-image {
-    position: relative;
-    left: 50%;
-    -webkit-transform: translate(-50%, 0);
-    -ms-transform: translate(-50%, 0);
-    transform: translate(-50%, 0);
-    padding: 0;
-    margin: 0;
-    width: 100vw;
-    height: 20vh;
-    /*    min-height: 23rem;*/
-    overflow: hidden;
+	position: relative;
+	left: 50%;
+	-webkit-transform: translate(-50%, 0);
+	-ms-transform: translate(-50%, 0);
+	transform: translate(-50%, 0);
+	padding: 0;
+	margin: 0;
+	width: 100vw;
+	height: 20vh;
+	/*    min-height: 23rem;*/
+	overflow: hidden;
 }
 
 /* This is the overlay for the banner image */
 
 #banner-image:after {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.95));
-    z-index: 5;
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.95));
+	z-index: 5;
 }
 
 #banner-content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    display: block;
-    padding: 0rem 5rem;
-    line-height: 0;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	display: block;
+	padding: 0rem 5rem;
+	line-height: 0;
 }
 
 #banner-content p {
-    margin: 0;
-    padding: 0;
-    width: 28rem;
-    font-size: 1.3rem;
-    font-weight: 700;
-    line-height: 1.5em;
-    letter-spacing: 0.1rem;
-    color: #E1E1E1;
+	margin: 0;
+	padding: 0;
+	width: 28rem;
+	font-size: 1.3rem;
+	font-weight: 700;
+	line-height: 1.5em;
+	letter-spacing: 0.1rem;
+	color: #E1E1E1;
 }
 
 #banner-content h1 {
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-    font-size: 4rem;
-    letter-spacing: 0.3rem;
-    line-height: 0.85em;
-    color: #E1E1E1;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	font-size: 4rem;
+	letter-spacing: 0.3rem;
+	line-height: 0.85em;
+	color: #E1E1E1;
 }
 
 #home-banner,
 #home-banner #banner-image {
-    height: 35vh;
-    min-height: 23rem;
+	height: 35vh;
+	min-height: 23rem;
 }
 
 #home-banner #banner-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 2rem 5rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 2rem 5rem;
 }
 
 #home-banner p {
-    font-family: "Source Sans Pro";
-    margin: 0;
-    padding: 0;
-    width: 28rem;
-    font-size: 1.3rem;
-    font-weight: 100;
-    line-height: 1.5em;
-    letter-spacing: 0.1rem;
-    color: #E1E1E1;
+	font-family: "Source Sans Pro";
+	margin: 0;
+	padding: 0;
+	width: 28rem;
+	font-size: 1.3rem;
+	font-weight: 100;
+	line-height: 1.5em;
+	letter-spacing: 0.1rem;
+	color: #E1E1E1;
 }
 
 #home-banner h1 {
-    font-size: 6rem;
-    font-weight: 700;
-    /*	border-bottom: 0.4rem solid #DD4D6A;*/
-    margin-bottom: 1rem;
+	font-size: 6rem;
+	font-weight: 700;
+	/*	border-bottom: 0.4rem solid #DD4D6A;*/
+	margin-bottom: 1rem;
 }
 
+/* ===========================================================================
+**
+**	  ,ad8888ba,
+**	 d8"'    `"8b                             ,d                              ,d
+**	d8'                                       88                              88
+**	88              ,adPPYba,   8b,dPPYba,  MM88MMM  ,adPPYba,  8b,dPPYba,  MM88MMM
+**	88             a8"     "8a  88P'   `"8a   88    a8P_____88  88P'   `"8a   88
+**	Y8,            8b       d8  88       88   88    8PP"""""""  88       88   88
+**	 Y8a.    .a8P  "8a,   ,a8"  88       88   88,   "8b,   ,aa  88       88   88,
+**	  `"Y8888Y"'    `"YbbdP"'   88       88   "Y888  `"Ybbd8"'  88       88   "Y888
+**
+**	===========================================================================*/
 
 /*  =========================
- *  CONTENT FRAGMENTS
- *  =========================*/
+**  CONTENT FRAGMENTS
+**  =========================*/
 
 /* HOME & INVENTORY FRAGMENTS */
 
+.content-container {
+	background: #151515;
+	box-shadow: 0 0 0.3rem 0.1rem rgba(0, 0, 0, 0.5);
+/*	padding: 0 0 1rem 0;*/
+	padding: 0;
+}
+
+.content-container.details-page {
+	box-shadow: none;
+}
+
+.content-fragment-text {
+	margin: 0;
+	padding: 0 0.5rem 0.5rem 0.5rem;
+}
+
+/*
+.content-container h2,
+.content-container p,
+.content-container span {
+	margin: 0;
+	padding: 0;
+}
+*/
+
 .home-content.content-container h2,
 .banner-container h1 {
-    text-transform: uppercase;
+	text-transform: uppercase;
 }
 
 .content-container h2 {
-    /*    text-transform: capitalize;*/
-    display: inline;
-    margin: 0 0 1rem 0;
-    padding: 0;
+	display: inline-block;
 }
 
 .content-container span {
-    display: inline;
-    float: right;
-    padding-top: 0.6rem;
-    font-size: 1rem;
-    text-transform: capitalize;
+	display: inline;
+	float: right;
+	padding-top: 0.6rem;
+	font-size: 1rem;
+	text-transform: capitalize;
 }
 .content-fragment-feature {
-    margin-top: 1rem;
+	margin-top: 1rem;
 }
 .content-fragment-feature p{
-    line-height: 0;
-    padding-left: 1rem;
+	line-height: 0;
+	padding-left: 1rem;
+}
+
+.col2of6 .content-fragment-text {
+	min-height: 10rem;
 }
 
 /* SERVICES & BLOG FRAGMENTS */
 
-.col6of6.content-container img,
-.col6of6.content-container .content-fragment-text {
-    width: 50%;
-    float: left;
+.col6of6 .content-container img,
+.col6of6 .content-container .content-fragment-text {
+	width: 50%;
+	float: left;
 }
 
-.col6of6.content-container .content-fragment-text {
-    padding-left: 1.5rem;
+.col6of6 .content-container span {
+	display: block;
+	float: none;
+	color: #DD4D6A;
 }
 
-.col6of6.content-container span {
-    display: block;
-    float: none;
-    color: #DD4D6A;
+.col6of6 .content-container p {
+	margin-top: 0.25rem;
 }
-
-.col6of6.content-container p {
-    margin-top: 0.25rem;
-}
-
-
-/* TODO: Below this point hasn't been udpated other than the media queries. */
-
 
 /*  =========================
- *  DETAIL PAGES
- *  =========================*/
+**  DETAIL PAGES
+**  =========================*/
 
 .content-fragment-text ul {
-    padding: 0;
+	padding: 0;
 }
 
 .content-fragment-text li {
-    list-style: square;
-    color: #666666;
-    padding: 0 0 0.5rem 0;
-    margin-left: 1rem;
+	list-style: square;
+	color: #666666;
+	padding: 0 0 0.5rem 0;
+	margin-left: 1rem;
 }
 
 .star-rating {
-    color: #DD4D6A;
-    font-size: 1.5rem;
-    letter-spacing: 0.2rem;
-    line-height: 1rem;
-    padding: 0.5rem 0 0 0;
+	color: #DD4D6A;
+	font-size: 1.5rem;
+	letter-spacing: 0.2rem;
+	line-height: 1rem;
+	padding: 0.5rem 0;
 }
 
 .content-fragment-text .star-rating span {
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-    color: #E1E1E1;
-    font-size: 1rem;
-    letter-spacing: 0;
-    font-weight: 400;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	color: #E1E1E1;
+	font-size: 1rem;
+	letter-spacing: 0;
+	font-weight: 400;
 }
 
 .content-details-container {
-    position: relative;
-    display: block;
-    width: 100%;
-    padding: 0 1rem;
-    line-height: 1rem;
-    padding-top: 1rem;
+	position: relative;
+	display: block;
+	width: 100%;
+	padding: 0 1rem;
+	line-height: 1rem;
+	padding-top: 1rem;
+}
+
+.content-selector {
+	display: none;
 }
 
 .content-selector ul {
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-    background: #666666;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	background: #666666;
 }
 
 .content-selector a {
-    margin: 0;
-    border: none;
-    font-weight: 600;
+	margin: 0;
+	border: none;
+	font-weight: 600;
 }
 
 .content-selector a:hover,
 .content-selector a:focus,
 .content-selector a:active {
-    background-color: #DD4D6A;
-    color: #191919;
-    font-weight: 600;
-    opacity: 1;
+	background-color: #DD4D6A;
+	color: #191919;
+	font-weight: 600;
+	opacity: 1;
 }
 
 #content-details-desc {
-    display: none;
-    margin-top: 1rem;
+/*	display: none;*/
+	margin-top: 1rem;
 }
 
 #content-details-text p {
-    margin: 0;
-    padding: 0.5rem 0 0 0;
-    line-height: 1.2rem;
+	margin: 0;
+	padding: 0.5rem 0 0 0;
+	line-height: 1.2rem;
 }
 
 #content-details-reviews {
-    padding: 0.5rem 0;
+	padding: 0.5rem 0;
 }
 
 #content-details-reviews .review img {
-    float: left;
-    width: 20%;
-    margin: 0 1rem 1rem 0;
+	float: left;
+	width: 20%;
+	margin: 0 1rem 0.5rem 0;
 }
 
 #content-details-reviews .review h2,
 #content-details-reviews .review h3,
-#content-details-reviews .review .star-rating {
-    padding: 0.5rem 0 0 0;
-    text-transform: none;
+#content-details-reviews .review .star-rating,
+#content-details-reviews .review span {
+	margin: 0;
+	padding: 0.25rem 0 ;
+	text-transform: none;
 }
 
 #content-details-reviews .review p {
-    line-height: 1.2rem;
-    padding-top: 0.5rem;
+	line-height: 1.2rem;
+	padding-top: 0.5rem;
 }
 
 #content-details-reviews {
-    position: relative;
-    display: block;
-    margin: 0;
-    padding: 1rem 0;
+	position: relative;
+	display: block;
+	margin: 0;
+	padding: 1rem 0;
 }
 
 .content-detail-interview {
-    padding: 3em;
+	padding: 3em;
 }
 
 .content-detail-interview strong {
-    color: #FFF;
+	color: #FFF;
 }
 
 
 /* FIXME: For some reason this doesn't work... not sure why. */
 
 #content-details-reviews:first-child {
-    padding-left: 0;
+	padding-left: 0;
 }
 
 .review {
-    margin: 0 0 1rem 0;
-    border-bottom: 1px solid #DD4D6A;
+	margin: 0 0 1rem 0;
+	border-bottom: 1px solid #DD4D6A;
 }
 
 #review-header {
-    margin: -0.5rem 0 1rem 0;
+	margin: -0.5rem 0 1rem 0;
 }
 
 #review-header form,
 #review-header btn {
-    display: inline-block;
+	display: inline-block;
 }
 
 #content-details-desc ul {
-    color: #666666;
-    padding: 0;
-    list-style: inside;
+	color: #666666;
+	padding: 0;
+	list-style: inside;
 }
 
 #content-details-desc li {
-    list-style-type: square;
+	list-style-type: square;
 }
 
 #content-details-spec {
-    display: none;
-    margin-top: 1rem;
+/*	display: none;*/
+	margin-top: 1rem;
 }
 
 span.entry-date {
-    font-size: 0.9rem;
+	font-size: 0.9rem;
 }
 
 
 /*  =========================
- *  FORMS & DROPDOWNS
- *  =========================*/
+**  FORMS & DROPDOWNS
+**  =========================*/
 
 
 /* TODO: Update form element styling. */
 
 form {
-    padding: 0;
-    margin: 0;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;/*Contain form elements*/
 }
 
 label {
-    display: inline-block;
-    margin: 0;
-    padding: 0 0.35em 0.35em 0.25em;
-    font-family: "Source Sans Pro";
-    color: #E1E1E1;
-    font-weight: 600;
-    font-size: 0.8em;
-    text-transform: uppercase;
-    cursor: pointer;
+/*	display: inline-block;*/
+	display: block; /*Hopefully this doesn't mess anything up*/
+	margin: 0;
+	padding: 0 0.35em 0.35em 0.25em;
+	font-family: "Source Sans Pro";
+	color: #E1E1E1;
+	font-weight: 600;
+	font-size: 0.8em;
+	text-transform: uppercase;
+	cursor: pointer;
 }
 
 select {
-    border: 1.5px solid #191919;
-    /*    background: #666666;*/
-    color: #E1E1E1;
-    height: 2rem;
+	border: 1.5px solid #666;
+	background-color: #151515;
+	color: #E1E1E1;
+	height: 2rem;
 }
 
 input {
-    padding: 0.5em 0.8em;
-    display: block;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    background: transparent;
-    border: 1.5px solid;
+	padding: 0.5em 0.8em;
+	display: block;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	background: transparent;
+	border: 1.5px solid;
+}
+
+input[type="text"] {
+	background-color: #151515;
+	border: 1px solid #666;
 }
 
 /*  =========================
- *  Contact
- *  =========================*/
+**  Contact
+**  =========================*/
 
 #mapContainer {
 	position: relative;
@@ -614,161 +681,219 @@ input {
 	height: 100%;
 }
 
-.checkout-content label,
-select {
-    color: #191919;
-}
-
 .checkout-content select {
-    background-color: #FFF;
-    width: 100%;
+	width: 100%;
 }
 
-/*=========
- *  BAG
- *=========*/
+/* TODO: Below this point hasn't been udpated other than the media queries.**/
 
-td {
-    padding: 0em 1.5em !important;
-    text-align: left;
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
-}
+/*====================
+**  BAG & CHECKOUT
+**====================*/
 
-th {
-    padding: 1em 1em;
-    font-family: "Source Sans Pro";
-    text-transform: uppercase;
-    font-size: 0.9em;
-    letter-spacing: 0.03em;
-}
-
-tr.pricing-total td{
-    padding-top: 0.5rem !important;
-    padding-bottom: 0.5rem !important;
-}
-
-
+/*Containers*/
 .checkout-content {
-    background: white;
-    min-width: 400px;
-    color: #191919;
-    overflow: hidden;
+	min-width: 400px;
+	overflow: hidden;
 }
 
 .shoppingbag-summary {
-    width: 100%;
-    border-collapse: collapse;
-    border-spacing: 0;
-    margin-right: 0.75em;
-    padding: 1.5em 2em .5em 2em;
-    text-align: left;
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+/*	margin-right: 0.75em;*/
+/*	padding: 1.5em 2em .5em 2em;*/
+	text-align: left;
 }
 
-.shoppingbag-summary select {
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
-    margin-right: 0.5em;
-    width: 5em;
+.checkout-container {
+	display: inline-block;
+}
+
+/*Table Headings*/
+th {
+	padding: 1em 1em;
+	background: #FFF;
+	color: #191919;
+	font-family: "Source Sans Pro";
+	text-transform: uppercase;
+	font-size: 0.9em;
+	letter-spacing: 0.03em;
+}
+
+/*.shoppingbag-summary th {
+	background: #FFF;
+}*/
+
+.order-summary th {
+	background: #BC7482;
+	color: white;
+}
+
+/*Table Rows*/
+.shoppingbag-summary tr {
+	background-color: #151515;
 }
 
 .shoppingbag-summary tr:nth-of-type(odd) {
-    /* colored strips for chart*/
-    background: #F6F6F6;
+	/* colored strips for chart*/
+	background: #101010;
 }
 
-.order-summary th {
-    background: #BC7482;
-    color: white;
+/*Table Cells*/
+td {
+	padding: 0em 1.5em !important;
+	color: #e1e1e1;
+	text-align: left;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
 }
 
-.shippingbag-title {
-    background: #FFF;
+tr.pricing-total td{
+	padding-top: 0.5rem !important;
+	padding-bottom: 0.5rem !important;
 }
 
-.bag-checkout .btn {
-    background: #191919;
-    margin-top: 2em;
-    margin-bottom: 2em;
-    padding: 0.5em 1em;
-    float: right;
-    margin-right: 3em;
-    letter-spacing: 0.03em;
+/*Form Elements*/
+.shoppingbag-summary select {
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+	margin-right: 0.5em;
+	width: 5em;
 }
 
+.checkout-info-form .btn {
+/*	background: #191919;*/
+	margin: 2em 0;
+	padding: 0.5em 1em;
+	float: right;
+	letter-spacing: 0.03em;
+}
+
+/*
 .bag-checkout.login .btn {
-    float: left;
-    margin: 0.5rem 1rem;
+	float: left;
+	margin: 0.5rem 1rem;
+}
+*/
+
+#same-as-shipping {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	width: 1rem;
+	height: 1rem;
+	background-color: #151515;
+	border: 1px solid #666;
+}
+label[for="same-as-shipping"] {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	height: 1rem;
+	line-height: 1rem;
+	text-transform: capitalize;
+	font-weight: 400;
 }
 
+#same-as-shipping ~form.billing {
+	display:block;
+}
+#same-as-shipping:checked ~ form.billing {
+	display:none;
+}
 
 /*===================
- *  CHECKOUT
- *===================*/
-
-.checkout-container {
-    display: inline-block;
-}
+**  CHECKOUT
+**===================*/
 
 .checkout-content.confirm {
-    padding: 1rem;
+	margin: 0;
+	padding: 0rem;
 }
 
 
 /*---SHIPPING---*/
 
 .col4of8 {
-    width: 100%;
-    float: left;
+	width: 100%;
+	float: left;
 }
 
-.checkout-info-form {
-    margin-bottom: 5em;
+.checkout-info-form select {
+	width: 100%;
 }
 
+.checkout-info-form [class^="col"] {
+	padding: 0 1rem 0.25rem 0;
+/*	margin: 0;*/
+}
+
+/*
 .checkout-content h2 {
-    font-weight: 800;
-    margin-top: 1rem;
-    color: #191919;
-    margin-bottom: 0em;
+	font-weight: 800;
+	margin-top: 1rem;
+	color: #191919;
+	margin-bottom: 0em;
 }
+*/
 
 #month,
-#year {
-    display: block;
-    float: left;
+#year,
+#code {
+	display: block;
+	float: left;
 }
 
-#year {
-    padding-left: 1rem;
+#year, #code {
+	padding-left: 1rem;
 }
 
+#code input{
+	width: 3.5rem;
+	margin: 0;
+}
 
 /*---CONTACT PAYMENT---*/
 
 #checkout-payment {
-    margin-top: 2em;
+	margin-top: 2em;
 }
 
 .tiny-btn {
-    font-weight: 800;
-    text-decoration: underline;
-    margin-top: 1rem;
-    margin-left: 1rem;
+	font-weight: 800;
+	text-decoration: underline;
+	margin-top: 1rem;
+	margin-left: 1rem;
 }
 
 #confirm-order-content{
-    display: inline-block;
-    width: 100%;
-    text-align:center;
-    margin: 0 auto;
-    padding-top: 3em;
+	display: inline-block;
+	width: 100%;
+	text-align:center;
+	margin: 0 auto;
+	padding-top: 3em;
 }
 
 
+/*	===========================================================================
+**
+**	88b           d88               88           88  88
+**	888b         d888               88           ""  88
+**	88`8b       d8'88               88               88
+**	88 `8b     d8' 88   ,adPPYba,   88,dPPYba,   88  88   ,adPPYba,
+**	88  `8b   d8'  88  a8"     "8a  88P'    "8a  88  88  a8P_____88
+**	88   `8b d8'   88  8b       d8  88       d8  88  88  8PP"""""""
+**	88    `888'    88  "8a,   ,a8"  88b,   ,a8"  88  88  "8b,   ,aa
+**	88     `8'     88   `"YbbdP"'   8Y"Ybbd8"'   88  88   `"Ybbd8"'
+**
+**	===========================================================================*/
+
+
+
 /* ==================
- *   MEDIA QUERIES
- * ==================*/
+**   MEDIA QUERIES
+** ==================*/
 
 @media only screen
 	and (max-width: 63rem) {
@@ -788,72 +913,72 @@ tr.pricing-total td{
 			padding-top: 1rem;
 		}
 
-        /* MOBILE NAVIGATION */
+		/* MOBILE NAVIGATION */
 
 		header {
 			padding: 0;
-            position: fixed;
-            width: 100%;
+			position: fixed;
+			width: 100%;
 			background: #191919;
 			margin-top: -18rem;
 			z-index: 14; /* Needs to be on top of page */
 			-webkit-transition: margin-top 0.2s ease-in-out;
 			transition: margin-top 0.2s ease-in-out;
-            /* FIXME:  Those Transitions Tho'  */
-            -moz-animation-name: dropHeader;
-            -moz-animation-iteration-count: 1;
-            -moz-animation-delay: 0.1s;
-            -moz-animation-timing-function: ease-in;
-            -moz-animation-duration: 5s;
+			/* FIXME:  Those Transitions Tho'  */
+			-moz-animation-name: dropHeader;
+			-moz-animation-iteration-count: 1;
+			-moz-animation-delay: 0.1s;
+			-moz-animation-timing-function: ease-in;
+			-moz-animation-duration: 5s;
 
-            -webkit-animation-name: dropHeader;
-            -webkit-animation-iteration-count: 1;
-            -webkit-animation-delay: 0.1s;
-            -webkit-animation-timing-function: ease-in;
-            -webkit-animation-duration: 5s;
+			-webkit-animation-name: dropHeader;
+			-webkit-animation-iteration-count: 1;
+			-webkit-animation-delay: 0.1s;
+			-webkit-animation-timing-function: ease-in;
+			-webkit-animation-duration: 5s;
 
-            animation-name: dropHeader;
-            animation-iteration-count: 1;
-            animation-delay: 0.1s;
-            animation-timing-function: ease-in;
-            animation-duration: 5s;
+			animation-name: dropHeader;
+			animation-iteration-count: 1;
+			animation-delay: 0.1s;
+			animation-timing-function: ease-in;
+			animation-duration: 5s;
 		}
 
-        .nav-trigger:checked + label {
-            bottom: -18rem;
-        }
+		.nav-trigger:checked + label {
+			bottom: -18rem;
+		}
 
-        .nav-trigger:checked ~ #main-nav {
-            top: 18rem;
-            box-shadow: 0 0 0.2rem 0.2rem rgba(0,0,0,0.5);
-        }
+		.nav-trigger:checked ~ #main-nav {
+			top: 18rem;
+			box-shadow: 0 0 0.2rem 0.2rem rgba(0,0,0,0.5);
+		}
 
-        label[for="nav-trigger"] {
+		label[for="nav-trigger"] {
 			cursor: pointer;
 			position: absolute;
 			bottom: 0;
-            left: 50%;
-            -webkit-transform: translate(-50%, 0);
-            transform: translate(-50%, 0);
+			left: 50%;
+			-webkit-transform: translate(-50%, 0);
+			transform: translate(-50%, 0);
 			z-index: 15;
 		}
 
-        .nav-trigger + label {
-            -webkit-transition: bottom 0.2s ease-in-out;
-            transition: bottom 0.2s ease-in-out;
-        }
+		.nav-trigger + label {
+			-webkit-transition: bottom 0.2s ease-in-out;
+			transition: bottom 0.2s ease-in-out;
+		}
 
 		#main-nav {
 			position: relative;
-            top: 0;
+			top: 0;
 			width: 100%;
-            min-width: 100%;
+			min-width: 100%;
 			margin: 0;
-            padding: 0;
+			padding: 0;
 			line-height: 2.5rem;
-            background: #191919;
-            -webkit-transition: top 0.2s ease-in-out;
-            transition: top 0.2s ease-in-out;
+			background: #191919;
+			-webkit-transition: top 0.2s ease-in-out;
+			transition: top 0.2s ease-in-out;
 		}
 
 		#main-nav ul {
@@ -880,43 +1005,43 @@ tr.pricing-total td{
 			background: #DD4D6A
 		}
 
-        /* ==================
-         *   ANIMATIONS
-         * ==================*/
+		/* ==================
+		**   ANIMATIONS
+		** ==================*/
 
-        @-moz-keyframes dropHeader {
-            0% {
-                -moz-transform: translateY(0);
-            }
-            50% {
-                -moz-transform: translateY(1.5rem);
-            }
-            100% {
-                -moz-transform: translateY(0);
-            }
-        }
-        @-webkit-keyframes dropHeader {
-            0% {
-                -webkit-transform: translateY(0);
-            }
-            50% {
-                -webkit-transform: translateY(1.5rem);
-            }
-            100% {
-                -webkit-transform: translateY(0);
-            }
-        }
-        @keyframes dropHeader {
-            0% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(1.5rem;)
-            }
-            100% {
-                transform: translateY(0);
-            }
-        }
+		@-moz-keyframes dropHeader {
+			0% {
+				-moz-transform: translateY(0);
+			}
+			50% {
+				-moz-transform: translateY(1.5rem);
+			}
+			100% {
+				-moz-transform: translateY(0);
+			}
+		}
+		@-webkit-keyframes dropHeader {
+			0% {
+				-webkit-transform: translateY(0);
+			}
+			50% {
+				-webkit-transform: translateY(1.5rem);
+			}
+			100% {
+				-webkit-transform: translateY(0);
+			}
+		}
+		@keyframes dropHeader {
+			0% {
+				transform: translateY(0);
+			}
+			50% {
+				transform: translateY(1.5rem;)
+			}
+			100% {
+				transform: translateY(0);
+			}
+		}
 
 
 		/* TODO: Figure out why the hell these need to use !important, because they shouldn't... */
@@ -929,16 +1054,12 @@ tr.pricing-total td{
 		.content-container {
 			padding: 0 0 1rem 0;
 		}
-		.content-fragment-text {
-/*			padding: 0 3rem;*/
-		}
 
 		/* Blog & Services */
-		.col6of6.content-container img,
-		.col6of6.content-container .content-fragment-text {
+		.col6of6 .content-container img,
+		.col6of6 .content-container .content-fragment-text {
 			float: none !important;
 			width: 100% !important;
-/*            padding-left: 0 !important;*/
 		}
 }
 

@@ -1,33 +1,32 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title> The Whole Nine Yards </title>
+	<title> The Whole Nine Yards </title>
 
-    <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/grid.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
+	<link href="css/normalize.css" rel="stylesheet">
+	<link href="css/grid.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
 
-
-    <link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700' rel='stylesheet' type='text/css'>
-
+	<link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
-    <main>
-        <!--=====================
-				NAVIGATION
+	<main>
+		<!--=====================
+			NAVIGATION
 			=====================-->
-
 		<header>
-			<input type="checkbox" id="nav-trigger" class="nav-trigger logo"/>
-            <label for="nav-trigger"></label>
+			<!-- Super crazy css mobile nav logo -->
+			<input type="checkbox" id="nav-trigger" class="nav-trigger logo" />
+			<label for="nav-trigger"></label>
 			<nav id="main-nav">
 				<ul>
-					<li><a class="col1of6 btn btn-nav" href="index.html"> Home </a></li>
+					<li><a class="col1of6 btn btn-nav current" href="index.html"> Home </a></li>
 					<li><a class="col1of6 btn btn-nav" href="twnyInventory.html"> Inventory </a></li>
 					<li><a class="col1of6 btn btn-nav" href="twnyServices.html"> Services </a></li>
 					<li><a class="col1of6 btn btn-nav" href="twnyBlog.html"> Blog </a></li>
@@ -36,163 +35,215 @@
 				</ul>
 			</nav>
 		</header>
-
-
+		<div class="banner-container">
+			<div id="banner-image">
+				<img src="img/banner-home.jpg" alt="A model of an ancient city">
+			</div>
+			<div id="banner-content">
+				<h1>Checkout</h1>
+			</div>
+		</div>
+		<!--=====================
+			BODY CONTENT
+			=====================-->
 		<div id="body-content">
 			<!--================
 			 SHIPPING
 			=================-->
-
-
-            <div class="checkout-content confirm">
-                <div class="tiny-btn"><a href="twnyBag.html">Back</a></div>
-                <h2 class="checkout-title"> Shipping </h2>
-                <form class="checkout-info-form">
-                    <div class="col3of6">
-                        <label for="first-name1">First Name</label>
-                        <input type="text" id="first-name1" placeholder="Jane">
-                    </div>
-
-                    <div class="col3of6">
-                        <label for="last-name1">Last Name</label>
-                        <input type="text" id="last-name1" placeholder="Doe">
-                    </div>
-
-                    <div class="col3of6">
-                        <label for="phone-number1">Phone Number</label>
-                        <input type="text" id="phone-number1" placeholder="604-268-4253">
-                    </div>
-
-                    <div class="col3of6">
-                        <label for="email1">Email Adress</label>
-                        <input type="text" id="email1" placeholder="jdoe@gmail.com">
-                    </div>
-
-                    <div class="col3of6">
-                        <label for="address1">Address</label>
-                        <input type="text" id="address1" placeholder="2194 Sperling Ave">
-                    </div>
-
-                    <div class="col3of6">
-                        <label for="postal-code1">Postal Code</label>
-                        <input type="text" id="postal-code1" placeholder="V5T C8C">
-                    </div>
-
-                    <div class="col3of6">
-                        <label for="province1">Province</label>
-                        <select name="province1" id="province1">
-                            <option value="AL">Alberta</option>
-                            <option value="BC">British Columbia</option>
-                            <option value="MAN">Manitoba</option>
-                            <option value="NB">New Brunswick</option>
-                            <option value="NFL">Newfoundland</option>
-                            <option value="NS">Nova Scotia</option>
-                            <option value="ONT">Ontario</option>
-                            <option value="PEI">Prince Edward Island</option>
-                            <option value="QU">Quebec</option>
-                            <option value="SASK">Saskatchewan</option>
-                        </select>
-                    </div>
-
-                    <div class="col3of6">
-                        <label for="city1">City</label>
-                        <select name="city1" id="city1">
-                            <option value="AB">Abbotsford</option>
-                            <option value="BBY">Burnaby</option>
-                            <option value="CHILL">Chilliwack</option>
-                            <option value="COQ">Coquitlam</option>
-                            <option value="FSJ">Fort St. John</option>
-                            <option value="KAM">Kamloops</option>
-                            <option value="KEL">Kelowna</option>
-                            <option value="LANG">Langley</option>
-                            <option value="MR">Maple Ridge</option>
-                            <option value="NAI">Nanaimo</option>
-                            <option value="NW">New Westminister</option>
-                            <option value="NV">North Vancouver</option>
-                            <option value="PM">Pitt Meadows</option>
-                            <option value="PMO">Port Moody</option>
-                            <option value="PG">Prince George</option>
-                            <option value="RMD">Richmond</option>
-                            <option value="SUR">Surrey</option>
-                            <option value="VAN">Vancouver</option>
-                            <option value="VIC">Victoria</option>
-                            <option value="WR">White Rock</option>
-                        </select>
-
-                        <!--
-					<div id="payment-button">
-					  <a class="button" href="EtchedOn_Billing.html"></a>
+			<a class="btn" href="twnyBag.html">Back</a>
+			<h2>Shipping Info</h2>
+			<form class="checkout-info-form">
+				<div class="col3of6">
+					<label for="first-name1">First Name</label>
+					<input type="text" id="first-name1" placeholder="Jane">
+				</div>
+				<div class="col3of6">
+					<label for="last-name1">Last Name</label>
+					<input type="text" id="last-name1" placeholder="Doe">
+				</div>
+				<div class="col3of6">
+					<label for="phone-number1">Phone Number</label>
+					<input type="text" id="phone-number1" placeholder="604-268-4253">
+				</div>
+				<div class="col3of6">
+					<label for="email1">Email Adress</label>
+					<input type="text" id="email1" placeholder="jdoe@gmail.com">
+				</div>
+				<div class="col6of6">
+					<label for="address1">Address</label>
+					<input type="text" id="address1" placeholder="2194 Sperling Ave">
+				</div>
+				<div class="col6of6">
+					<label for="address1">Address 2</label>
+					<input type="text" id="address1" placeholder="2194 Sperling Ave">
+				</div>
+				<div class="col2of6">
+					<label for="province1">Province</label>
+					<select name="province1" id="province1">
+						<option value="AL">Alberta</option>
+						<option value="BC">British Columbia</option>
+						<option value="MAN">Manitoba</option>
+						<option value="NB">New Brunswick</option>
+						<option value="NFL">Newfoundland</option>
+						<option value="NS">Nova Scotia</option>
+						<option value="ONT">Ontario</option>
+						<option value="PEI">Prince Edward Island</option>
+						<option value="QU">Quebec</option>
+						<option value="SASK">Saskatchewan</option>
+					</select>
+				</div>
+				<div class="col2of6">
+					<label for="city1">City</label>
+					<select name="city1" id="city1">
+						<option value="AB">Abbotsford</option>
+						<option value="BBY">Burnaby</option>
+						<option value="CHILL">Chilliwack</option>
+						<option value="COQ">Coquitlam</option>
+						<option value="FSJ">Fort St. John</option>
+						<option value="KAM">Kamloops</option>
+						<option value="KEL">Kelowna</option>
+						<option value="LANG">Langley</option>
+						<option value="MR">Maple Ridge</option>
+						<option value="NAI">Nanaimo</option>
+						<option value="NW">New Westminister</option>
+						<option value="NV">North Vancouver</option>
+						<option value="PM">Pitt Meadows</option>
+						<option value="PMO">Port Moody</option>
+						<option value="PG">Prince George</option>
+						<option value="RMD">Richmond</option>
+						<option value="SUR">Surrey</option>
+						<option value="VAN">Vancouver</option>
+						<option value="VIC">Victoria</option>
+						<option value="WR">White Rock</option>
+					</select>
+				</div>
+				<div class="col2of6">
+					<label for="postal-code1">Postal Code</label>
+					<input type="text" id="postal-code1" placeholder="V5T C8C">
+				</div>
+			</form>
+			<h2>Billing Info</h2>
+			<input id="same-as-shipping" type="checkbox">
+			<label for="same-as-shipping">Same as Shipping</label>
+			<form class="checkout-info-form billing">
+				<div class="col3of6">
+					<label for="first-name1">First Name</label>
+					<input type="text" id="first-name1" placeholder="Jane">
+				</div>
+				<div class="col3of6">
+					<label for="last-name1">Last Name</label>
+					<input type="text" id="last-name1" placeholder="Doe">
+				</div>
+				<div class="col3of6">
+					<label for="phone-number1">Phone Number</label>
+					<input type="text" id="phone-number1" placeholder="604-268-4253">
+				</div>
+				<div class="col3of6">
+					<label for="email1">Email Adress</label>
+					<input type="text" id="email1" placeholder="jdoe@gmail.com">
+				</div>
+				<div class="col6of6">
+					<label for="address1">Address</label>
+					<input type="text" id="address1" placeholder="2194 Sperling Ave">
+				</div>
+				<div class="col6of6">
+					<label for="address1">Address 2</label>
+					<input type="text" id="address1" placeholder="2194 Sperling Ave">
+				</div>
+				<div class="col2of6">
+					<label for="province1">Province</label>
+					<select name="province1" id="province1">
+						<option value="AL">Alberta</option>
+						<option value="BC">British Columbia</option>
+						<option value="MAN">Manitoba</option>
+						<option value="NB">New Brunswick</option>
+						<option value="NFL">Newfoundland</option>
+						<option value="NS">Nova Scotia</option>
+						<option value="ONT">Ontario</option>
+						<option value="PEI">Prince Edward Island</option>
+						<option value="QU">Quebec</option>
+						<option value="SASK">Saskatchewan</option>
+					</select>
+				</div>
+				<div class="col2of6">
+					<label for="city1">City</label>
+					<select name="city1" id="city1">
+						<option value="AB">Abbotsford</option>
+						<option value="BBY">Burnaby</option>
+						<option value="CHILL">Chilliwack</option>
+						<option value="COQ">Coquitlam</option>
+						<option value="FSJ">Fort St. John</option>
+						<option value="KAM">Kamloops</option>
+						<option value="KEL">Kelowna</option>
+						<option value="LANG">Langley</option>
+						<option value="MR">Maple Ridge</option>
+						<option value="NAI">Nanaimo</option>
+						<option value="NW">New Westminister</option>
+						<option value="NV">North Vancouver</option>
+						<option value="PM">Pitt Meadows</option>
+						<option value="PMO">Port Moody</option>
+						<option value="PG">Prince George</option>
+						<option value="RMD">Richmond</option>
+						<option value="SUR">Surrey</option>
+						<option value="VAN">Vancouver</option>
+						<option value="VIC">Victoria</option>
+						<option value="WR">White Rock</option>
+					</select>
+				</div>
+				<div class="col2of6">
+					<label for="postal-code1">Postal Code</label>
+					<input type="text" id="postal-code1" placeholder="V5T C8C">
+				</div>
+			</form>
+			<!--======================
+				CONTACT-PAYMENT
+				=======================-->
+			<form class="checkout-info-form">
+				<div class="payment-info-form">
+					<div class="col3of6">
+						<label for="card-number">Card Number</label>
+						<input type="text" id="card-number" placeholder="XXXX-XXXX-XXXX-XXXX">
 					</div>
--->
-
-                    </div>
-                </form>
-
-                <div class="clearfix"></div>
-
-
-                <!--======================
-						CONTACT-PAYMENT
-					=======================-->
-                <div id="checkout-payment">
-                    <h2 class="checkout-title"> Payment </h2>
-                    <form class="checkout-info-form">
-                        <div class="payment-info-form">
-                            <div class="col2of6">
-                                <label for="card-number">Card Number</label>
-                                <input type="text" id="card-number" placeholder="XXXX-XXXX-XXXX-XXXX">
-                            </div>
-
-                            <div class="col2of6">
-
-                                <div class="checkout-payment-expiration">
-                                    <div id="month">
-                                        <label for="expiration-month"> Month</label>
-                                        <select name="month" id="month">
-                                            <option value="M1">1</option>
-                                            <option value="M2">2</option>
-                                            <option value="M3">3</option>
-                                            <option value="M4">4</option>
-                                            <option value="M5">5</option>
-                                            <option value="M6">6</option>
-                                            <option value="M7">7</option>
-                                            <option value="M8">8</option>
-                                            <option value="M9">9</option>
-                                            <option value="M10">10</option>
-                                            <option value="M11">11</option>
-                                            <option value="M12">12</option>
-                                        </select>
-                                    </div>
-                                    <div id="year">
-                                        <label for="expiration-year"> Year</label>
-                                        <select name="year" id="year">
-                                            <option value="2015">2015</option>
-                                            <option value="2016">2016</option>
-                                            <option value="2017">2017</option>
-                                            <option value="2018">2018</option>
-                                            <option value="2019">2019</option>
-                                            <option value="2020">2020</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col2of6">
-                                <label for="security-code">Security Code</label>
-                                <input type="text" id="security-code" placeholder="XXX">
-                            </div>
-                        </div>
-                    </form>
-
-                </div>
-                <div class="clearfix"></div>
-                <div class="bag-checkout">
-                    <a href="twnyConfirmOrder.html" class="btn checkout">Confirm Order</a>
-                </div>
-            </div>
-        </div>
-        <script src="js/main.js"></script>
-    </main>
+					<div id="checkout-card-details" class="col3of6">
+						<div id="month">
+							<label for="expiration-month"> Month</label>
+							<select name="month" id="month">
+								<option value="M1">1</option>
+								<option value="M2">2</option>
+								<option value="M3">3</option>
+								<option value="M4">4</option>
+								<option value="M5">5</option>
+								<option value="M6">6</option>
+								<option value="M7">7</option>
+								<option value="M8">8</option>
+								<option value="M9">9</option>
+								<option value="M10">10</option>
+								<option value="M11">11</option>
+								<option value="M12">12</option>
+							</select>
+						</div>
+						<div id="year">
+							<label for="expiration-year"> Year</label>
+							<select name="year" id="year">
+								<option value="2015">2015</option>
+								<option value="2016">2016</option>
+								<option value="2017">2017</option>
+								<option value="2018">2018</option>
+								<option value="2019">2019</option>
+								<option value="2020">2020</option>
+							</select>
+						</div>
+						<div id="code">
+							<label for="security-code">Security Code</label>
+							<input type="text" id="security-code" placeholder="XXX">
+						</div>
+					</div>
+				</div>
+				<a href="twnyConfirmOrder.html" class="btn checkout">Confirm Order</a>
+			</form>
+		</div>
+	</main>
+	<script src="js/main.js"></script>
 </body>
 
 </html>

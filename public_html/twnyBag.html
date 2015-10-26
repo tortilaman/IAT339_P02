@@ -1,176 +1,164 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 
-<head>
-    <meta charset="utf-8">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title> The Whole Nine Yards </title>
+		<title> The Whole Nine Yards </title>
 
-    <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/grid.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
+		<link href="css/normalize.css" rel="stylesheet">
+		<link href="css/grid.css" rel="stylesheet">
+		<link href="css/main.css" rel="stylesheet">
 
-
-    <link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700' rel='stylesheet' type='text/css'>
-
-</head>
-
-<body>
-    <main>
-        <!--=====================
+		<link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+		<main>
+			<!--=====================
 				NAVIGATION
-			=====================-->
+				=====================-->
+			<header>
+				<!-- Super crazy css mobile nav logo -->
+				<input type="checkbox" id="nav-trigger" class="nav-trigger logo" />
+				<label for="nav-trigger"></label>
+				<nav id="main-nav">
+					<ul>
+						<li><a class="col1of6 btn btn-nav current" href="index.html"> Home </a></li>
+						<li><a class="col1of6 btn btn-nav" href="twnyInventory.html"> Inventory </a></li>
+						<li><a class="col1of6 btn btn-nav" href="twnyServices.html"> Services </a></li>
+						<li><a class="col1of6 btn btn-nav" href="twnyBlog.html"> Blog </a></li>
+						<li><a class="col1of6 btn btn-nav" href="twnyContact.html"> Contact </a></li>
+						<li><a class="col1of6 btn btn-nav" href="twnyAccount.html"> Account </a></li>
+					</ul>
+				</nav>
+			</header>
+			<div class="banner-container">
+				<div id="banner-image">
+					<img src="img/banner-home.jpg" alt="A model of an ancient city">
+				</div>
+				<div id="banner-content">
+					<h1>Bag</h1>
+				</div>
+			</div>
+			<!--=====================
+				BODY CONTENT
+				=====================-->
+		<div id="body-content">
+			<div class="checkout-content">
+				<table class="shoppingbag-summary">
+					<thead>
+						<tr>
+							<th class="shippingbag-title">Item</th>
+							<th class="shippingbag-title">Quantity</th>
+							<th class="shippingbag-title">Item Price</th>
+							<th class="shippingbag-title">Total Price</th>
+						</tr>
+					</thead>
 
-		<header>
-			<input type="checkbox" id="nav-trigger" class="nav-trigger logo"/>
-            <label for="nav-trigger"></label>
-			<nav id="main-nav">
-				<ul>
-					<li><a class="col1of6 btn btn-nav" href="index.html"> Home </a></li>
-					<li><a class="col1of6 btn btn-nav" href="twnyInventory.html"> Inventory </a></li>
-					<li><a class="col1of6 btn btn-nav" href="twnyServices.html"> Services </a></li>
-					<li><a class="col1of6 btn btn-nav" href="twnyBlog.html"> Blog </a></li>
-					<li><a class="col1of6 btn btn-nav" href="twnyContact.html"> Contact </a></li>
-					<li><a class="col1of6 btn btn-nav" href="twnyAccount.html"> Account </a></li>
-				</ul>
-			</nav>
-		</header>
+					<!--M136 AT4-->
+					<tbody>
+						<tr>
+							<td>M136 AT4</td>
+							<td>
+								<form>
+									<label for="form-quantity3"></label>
+									<select name="form-quantity3" id="form-quantity3">
+										<option value="quantity1">1</option>
+										<option value="quantity2">2</option>
+										<option value="quantity3">3</option>
+										<option value="quantity4">4</option>
+										<option value="quantity5">5</option>
+										<option value="quantity6">6</option>
+										<option value="quantity7">7</option>
+										<option value="quantity8">8</option>
+										<option value="quantity9">9</option>
+										<option value="quantity10">10</option>
+									</select>
+								</form>
+							</td>
+							<td>$ 20.00</td>
+							<td>$ 20.00</td>
+						</tr>
 
-		<!--================
-=======
-        <header>
-            <a onclick="toggleNav()"><img src="img/logo-03.png" id="logo" alt="The Whole Nine Yards logo"> </a>
+						<!--Savage 110BA-->
+						<tr>
+							<td>Savage 110BA</td>
+							<td>
+								<form>
+									<label for="form-quantity4"></label>
+									<select name="form-quantity4" id="form-quantity4">
+										<option value="quantity1">1</option>
+										<option value="quantity2">2</option>
+										<option value="quantity3">3</option>
+										<option selected="selected">4</option>
+										<option value="quantity5">5</option>
+										<option value="quantity6">6</option>
+										<option value="quantity7">7</option>
+										<option value="quantity8">8</option>
+										<option value="quantity9">9</option>
+										<option value="quantity10">10</option>
+									</select>
+								</form>
+							</td>
+							<td>$ 15.00</td>
+							<td>$ 60.00</td>
+						</tr>
 
-            <nav id="main-nav">
-                <ul>
-                    <li><a class="col1of6 btn btn-nav" href="index.html"> Home </a></li>
-                    <li><a class="col1of6 btn btn-nav" href="twnyInventory.html"> Inventory </a></li>
-                    <li><a class="col1of6 btn btn-nav" href="twnyServices.html"> Services </a></li>
-                    <li><a class="col1of6 btn btn-nav" href="twnyBlog.html"> Blog </a></li>
-                    <li><a class="col1of6 btn btn-nav" href="twnyContact.html"> Contact </a></li>
-                    <li><a class="col1of6 btn btn-nav" href="twnyAccount.html"> Account </a></li>
-                </ul>
-            </nav>
-        </header>
+						<!--MK2 Grenade-->
+						<tr>
 
-		<!--================
-				CONTENT
-			================-->
-        <div id="body-content">
-            <div class="checkout-content">
-                <table class="shoppingbag-summary">
-                    <thead>
-                        <tr>
-                            <th class="shippingbag-title">Item</th>
-                            <th class="shippingbag-title">Quantity</th>
-                            <th class="shippingbag-title">Item Price</th>
-                            <th class="shippingbag-title">Total Price</th>
-                        </tr>
-                    </thead>
-
-                    <!--M136 AT4-->
-                    <tbody>
-                        <tr>
-                            <td>M136 AT4</td>
-                            <td>
-                                <form>
-                                    <label for="form-quantity3"></label>
-                                    <select name="form-quantity3" id="form-quantity3">
-                                        <option value="quantity1">1</option>
-                                        <option value="quantity2">2</option>
-                                        <option value="quantity3">3</option>
-                                        <option value="quantity4">4</option>
-                                        <option value="quantity5">5</option>
-                                        <option value="quantity6">6</option>
-                                        <option value="quantity7">7</option>
-                                        <option value="quantity8">8</option>
-                                        <option value="quantity9">9</option>
-                                        <option value="quantity10">10</option>
-                                    </select>
-                                </form>
-                            </td>
-                            <td>$ 20.00</td>
-                            <td>$ 20.00</td>
-                        </tr>
-
-                        <!--Savage 110BA-->
-                        <tr>
-                            <td>Savage 110BA</td>
-                            <td>
-                                <form>
-                                    <label for="form-quantity4"></label>
-                                    <select name="form-quantity4" id="form-quantity4">
-                                        <option value="quantity1">1</option>
-                                        <option value="quantity2">2</option>
-                                        <option value="quantity3">3</option>
-                                        <option selected="selected">4</option>
-                                        <option value="quantity5">5</option>
-                                        <option value="quantity6">6</option>
-                                        <option value="quantity7">7</option>
-                                        <option value="quantity8">8</option>
-                                        <option value="quantity9">9</option>
-                                        <option value="quantity10">10</option>
-                                    </select>
-                                </form>
-                            </td>
-                            <td>$ 15.00</td>
-                            <td>$ 60.00</td>
-                        </tr>
-
-                        <!--MK2 Grenade-->
-                        <tr>
-
-                            <td>MK2 Grenade</td>
-                            <td>
-                                <form>
-                                    <label for="form-quantity5"></label>
-                                    <select name="form-quantity5" id="form-quantity5">
-                                        <option value="quantity1">1</option>
-                                        <option value="quantity2">2</option>
-                                        <option value="quantity3">3</option>
-                                        <option value="quantity4">4</option>
-                                        <option value="quantity5">5</option>
-                                        <option value="quantity6">6</option>
-                                        <option value="quantity7">7</option>
-                                        <option value="quantity8">8</option>
-                                        <option value="quantity9">9</option>
-                                        <option value="quantity110">10</option>
-                                    </select>
-                                </form>
-                            </td>
-                            <td>$ 25.00</td>
-                            <td>$ 25.00</td>
-                        </tr>
-                        <tr class="pricing-total">
-                            <td></td>
-                            <td></td>
-                            <td><strong>Subtotal</strong></td>
-                            <td>$150.00</td>
-                        </tr>
-                        <tr></tr>
-                        <tr class="pricing-total">
-                            <td></td>
-                            <td></td>
-                            <td><strong>Shipping</strong></td>
-                            <td>$10.00</td>
-                        </tr>
-                        <tr></tr>
-                        <tr class="pricing-total">
-                            <td></td>
-                            <td></td>
-                            <td><strong>Total</strong></td>
-                            <td>$160.00</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="bag-checkout">
-                    <a href="twnyCheckout.html" class="btn checkout">Checkout</a>
-                </div>
-            </div>
-        </div>
-        <script src="js/main.js"></script>
-    </main>
+							<td>MK2 Grenade</td>
+							<td>
+								<form>
+									<label for="form-quantity5"></label>
+									<select name="form-quantity5" id="form-quantity5">
+										<option value="quantity1">1</option>
+										<option value="quantity2">2</option>
+										<option value="quantity3">3</option>
+										<option value="quantity4">4</option>
+										<option value="quantity5">5</option>
+										<option value="quantity6">6</option>
+										<option value="quantity7">7</option>
+										<option value="quantity8">8</option>
+										<option value="quantity9">9</option>
+										<option value="quantity110">10</option>
+									</select>
+								</form>
+							</td>
+							<td>$ 25.00</td>
+							<td>$ 25.00</td>
+						</tr>
+						<tr class="pricing-total">
+							<td></td>
+							<td></td>
+							<td><strong>Subtotal</strong></td>
+							<td>$150.00</td>
+						</tr>
+						<tr></tr>
+						<tr class="pricing-total">
+							<td></td>
+							<td></td>
+							<td><strong>Shipping</strong></td>
+							<td>$10.00</td>
+						</tr>
+						<tr></tr>
+						<tr class="pricing-total">
+							<td></td>
+							<td></td>
+							<td><strong>Total</strong></td>
+							<td>$160.00</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="bag-checkout">
+					<a href="twnyCheckout.html" class="btn checkout">Checkout</a>
+				</div>
+			</div>
+		</div>
+		<script src="js/main.js"></script>
+	</main>
 
 </body>
 
