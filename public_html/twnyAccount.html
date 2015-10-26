@@ -1,30 +1,26 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 
 <head>
 	<meta charset="utf-8">
-
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title> The Whole Nine Yards </title>
-
 	<link href="css/normalize.css" rel="stylesheet">
 	<link href="css/grid.css" rel="stylesheet">
 	<link href="css/main.css" rel="stylesheet">
-
-
 	<link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700' rel='stylesheet' type='text/css'>
-
 </head>
 
 <body>
 	<main>
 		<!--=====================
-				NAVIGATION
+			NAVIGATION
 			=====================-->
-
-        <header>
+		<header>
+			<!-- Super crazy css mobile nav logo -->
 			<input type="checkbox" id="nav-trigger" class="nav-trigger logo" />
-<label for="nav-trigger"></label>
+			<label for="nav-trigger"></label>
 			<nav id="main-nav">
 				<ul>
 					<li><a class="col1of6 btn btn-nav" href="index.html"> Home </a></li>
@@ -36,54 +32,60 @@
 				</ul>
 			</nav>
 		</header>
-
-        <!--================
-				CONTENT
-			================-->
-
-        <div id="body-content">
-            <div class="checkout-content">
-
-                <div class="col3of6">
-                    <form>
-                        <div class="col6of6">
-                            <h2>Login</h2>
-                            <label for="email1">Email Adress</label>
-                            <input type="text" id="email1" placeholder="jdoe@gmail.com">
-                        </div>
-
-                        <div class="col6of6">
-                            <label for="password">Password</label>
-                            <input type="text" id="password" placeholder="*********">
-                        </div>
-                        <div class="bag-checkout login">
-                            <a class="tiny-btn">I forgot my password</a><br>
-                            <a href="#" class="btn">Login</a>
-                        </div>
-                    </form>
-                </div>
-
-                <div class="col3of6">
-                    <form>
-                        <div class="col6of6">
-                            <h2>Join now!</h2>
-                            <p>Welcome new customer! Please register to access convenient features and quick checkout.</p>
-                            <label for="email1">Email Adress</label>
-                            <input type="text" id="email1" placeholder="jdoe@gmail.com">
-                        </div>
-                        <div class="bag-checkout login">
-                                <a href="#" class="btn">Create Account</a>
-                            </div>
-
-                    </form>
-                </div>
-
-
-            </div>
-
-        </div>
-    </main>
-    <script src="js/main.js"></script>
+		<div class="banner-container">
+			<div id="banner-image">
+				<img src="img/banner-home.jpg" alt="A model of an ancient city">
+			</div>
+			<div id="banner-content">
+				<h1>My Account</h1>
+			</div>
+		</div>
+		<!--=====================
+			BODY CONTENT
+			=====================-->
+		<div id="body-content">
+			<div class="checkout-content">
+				<div class="col3of6">
+					<form>
+						<div class="col6of6">
+							<h2>Login</h2>
+							<label for="email1">Email Adress</label>
+							<input type="text" id="email1" placeholder="jdoe@gmail.com">
+						</div>
+						<div class="col6of6">
+							<label for="password">Password</label>
+							<input type="text" id="password" placeholder="*********">
+						</div>
+						<div class="bag-checkout login">
+							<a class="tiny-btn">I forgot my password</a>
+							<br>
+							<a href="#" class="btn">Login</a>
+						</div>
+					</form>
+				</div>
+				<div class="col3of6">
+					<form>
+						<div class="col6of6">
+							<h2>Join now!</h2>
+							<p>Welcome new customer! Please register to access convenient features and quick checkout.</p>
+							<label for="email1">Email Adress</label>
+							<input type="text" id="email1" placeholder="jdoe@gmail.com">
+						</div>
+						<div class="bag-checkout login">
+							<a href="#" class="btn">Create Account</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<p>
+				<span><strong>&#9742;</strong>(555)873-5000</span> <span><strong>&#9993;</strong>letschat@twny.com</span> <span><strong>&#9951;</strong>1393 Knight St. Vancouver CA</span>
+				<span><strong>&#169;</strong>TWNY 2015</span>
+			</p>
+		</footer>
+	</main>
+	<script src="js/main.js"></script>
 </body>
 
 </html>

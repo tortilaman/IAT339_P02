@@ -4,7 +4,11 @@
 	box-sizing: border-box;
 }
 
-html,body { height:100%; }
+html,
+body {
+	height: 100%;
+}
+
 
 /*==================
 	THE ACTUAL GRID
@@ -40,6 +44,7 @@ html,body { height:100%; }
 .col3of6 {
 	width: 50%;
 }
+
 .col6of6 {
 	float: none;
 	width: 100%;
@@ -55,11 +60,11 @@ main {
 	position: relative;
 	margin: 0 auto;
 	max-width: 75rem;
-/*    background: #151515;*/
+	/*    background: #151515;*/
 	font-family: "Inconsolata";
 	font-weight: 400;
-	height: 100vh;
-/*    box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, 0.25);*/
+	min-height: 100vh;
+	/*    box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, 0.25);*/
 }
 
 #body-content {
@@ -68,32 +73,67 @@ main {
 	padding: 0 4rem;
 }
 
+#body-content:after {
+	content: "";
+	padding: 1rem;
+	line-height: 2.5rem;
+}
+
+footer {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 100vw;
+	background: #151515;
+	line-height: 1em;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+	padding: 0.5rem 0;
+	text-align: center;
+}
+
+footer p {
+	margin-bottom: 0;
+}
+
+footer span {
+	text-transform: none;
+	margin-right: 5vmin;
+	font-weight: 400;
+	color: #666;
+}
+
+footer strong {
+	font-weight: 400;
+	color: #E1E1E1;
+	padding-right: 0.5rem;
+}
+
+
 /* ==================
  *   MEDIA QUERIES
  * ==================*/
 
-@media only screen
-	and (max-width: 63rem) {
-		.col1of6, .col2of6, .col3of6 {
-			width: 100%;
-			padding: 0 0 2rem 0;
-		}
-		#body-content {
-			padding: 2rem;
-		}
+@media only screen and (max-width: 63rem) {
+	.col1of6,
+	.col2of6,
+	.col3of6 {
+		width: 100%;
+		padding: 0 0 2rem 0;
+	}
+	#body-content {
+		padding: 2rem;
+	}
+	.content-container {
+		padding-top: 2rem;
+	}
+}
 
-		.content-container{
-			padding-top: 2rem;
-		}
+@media only screen and (min-width: 63.1rem) and (max-width: 75rem) {
+	.col2of6 {
+		width: 100%;
+	}
 }
-@media only screen
-	and (min-width: 63.1rem)
-	and (max-width: 75rem) {
-		.col2of6 {
-			width: 100%;
-		}
-}
-@media only screen
-	and (min-width: 75.1rem) {
 
-}
+@media only screen and (min-width: 75.1rem) {}
