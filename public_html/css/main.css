@@ -41,13 +41,18 @@
 /*  TODO:   Shopping bag icon for "bag it" button*/
 
 
+/*	FIXME:	Mobile nav bar on a phone isn't centered, not sure why... */
+
+
 /*  FIXME:  Change mobile nav to use #main-nav:target instead of javascript for functionality */
 
 
 /*  FIXME:  Change tabs on details page to by default be a list of divs, and if javascript works turn it into a tab structure.*/
 
 
-/*  FIXME:  Nav bar should by default be "open", and javascript closes it if javascript is enabled.
+/*  FIXME:  Nav bar should by default be "open", and javascript closes it if javascript is enabled.*/
+
+
 /*  FIXME:  The size of the navigation bar is waaaaay too small on mobile. Maybe try loading the site from my phone while my computer hosts the local webserver? */
 
 
@@ -70,6 +75,7 @@
 **  COLOR PALLETTE
 **  -------------------------
 **  Red:    #DD4D6A
+**	Blue:	#2B7490;
 **  White:  #E1E1E1
 **  Gray:   #666666
 **  Black:  #191919
@@ -189,7 +195,6 @@ a img:hover {
 
 .btn {
 	display: inline-block;
-	margin-top: 0.5rem;
 	border: none;
 	background-color: #666666;
 	box-shadow: 0 0 0.1rem rgba(150, 150, 150, 0.25);
@@ -448,15 +453,9 @@ header {
 	padding: 0 0.5rem 0.5rem 0.5rem;
 }
 
-
-/*
-.content-container h2,
-.content-container p,
-.content-container span {
-	margin: 0;
-	padding: 0;
+.content-fragment-text .btn {
+	margin-top: 0;
 }
-*/
 
 .home-content.content-container h2,
 .banner-container h1 {
@@ -500,7 +499,8 @@ header {
 .col6of6 .content-container span {
 	display: block;
 	float: none;
-	color: #DD4D6A;
+	padding: 0;
+	color: #E1E1E1;
 }
 
 .col6of6 .content-container p {
@@ -524,7 +524,7 @@ header {
 }
 
 .star-rating {
-	color: #DD4D6A;
+	color: #2B7490;
 	font-size: 1.5rem;
 	letter-spacing: 0.2rem;
 	line-height: 1rem;
@@ -535,7 +535,7 @@ header {
 	display: inline-block;
 	margin: 0;
 	padding: 0;
-	color: #E1E1E1;
+	color: #666;
 	font-size: 1rem;
 	letter-spacing: 0;
 	font-weight: 400;
@@ -635,7 +635,8 @@ header {
 
 .review {
 	margin: 0 0 1rem 0;
-	border-bottom: 1px solid #DD4D6A;
+	border-bottom: 1px solid rgb(130, 180, 240);
+	;
 }
 
 #review-header {
@@ -749,6 +750,70 @@ input[type="text"] {
 /*====================
 **  BAG & CHECKOUT
 **====================*/
+
+
+/*Progress Bar*/
+
+.progress-bar.grid {
+	margin: 1rem 0;
+	box-shadow: 0 0 0.2rem 0.1rem rgba(0, 0, 0, 0.25);
+	background: #151515;
+}
+
+.progress-bar .col2of6 {
+	position: relative;
+	height: 2.5rem;
+	display: inline-block;
+	padding: 0.5em 0.5rem 0.5rem 2rem;
+	margin: 0;
+	background: -webkit-linear-gradient(left, #101010, #151515);
+	background: linear-gradient(to right, #101010, #151515);
+	border: none;
+}
+
+.progress-bar .col2of6:hover,
+.progress-bar .col2of6:active,
+.progress-bar .col2of6:focus {
+	cursor: pointer;
+	background: -webkit-linear-gradient(left, #AA3B52, #DD4D6A);
+	background: linear-gradient(to right, #AA3B52, #DD4D6A);
+}
+
+.progress-bar .col2of6::after {
+	position: absolute;
+	right: -1.2rem;
+	top: 0;
+	content: ' ';
+	width: 0;
+	height: 0;
+	padding: 0;
+	margin: 0;
+	border-top: 1.25rem solid transparent;
+	border-bottom: 1.25rem solid transparent;
+	border-left: 1.25rem solid #151515;
+	z-index: 10;
+}
+
+.progress-bar .col2of6:hover::after,
+.progress-bar .col2of6:active::after,
+.progress-bar .col2of6:focus::after {
+	border-left: 1.25rem solid #DD4D6A;
+}
+
+.progress-bar .col2of6.current {
+	background: -webkit-linear-gradient(left, #2A86AA, #2b7490);
+	background: linear-gradient(to right, #2A86AA, #2b7490);
+	cursor: default;
+}
+
+.progress-bar .col2of6.current::after {
+	border-left: 1.25rem solid #2b7490;
+	cursor: default;
+}
+
+.progress-bar .col2of6:last-of-type::after {
+	display: none;
+}
 
 
 /*Containers*/
@@ -1133,3 +1198,5 @@ label[for="same-as-shipping"] {
 		padding-left: 1rem;
 	}
 }
+
+span {}

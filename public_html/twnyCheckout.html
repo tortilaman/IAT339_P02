@@ -44,12 +44,44 @@
 			BODY CONTENT
 			=====================-->
 		<div id="body-content">
-			<!--================
-			 SHIPPING
-			=================-->
 			<a class="btn" href="twnyBag.html">Back</a>
-			<h2>Shipping Info</h2>
-			<form class="checkout-info-form">
+			<div class="progress-bar grid">
+				<div class="col2of6 current">
+					<h3>Personal Details</h3>
+				</div>
+				<div class="col2of6">
+					<h3>Shipping Info</h3>
+				</div>
+				<div class="col2of6">
+					<h3>Billing Info</h3>
+				</div>
+			</div>
+			<!-- TODO:  This needs finishing up... -->
+			<!--================
+				PERSONAL INFO
+				=================-->
+			<form id="personal-details" class="checkout-info-form">
+				<div class="col3of6">
+					<label for="first-name1">First Name</label>
+					<input type="text" id="first-name1" placeholder="Jane">
+				</div>
+				<div class="col3of6">
+					<label for="last-name1">Last Name</label>
+					<input type="text" id="last-name1" placeholder="Doe">
+				</div>
+				<div class="col3of6">
+					<label for="phone-number1">Phone Number</label>
+					<input type="text" id="phone-number1" placeholder="604-268-4253">
+				</div>
+				<div class="col3of6">
+					<label for="email1">Email Adress</label>
+					<input type="text" id="email1" placeholder="jdoe@gmail.com">
+				</div>
+			</form>
+			<!--================
+				SHIPPING INFO
+				=================-->
+			<form id="shipping-details" class="checkout-info-form">
 				<div class="col3of6">
 					<label for="first-name1">First Name</label>
 					<input type="text" id="first-name1" placeholder="Jane">
@@ -119,10 +151,12 @@
 					<input type="text" id="postal-code1" placeholder="V5T C8C">
 				</div>
 			</form>
-			<h2>Billing Info</h2>
-			<input id="same-as-shipping" type="checkbox">
-			<label for="same-as-shipping">Same as Shipping</label>
+			<!--================
+				BILLING INFO
+				=================-->
 			<form class="checkout-info-form billing">
+				<input id="same-as-shipping" type="checkbox">
+				<label for="same-as-shipping">Same as Shipping</label>
 				<div class="col3of6">
 					<label for="first-name1">First Name</label>
 					<input type="text" id="first-name1" placeholder="Jane">
