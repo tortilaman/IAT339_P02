@@ -154,6 +154,7 @@ a {
 	color: #DD4D6A;
 	text-decoration: none;
 	opacity: 1;
+    overflow: hidden;
 }
 
 a:hover,
