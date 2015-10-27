@@ -1040,6 +1040,10 @@ label[for="same-as-shipping"] {
     padding-top: 3em;
 }
 
+.form-input{
+    padding-top: 1rem !important;
+}
+
 
 /*	===========================================================================
 **
