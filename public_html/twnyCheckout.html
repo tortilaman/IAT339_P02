@@ -46,13 +46,16 @@
 		<div id="body-content">
 			<a class="btn" href="twnyBag.html">Back</a>
 			<div class="progress-bar grid">
-				<div class="col2of6 current">
+				<div id="personal-btn" class="col2of6 current" onclick="checkoutStep(0)">
+					<h2>&#10102;</h2>
 					<h3>Personal Details</h3>
 				</div>
-				<div class="col2of6">
+				<div id="shipping-btn" class="col2of6" onclick="checkoutStep(1)">
+					<h2>&#10103;</h2>
 					<h3>Shipping Info</h3>
 				</div>
-				<div class="col2of6">
+				<div id="billing-btn" class="col2of6" onclick="checkoutStep(2)">
+					<h2>&#10104;</h2>
 					<h3>Billing Info</h3>
 				</div>
 			</div>
@@ -154,36 +157,36 @@
 			<!--================
 				BILLING INFO
 				=================-->
-			<form class="checkout-info-form billing">
-				<input id="same-as-shipping" type="checkbox">
-				<label for="same-as-shipping">Same as Shipping</label>
+			<form id="billing-details" class="checkout-info-form billing">
+				<input id="same-as-shipping" type="checkbox" onclick="shippingBillingSame()">
+				<label for="same-as-shipping">Use Shipping Address</label>
 				<div class="col3of6">
 					<label for="first-name1">First Name</label>
-					<input type="text" id="first-name1" placeholder="Jane">
+					<input type="text" id="first-name1" placeholder="Jane" class="address-toggled">
 				</div>
 				<div class="col3of6">
 					<label for="last-name1">Last Name</label>
-					<input type="text" id="last-name1" placeholder="Doe">
+					<input type="text" id="last-name1" placeholder="Doe" class="address-toggled">
 				</div>
 				<div class="col3of6">
 					<label for="phone-number1">Phone Number</label>
-					<input type="text" id="phone-number1" placeholder="604-268-4253">
+					<input type="text" id="phone-number1" placeholder="604-268-4253" class="address-toggled">
 				</div>
 				<div class="col3of6">
 					<label for="email1">Email Adress</label>
-					<input type="text" id="email1" placeholder="jdoe@gmail.com">
+					<input type="text" id="email1" placeholder="jdoe@gmail.com" class="address-toggled">
 				</div>
 				<div class="col6of6">
 					<label for="address1">Address</label>
-					<input type="text" id="address1" placeholder="2194 Sperling Ave">
+					<input type="text" id="address1" placeholder="2194 Sperling Ave" class="address-toggled">
 				</div>
 				<div class="col6of6">
 					<label for="address1">Address 2</label>
-					<input type="text" id="address1" placeholder="2194 Sperling Ave">
+					<input type="text" id="address1" placeholder="2194 Sperling Ave" class="address-toggled">
 				</div>
 				<div class="col2of6">
 					<label for="province1">Province</label>
-					<select name="province1" id="province1">
+					<select name="province1" id="province1" class="address-toggled">
 						<option value="AL">Alberta</option>
 						<option value="BC">British Columbia</option>
 						<option value="MAN">Manitoba</option>
@@ -198,7 +201,7 @@
 				</div>
 				<div class="col2of6">
 					<label for="city1">City</label>
-					<select name="city1" id="city1">
+					<select name="city1" id="city1" class="address-toggled">
 						<option value="AB">Abbotsford</option>
 						<option value="BBY">Burnaby</option>
 						<option value="CHILL">Chilliwack</option>
@@ -223,13 +226,8 @@
 				</div>
 				<div class="col2of6">
 					<label for="postal-code1">Postal Code</label>
-					<input type="text" id="postal-code1" placeholder="V5T C8C">
+					<input type="text" id="postal-code1" placeholder="V5T C8C" class="address-toggled">
 				</div>
-			</form>
-			<!--======================
-				CONTACT-PAYMENT
-				=======================-->
-			<form class="checkout-info-form">
 				<div class="payment-info-form">
 					<div class="col3of6">
 						<label for="card-number">Card Number</label>
@@ -272,6 +270,9 @@
 				</div>
 				<a href="twnyConfirmOrder.html" class="btn checkout">Confirm Order</a>
 			</form>
+			<!--======================
+				CONTACT-PAYMENT
+				=======================-->
 		</div>
 		<footer>
 			<p>
@@ -280,6 +281,7 @@
 			</p>
 		</footer>
 	</main>
+	<script src="js/jquery-1.11.3.min.js"></script>
 	<script src="js/main.js"></script>
 </body>
 

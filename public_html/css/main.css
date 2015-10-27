@@ -718,6 +718,11 @@ input[type="text"] {
 	border: 1px solid #666;
 }
 
+input[type="text"]:disabled,
+select:disabled {
+	background: #333;
+}
+
 
 /*  =========================
 **  Contact
@@ -758,6 +763,17 @@ input[type="text"] {
 	margin: 1rem 0;
 	box-shadow: 0 0 0.2rem 0.1rem rgba(0, 0, 0, 0.25);
 	background: #151515;
+}
+
+.progress-bar h2 {
+	font-weight: 400;
+	vertical-align: middle;
+	display: none;
+}
+
+.progress-bar h3 {
+	display: inline-block;
+	vertical-align: middle;
 }
 
 .progress-bar .col2of6 {
@@ -1183,6 +1199,15 @@ label[for="same-as-shipping"] {
 	.col6of6 .content-container .content-fragment-text {
 		float: none !important;
 		width: 100% !important;
+	}
+	.progress-bar .col2of6 {
+		padding-left: 1rem;
+	}
+	.progress-bar .col2of6::after {
+		display: none;
+	}
+	.progress-bar h2 {
+		display: inline-block;
 	}
 }
 

@@ -1,6 +1,7 @@
-var theMargin;
+/*var theMargin;
+
 function changeDetailsTab(visElem) {
-	/*FUTURE: Perhaps there's a way to dynamically populate this instead of an array? Not important now though...*/
+	FUTURE: Perhaps there's a way to dynamically populate this instead of an array? Not important now though...
 	var tabs = ["content-details-reviews", "content-details-desc", "content-details-spec"],
 		xScrollPos = window.pageXOffset,
 		yScrollPos = window.pageYOffset,
@@ -14,13 +15,15 @@ function changeDetailsTab(visElem) {
 	window.scrollTo(xScrollPos, yScrollPos);
 	console.log(window.pageXOffset, window.pageYOffset);
 }
+
 function calcMargin() {
 	var theHead = document.getElementsByTagName("HEADER")[0],
 		headStyle = window.getComputedStyle(theHead);
 	theMargin = headStyle.getPropertyValue('margin-top');
 	console.log("Margin Calculated: " + theMargin);
-}
-function toggleNav() {
+}*/
+
+/*function toggleNav() {
 	var nav = document.getElementById("main-nav"),
 		navStyle = window.getComputedStyle(nav),
 		isMobile = navStyle.getPropertyValue('position'),
@@ -34,11 +37,36 @@ function toggleNav() {
 			document.getElementsByTagName("HEADER")[0].style.marginTop = theMargin;
 			console.log("Closed Menu");
 		} else {
-//					var pxPos = theMargin.search("px");
-//					theMargin = theMargin.substr(pxPos - 1);
+			//					var pxPos = theMargin.search("px");
+			//					theMargin = theMargin.substr(pxPos - 1);
 			document.getElementsByTagName("HEADER")[0].style.marginTop = 0;
 			console.log("Opened Menu");
 			calcMargin();
 		}
 	}
+}*/
+
+function checkoutStep(currentStep) {
+	var tabs = ["#personal-btn", "#shipping-btn", "#billing-btn"],
+		details = ["#personal-details", "#shipping-details", "#billing-details"];
+	for (i = 0; i < 3; i++) {
+		$(details[i]).fadeOut(0);
+		$(tabs[i]).removeClass("current");
+	}
+	$(details[currentStep]).fadeIn(500);
+	$(tabs[currentStep]).addClass("current");
 }
+
+function shippingBillingSame() {
+	console.log("changing billing disabled");
+	$('.address-toggled').each(function () {
+		$(this).prop('disabled', function (i, v) {
+			return !v;
+		});
+	})
+}
+
+$(document).ready(function () {
+	$("#shipping-details").css("display", "none");
+	$("#billing-details").css("display", "none");
+});
