@@ -77,7 +77,7 @@
 **  Red:    #DD4D6A
 **	Blue:	#2B7490;
 **  White:  #E1E1E1
-**  Gray:   #666666
+**  Gray:   #898989
 **  Black:  #191919
 **  =========================*/
 
@@ -132,13 +132,14 @@ h2 {
 }
 
 p {
-	color: #666666;
+	color: #898989;
 	line-height: 1.3em;
 	margin-top: 0;
 }
 
+/* NOTE: Do we ever use figcaption?*/
 figcaption {
-	color: #666666;
+	color: #898989;
 }
 
 
@@ -518,7 +519,7 @@ header {
 
 .content-fragment-text li {
 	list-style: square;
-	color: #666666;
+	color: #898989;
 	padding: 0 0 0.5rem 0;
 	margin-left: 1rem;
 }
@@ -649,7 +650,7 @@ header {
 }
 
 #content-details-desc ul {
-	color: #666666;
+	color: #898989;
 	padding: 0;
 	list-style: inside;
 }
@@ -1033,6 +1034,10 @@ label[for="same-as-shipping"] {
 	text-align: center;
 	margin: 0 auto;
 	padding-top: 3em;
+}
+
+.form-input{
+	padding-top: 1rem !important;
 }
 
 

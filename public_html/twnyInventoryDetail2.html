@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
 	<link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700' rel='stylesheet' type='text/css'>
 </head>
+
 <body>
 	<main>
 		<!--=====================
@@ -44,7 +46,7 @@
 			<div class="col6of6">
 				<div class="content-container details-page clearfix">
 					<img src="img/pl_savage110BA.jpg" alt="Image of a rocket launcher">
-					<div class="content-fragment-text">
+					<div class="content-fragment-text snippet">
 						<h2>Savage 110 BA</h2>
 						<div class="star-rating">★★★★☆<span> - from 1 review</span></div>
 						<span>$50.00</span>
@@ -77,16 +79,14 @@
 				<div class="content-selector">
 					<ul>
 						<!-- FIXME: Is it obvious these are tabs / buttons? -->
-						<!-- FIXME: <a> tags are causing validation errors here. Maybe move them inside the <li> tags? -->
-						<a href="#" id="reviews-btn" class="btn current" onclick="changeDetailsTab('content-details-reviews')">
-							<li>Reviews</li>
-						</a>
-						<a href="#" id="desc-btn" class="btn" onclick="changeDetailsTab('content-details-desc')">
-							<li>Description</li>
-						</a>
-						<a href="#" id="spec-btn" class="btn" onclick="changeDetailsTab('content-details-spec')">
-							<li>Specifications</li>
-						</a>
+
+						<li><a href="#" id="reviews-btn" class="btn current" onclick="changeDetailsTab('content-details-reviews')">
+							Reviews
+							</a></li>
+
+						<li><a href="#" id="desc-btn" class="btn" onclick="changeDetailsTab('content-details-desc')">Description</a></li>
+
+						<li><a href="#" id="spec-btn" class="btn" onclick="changeDetailsTab('content-details-spec')">Specification</a></li>
 					</ul>
 				</div>
 				<div class="grid">
@@ -155,4 +155,5 @@
 	</main>
 	<script src="js/main.js"></script>
 </body>
+
 </html>
