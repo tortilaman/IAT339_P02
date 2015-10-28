@@ -3,14 +3,8 @@
   Specific stylings for the style guide.
 */
 
-body {
-    font-family: sans-serif;
-    padding: 2rem;
-}
-
-#title {
-    color: #E1E1E1;
-    text-align: center;
+body{
+    margin: 0;
 }
 
 section {
@@ -34,16 +28,27 @@ section p {
 
 section code {
     line-height: 2em;
+    color: #898989;
 }
 
 .sample-code {
-    background-color: #EEE;
+    background-color: #151515;
     padding: 1em;
     margin-bottom: 1em;
 }
 
-pre{
+pre {
     margin: 0;
+    white-space: pre-wrap;
+    /* css-3 */
+    white-space: -moz-pre-wrap !important;
+    /* Mozilla, since 1999 */
+    white-space: -pre-wrap;
+    /* Opera 4-6 */
+    white-space: -o-pre-wrap;
+    /* Opera 7 */
+    word-wrap: break-word;
+    /* Internet Explorer 5.5+ */
 }
 
 
@@ -82,17 +87,17 @@ pre{
 
 .item-example {
     padding: 0em 1em;
-    
 }
 
-.item-example h1{
+.item-example h1 {
     font-size: 2em;
 }
-.item-example .ul_li{
+
+.item-example .ul_li {
     list-style-type: disc;
 }
 
-.item-example .ol_li{
+.item-example .ol_li {
     list-style-type: decimal;
 }
 
@@ -103,23 +108,44 @@ pre{
 
 
 /* Styling for the navigation button */
-.item-example a.btn{
+
+.item-example a.btn {
     margin-top: 1em;
 }
 
-
+#main-nav.btn-state{
+    margin: 0;
+}
 
 /* 
   FORM ELEMENTS -------------------
 */
-select{
+
+select {
     width: 100%;
 }
+
+input{
+    font-family: "Inconsolata", sans-serif, monospace;
+}
+
 
 /* 
   GROUPED ELEMENTS -------------------
 */
 
-.item-example.nav{
+.item-example.nav {
     padding: 0;
+}
+
+
+/* 
+  GRID -------------------
+*/
+
+.content-container.grid-fill{
+    background-color: #898989;
+    text-align: center;
+    padding: 1rem 0rem;
+    box-shadow: none;
 }
