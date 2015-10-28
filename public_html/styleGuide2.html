@@ -1,21 +1,14 @@
 <!--Todo:-->
 
-<!--Add sample code and rendered element in text-area and textfield-->
-
-<!--Add in sample code for grid-->
-
-<!--Add in sample code for product listing-->
-
-<!--Add in description for default button-->
-
+<!--Fix navigation bar-->
 
 
 <!DOCTYPE html>
 <html>
 
 <head>
-
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Whole Nine Yards Styleguide</title>
 
     <link href="normalize.css" rel='stylesheet'>
@@ -23,35 +16,32 @@
     <link href="css/main.css" rel="stylesheet">
     <link href="css/styleGuide2.css" rel='stylesheet'>
 
+    <link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
     <main>
-        <div id="body-container">
+        <!-- NAVIGATION // -->
+        <header>
+            <!-- Super crazy css mobile nav logo -->
+            <input type="checkbox" id="nav-trigger" class="nav-trigger logo" />
+            <label for="nav-trigger"></label>
+            <nav id="main-nav">
+                <ul>
+                    <li><a class="col1of6 btn btn-nav" href="#text_elements"> Text </a></li>
+                    <li><a class="col1of6 btn btn-nav" href="#button_elements"> Buttons </a></li>
+                    <li><a class="col1of6 btn btn-nav" href="#form_elements"> Forms </a></li>
+                    <li><a class="col1of6 btn btn-nav" href="#grouped_elements"> Grouped </a></li>
+                    <li><a class="col1of6 btn btn-nav" href="#grid"> Grid </a></li>
+                    <li><a class="col1of6 btn btn-nav" href="#citations"> Citations</a></li>
+                </ul>
+            </nav>
+        </header>
 
 
-            <!-- NAVIGATION // -->
-
-            <header>
-                <nav id="main-nav">
-                    <h1 id="title">Styleguide</h1>
-
-
-                    <a href="#colour_palette" class="col1of6 btn-nav"> Colour </a>
-                    <a href="#text_elements" class="col1of6 btn-nav">Text </a>
-                    <!--            show: header and paragraph and sub elements-->
-                    <a href="#button_elements" class="col1of6 btn-nav">Buttons</a>
-                    <!--            show: buttons, in-text links, navigation buttons-->
-                    <a href="#form_elements" class="col1of6 btn-nav">Forms</a>
-                    <!--            show: froms in the review and grouped elements in the billing process-->
-                    <a href="#grouped_elements" class="col1of6 btn-nav"> Grouped </a>
-                    <!--            show: navigation bar, product listing,  -->
-                    <a href="#grid" class="col1of6 btn-nav">Grid</a>
-
-                </nav>
-            </header>
-
-            <div id="body-content">
+        <div id="body-content" class="home-content">
+            <div class="grid">
 
                 <!-- COLOUR PALETTE SECTION // -->
 
@@ -112,8 +102,6 @@
 
                 </section>
                 <!-- // TEXT ELEMENTS SECTION -->
-
-
 
 
                 <!-- BUTTONS SECTION // -->
@@ -214,7 +202,7 @@
 
                         <h3>CSS selector:</h3>
                         <div class="item-example">
-                            <p></p>
+                            <p>select</p>
                         </div>
 
                         <h3>Sample code:</h3>
@@ -397,7 +385,7 @@
 
                         <h3>Rendered element:</h3>
                         <div class="item-example">
-                            
+
                             <div>
                                 <h3>1 column grid</h3>
                                 <div class="col6of6">
@@ -406,7 +394,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div>
                                 <h3>2 column grid</h3>
                                 <div class="col3of6">
@@ -485,15 +473,45 @@
                 </section>
                 <!-- // GRID SECTION -->
 
-                <footer>
+                <!-- GRID SECTION // -->
+                <section id="grid">
 
-                </footer>
+                    <section id="citations">
+                        <h2>Citations</h2>
 
+                        <p>[Untitled photo of things from the burnign house tumblr]. (2014) Retrieved October 27, 2015 from http://theburninghouse.com/post/77588178374/name-m-coleman-horn-age-39-location.</p>
+
+                        <p>[Untitled photo of a set design from the Prince Caspian movie]. (n.d.) Retrieved October 27, 2015 from http://charlottebowie.com/wp-content/uploads/2012/11/8-Prince-Capsian.jpg</p>
+
+                        <p>[Untitled photo of an automated red prop knife]. (n.d.) Retrieved October 27, 2015 from http://www.thespecialistsltd.com/automatic-prop-knife-red.</p>
+
+                        <p>[Untitled photo of beretta 92]. (n.d.) Retrieved October 27, 2015 from http://www.thespecialistsltd.com/beretta-92f.</p>
+                        
+                        <p>[Untitled photo of brown bess musket]. (n.d.) Retrieved October 27, 2015 from http://www.thespecialistsltd.com/brown-bess-musket.</p>
+
+                        <p>[Untitled photo of a M136AT4]. (n.d.) Retrieved October 27, 2015 from http://www.thespecialistsltd.com/m136-at4.</p>
+                        
+                        <p>[Untitled photo of a savage 110BA]. (n.d.) Retrieved October 27, 2015 from http://www.thespecialistsltd.com/savage-110-ba.</p>
+                        
+                        <p>[Untitled photo of a tear gas]. (n.d.) Retrieved October 27, 2015 from http://www.thespecialistsltd.com/tear-gas.</p>
+                        
+                        <p>[Untitled photo of a US MK2 Grenade]. (n.d.) Retrieved October 27, 2015 from http://www.thespecialistsltd.com/us-mk2-pineapple-grenades.</p>
+                        
+                        <p>Litvin, A. (2015). Untitled [Online image]. Retrieved October 27,2015 from https://unsplash.com/photos/S6wHfOpdGkY.</p>
+
+
+                    </section>
+                </section>
+                <!-- // GRID SECTION -->
 
             </div>
+            <footer>
+                <p>Group: Nick Doering, Janyl Tamayo</p>
+
+            </footer>
         </div>
     </main>
-
+    <script src="js/main.js"></script>
 </body>
 
 </html>

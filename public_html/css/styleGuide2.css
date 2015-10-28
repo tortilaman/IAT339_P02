@@ -3,14 +3,8 @@
   Specific stylings for the style guide.
 */
 
-body {
-    font-family: sans-serif;
-    padding: 2rem;
-}
-
-#title {
-    color: #E1E1E1;
-    text-align: center;
+body{
+    margin: 0;
 }
 
 section {
@@ -150,10 +144,4 @@ select {
     text-align: center;
     padding: 1rem 0rem;
     box-shadow: none;
-}
-
-@media only screen and (max-width: 63rem) {
-    body{
-        padding: 0;
-    }
 }
