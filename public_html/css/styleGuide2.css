@@ -125,6 +125,10 @@ select {
     width: 100%;
 }
 
+input{
+    font-family: "Inconsolata", sans-serif, monospace;
+}
+
 
 /* 
   GROUPED ELEMENTS -------------------
