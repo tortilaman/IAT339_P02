@@ -143,7 +143,7 @@ a {
 	color: #DD4D6A;
 	text-decoration: none;
 	opacity: 1;
-    overflow: hidden;
+	overflow: hidden;
 }
 
 a:hover,
@@ -483,6 +483,11 @@ header {
 	float: left;
 }
 
+.col6of6 .content-container .lightbox img {
+	width: 100%;
+	float: none;
+}
+
 .col6of6 .content-container span {
 	display: block;
 	float: none;
@@ -494,7 +499,70 @@ header {
 	margin-top: 0.25rem;
 }
 
+.lightbox {
+	float: left;
+	width: 50%;
+	overflow: hidden;
+}
+.lightbox:hover {
+	position: relative;
+	cursor: pointer;
+}
 
+.lightbox:hover::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+/*	background: rgba(0, 0, 0, 0.5);*/
+	background:
+		url(../img/search_icon_white.png) no-repeat center center,
+		rgba(0, 0, 0, 0.5);
+	background-position: center;
+	z-index: 5;
+}
+
+.lightboxContainer {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.75);
+}
+
+#lightboxContent {
+	position: relative;
+	top: 50%;
+	margin: 0 auto;
+	width: 50vw;
+/*	margin: 50vh auto;*/
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+#lightboxContent .col3of6 {
+	width: 50%;
+}
+
+#lightboxContent .col6of6 {
+	width: 100%;
+}
+
+#lightboxContent .close {
+	position: absolute;
+	right: 0;
+	top: 0;
+	margin: 0;
+}
+
+#lightboxContent .close:hover {
+	cursor: pointer;
+}
 /*  =========================
 **  DETAIL PAGES
 **  =========================*/
