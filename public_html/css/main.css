@@ -394,14 +394,14 @@ header {
 	position: absolute;
 	top: 0;
 	left: 0;
-	padding: 2rem 5rem;
+	padding: 2rem 4rem;
 }
 
 #home-banner p {
 	font-family: "Source Sans Pro";
 	margin: 0;
 	padding: 0;
-	width: 28rem;
+	width: 70vw;
 	font-size: 1.3rem;
 	font-weight: 100;
 	line-height: 1.5em;
@@ -482,10 +482,6 @@ header {
 .content-fragment-feature p {
 	line-height: 0;
 	padding-left: 1rem;
-}
-
-.col2of6 .content-fragment-text {
-	min-height: 10rem;
 }
 
 
@@ -1061,7 +1057,7 @@ label[for="same-as-shipping"] {
 
 @media only screen and (max-width: 63rem) {
 	#banner-content {
-		padding: 0.5rem 2rem;
+		padding: 0.5rem 1rem;
 	}
 	#banner-content h1 {
 		font-size: 3.5rem;
@@ -1196,21 +1192,30 @@ label[for="same-as-shipping"] {
 		min-height: 13rem !important;
 		margin-bottom: 0;
 	}
+
+	#home-banner #banner-content {
+		padding: 2rem 1rem;
+	}
+
 	.banner-container {
 		margin-top: 2.5rem;
 	}
+
 	.content-container {
 		padding: 0 0 1rem 0;
 	}
+
 	/* Blog & Services */
 	.col6of6 .content-container img,
 	.col6of6 .content-container .content-fragment-text {
 		float: none !important;
 		width: 100% !important;
 	}
+
 	.progress-bar .col2of6 {
 		padding-left: 1rem;
 	}
+
 	.progress-bar .col2of6::after {
 		display: none;
 	}
