@@ -34,7 +34,7 @@
 		</header>
 		<div class="banner-container">
 			<div id="banner-image">
-				<img src="img/banner-home.jpg" alt="A model of an ancient city">
+				<img src="img/banner-x1.jpg" srcset="img/banner-x2.jpg 2x, img/banner-x3.jpg 3x" alt="A model of a town">
 			</div>
 			<div id="banner-content">
 				<h1>Checkout</h1>
@@ -59,10 +59,7 @@
 					<h3>Billing Info</h3>
 				</div>
 			</div>
-			<!-- TODO:  This needs finishing up... -->
-			<!--================
-				PERSONAL INFO
-				=================-->
+			<!--PERSONAL INFO (Step 1)-->
 			<form id="personal-details" class="checkout-info-form">
 				<div class="col3of6 form-input">
 					<label for="first-name1">First Name</label>
@@ -80,34 +77,35 @@
 					<label for="email1">Email Adress</label>
 					<input type="text" id="email1" placeholder="jdoe@gmail.com">
 				</div>
+				<div class="col6of6 checkout-nav-btns">
+					<a class="btn next" onclick="checkoutStep(1)">NExt</a>
+				</div>
 			</form>
-			<!--================
-				SHIPPING INFO
-				=================-->
+			<!--SHIPPING INFO (Step 2)-->
 			<form id="shipping-details" class="checkout-info-form">
 				<div class="col3of6 form-input">
-					<label for="first-name1">First Name</label>
-					<input type="text" id="first-name1" placeholder="Jane">
+					<label for="first-name2">First Name</label>
+					<input type="text" id="first-name2" placeholder="Jane">
 				</div>
 				<div class="col3of6 form-input">
-					<label for="last-name1">Last Name</label>
-					<input type="text" id="last-name1" placeholder="Doe">
+					<label for="last-name2">Last Name</label>
+					<input type="text" id="last-name2" placeholder="Doe">
 				</div>
 				<div class="col3of6 form-input">
-					<label for="phone-number1">Phone Number</label>
-					<input type="text" id="phone-number1" placeholder="604-268-4253">
+					<label for="phone-number2">Phone Number</label>
+					<input type="text" id="phone-number2" placeholder="604-268-4253">
 				</div>
 				<div class="col3of6 form-input">
-					<label for="email1">Email Adress</label>
-					<input type="text" id="email1" placeholder="jdoe@gmail.com">
+					<label for="email2">Email Adress</label>
+					<input type="text" id="email2" placeholder="jdoe@gmail.com">
 				</div>
 				<div class="col6of6 form-input">
 					<label for="address1">Address</label>
 					<input type="text" id="address1" placeholder="2194 Sperling Ave">
 				</div>
 				<div class="col6of6 form-input">
-					<label for="address1">Address 2</label>
-					<input type="text" id="address1" placeholder="2194 Sperling Ave">
+					<label for="address2">Address 2</label>
+					<input type="text" id="address2" placeholder="2194 Sperling Ave">
 				</div>
 				<div class="col2of6 form-input">
 					<label for="province1">Province</label>
@@ -153,40 +151,44 @@
 					<label for="postal-code1">Postal Code</label>
 					<input type="text" id="postal-code1" placeholder="V5T C8C">
 				</div>
+				<div class="col6of6 checkout-nav-btns">
+					<a class="btn next" onclick="checkoutStep(2)">Next</a>
+					<a class="btn back" onclick="checkoutStep(0)">Back</a>
+				</div>
 			</form>
-			<!--================
-				BILLING INFO
-				=================-->
+			<!--BILLING INFO (Step 3)-->
 			<form id="billing-details" class="checkout-info-form billing">
-				<input id="same-as-shipping" type="checkbox" onclick="shippingBillingSame()">
-				<label for="same-as-shipping">Use Shipping Address</label>
-				<div class="col3of6 form-input">
-					<label for="first-name1">First Name</label>
-					<input type="text" id="first-name1" placeholder="Jane" class="address-toggled">
+				<div class="col6of6">
+					<input id="same-as-shipping" type="checkbox" onclick="shippingBillingSame()">
+					<label for="same-as-shipping" class="clearfix">Use Shipping Address</label>
 				</div>
 				<div class="col3of6 form-input">
-					<label for="last-name1">Last Name</label>
-					<input type="text" id="last-name1" placeholder="Doe" class="address-toggled">
+					<label for="first-name3">First Name</label>
+					<input type="text" id="first-name3" placeholder="Jane" class="address-toggled">
 				</div>
 				<div class="col3of6 form-input">
-					<label for="phone-number1">Phone Number</label>
-					<input type="text" id="phone-number1" placeholder="604-268-4253" class="address-toggled">
+					<label for="last-name3">Last Name</label>
+					<input type="text" id="last-name3" placeholder="Doe" class="address-toggled">
 				</div>
 				<div class="col3of6 form-input">
-					<label for="email1">Email Adress</label>
-					<input type="text" id="email1" placeholder="jdoe@gmail.com" class="address-toggled">
+					<label for="phone-number3">Phone Number</label>
+					<input type="text" id="phone-number3" placeholder="604-268-4253" class="address-toggled">
+				</div>
+				<div class="col3of6 form-input">
+					<label for="email3">Email Adress</label>
+					<input type="text" id="email3" placeholder="jdoe@gmail.com" class="address-toggled">
 				</div>
 				<div class="col6of6 form-input">
-					<label for="address1">Address</label>
-					<input type="text" id="address1" placeholder="2194 Sperling Ave" class="address-toggled">
+					<label for="address3">Address</label>
+					<input type="text" id="address3" placeholder="2194 Sperling Ave" class="address-toggled">
 				</div>
 				<div class="col6of6 form-input">
-					<label for="address1">Address 2</label>
-					<input type="text" id="address1" placeholder="2194 Sperling Ave" class="address-toggled">
+					<label for="address4">Address 2</label>
+					<input type="text" id="address4" placeholder="2194 Sperling Ave" class="address-toggled">
 				</div>
 				<div class="col2of6 form-input">
-					<label for="province1">Province</label>
-					<select name="province1" id="province1" class="address-toggled">
+					<label for="province2">Province</label>
+					<select name="province1" id="province2" class="address-toggled">
 						<option value="AL">Alberta</option>
 						<option value="BC">British Columbia</option>
 						<option value="MAN">Manitoba</option>
@@ -200,8 +202,8 @@
 					</select>
 				</div>
 				<div class="col2of6 form-input">
-					<label for="city1">City</label>
-					<select name="city1" id="city1" class="address-toggled">
+					<label for="city2">City</label>
+					<select name="city1" id="city2" class="address-toggled">
 						<option value="AB">Abbotsford</option>
 						<option value="BBY">Burnaby</option>
 						<option value="CHILL">Chilliwack</option>
@@ -225,18 +227,18 @@
 					</select>
 				</div>
 				<div class="col2of6 form-input">
-					<label for="postal-code1">Postal Code</label>
-					<input type="text" id="postal-code1" placeholder="V5T C8C" class="address-toggled">
+					<label for="postal-code2">Postal Code</label>
+					<input type="text" id="postal-code2" placeholder="V5T C8C" class="address-toggled">
 				</div>
-				<div class="payment-info-form">
+				<div class="col6of6 payment-info-form">
 					<div class="col3of6 form-input">
 						<label for="card-number">Card Number</label>
 						<input type="text" id="card-number" placeholder="XXXX-XXXX-XXXX-XXXX">
 					</div>
 					<div id="checkout-card-details" class="col3of6 form-input">
 						<div id="month">
-							<label for="expiration-month"> Month</label>
-							<select name="month" id="month">
+							<label for="month2"> Month</label>
+							<select name="month" id="month2">
 								<option value="M1">1</option>
 								<option value="M2">2</option>
 								<option value="M3">3</option>
@@ -252,8 +254,8 @@
 							</select>
 						</div>
 						<div id="year">
-							<label for="expiration-year"> Year</label>
-							<select name="year" id="year">
+							<label for="year2"> Year</label>
+							<select name="year" id="year2">
 								<option value="2015">2015</option>
 								<option value="2016">2016</option>
 								<option value="2017">2017</option>
@@ -268,7 +270,10 @@
 						</div>
 					</div>
 				</div>
-				<a href="twnyConfirmOrder.html" class="btn checkout">Confirm Order</a>
+				<div class="col6of6 checkout-nav-btns">
+					<a href="twnyConfirmOrder.html" class="btn next">Confirm Order</a>
+					<a class="btn back" onclick="checkoutStep(0)">Back</a>
+				</div>
 			</form>
 			<!--======================
 				CONTACT-PAYMENT

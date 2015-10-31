@@ -22,7 +22,7 @@ body {
 	padding: 0;
 }
 
-.grid:after {
+.grid:after, .clearfix:after {
 	content: "";
 	display: table;
 	clear: both;
@@ -31,7 +31,7 @@ body {
 [class^="col"] {
 	float: left;
 	margin: 0;
-	padding: 0.5rem;
+	padding: 0.5em;
 }
 
 .col1of6 {
@@ -65,7 +65,7 @@ body {
 main {
 	position: relative;
 	margin: 0 auto;
-	max-width: 75rem;
+	max-width: 75em;
 	font-family: "Inconsolata";
 	font-weight: 400;
 	min-height: 100vh;
@@ -74,13 +74,14 @@ main {
 #body-content {
 	clear: both;
 	overflow: hidden;
-	padding: 0 4rem;
+	padding: 0 4em;
 }
 
+/* NOTE: Creates space for the footer. There's probably a better way to do this.*/
 #body-content:after {
 	content: "";
-	padding: 1rem;
-	line-height: 2.5rem;
+	padding: 1em;
+	line-height: 3.5em;
 }
 
 footer {
@@ -93,7 +94,7 @@ footer {
 	-webkit-transform: translateX(-50%);
 	-ms-transform: translateX(-50%);
 	transform: translateX(-50%);
-	padding: 0.5rem 0;
+	padding: 0.5em 0;
 	text-align: center;
 }
 
@@ -111,7 +112,7 @@ footer span {
 footer strong {
 	font-weight: 400;
 	color: #E1E1E1;
-	padding-right: 0.5rem;
+	padding-right: 0.5em;
 }
 
 
@@ -119,25 +120,25 @@ footer strong {
  *   MEDIA QUERIES
  * ==================*/
 
-@media only screen and (max-width: 63rem) {
+@media only screen and (max-width: 63em) {
 	.col1of6,
 	.col2of6,
 	.col3of6 {
 		width: 100%;
-		padding: 0 0 2rem 0;
+		padding: 0 0 2em 0;
 	}
 	#body-content {
-		padding: 1rem;
+		padding: 1em;
 	}
 	.content-container {
-		padding-top: 2rem;
+		padding-top: 2em;
 	}
 }
 
-@media only screen and (min-width: 63.1rem) and (max-width: 75rem) {
+@media only screen and (min-width: 63.1em) and (max-width: 75em) {
 	.col2of6 {
 		width: 100%;
 	}
 }
 
-@media only screen and (min-width: 75.1rem) {}
+@media only screen and (min-width: 75.1em) {}
